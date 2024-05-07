@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Alimentoo" load_steps=2 format=3 uid="uid://ci6rgaoh1ud5j"]
+
+[ext_resource type="Script" path="res://Alimentoo.gd" id="1_mtywy"]
+
+[resource]
+resource_name = "Gluten"
+script = ExtResource("1_mtywy")

@@ -7,7 +7,7 @@ var body_ref
 var offset: Vector2
 var initialPos: Vector2
 @onready var plato = %Plato
-var recurso = load("res://Resource/arroz.tres")
+var recurso = load("res://Resource/cebada.tres")
 
 
 
@@ -35,6 +35,7 @@ func _on_area_2d_body_entered(body):
 		if body == plato:
 			plato.elementos.append(recurso.resource_name)
 			print(recurso.resource_name)
+			print(body.elementos)
 		#print(body.name)
 		#body_ref.elementos.append(name)
 
@@ -57,3 +58,5 @@ func _on_area_2d_mouse_exited():
 	if !global.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)
+
+

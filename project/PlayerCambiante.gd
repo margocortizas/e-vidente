@@ -1,11 +1,11 @@
 extends Sprite2D
 
-var texture_hambriento : Texture
-var texture_semienfermo : Texture
-var texture_bastanteenfermo : Texture
-var texture_muyenfermo : Texture
+var texture_hambriento : CompressedTexture2D
+var texture_semienfermo : CompressedTexture2D
+var texture_bastanteenfermo : CompressedTexture2D
+var texture_muyenfermo : CompressedTexture2D
 @onready var plato = $"../Plato"
-
+@onready var anim = $AnimatedSprite2D
 
 func _ready():
 	# Cargar las texturas desde el directorio de recursos
@@ -13,13 +13,25 @@ func _ready():
 	texture_semienfermo = load("res://assets-sistema/personaje-celiaco-1-semi-emfermo.png")
 	texture_bastanteenfermo = load("res://assets-sistema/personaje-celiaco-1-bastante-emfermo.png")
 	texture_muyenfermo = load("res://assets-sistema/personaje-celiaco-1-muy-emfermo.png")
-
-	if plato.elementos.has("gluten"):
-		Sprite2D.texture = texture_semienfermo
-	else:
-		pass
+	
+	anim.play("cagadodehambre")
+	
+	#if plato.elementos.has("gluten"):
+		#Sprite2D.texture = texture_semienfermo
+	#else:
+		#pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if plato.elementos.is_empty():
+		anim.play("cagadodehambre")
+	elif plato.elementos.has("Gluten") && plato.elementos.has("Arroz"):
+			anim.play("masmochito")
+	elif (plato.elementos.has("Gluten") || plato.elementos.has("Cebada")) || plato.elementos.has("Arroz"):
+			anim.play("mochito")
+			
+
+
+func _on_area_2d_body_entered(body):
+	print(body)
