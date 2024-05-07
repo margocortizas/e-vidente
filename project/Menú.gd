@@ -6,6 +6,9 @@ func _process(delta):
 	else:
 		visible = false
 
+func _ready():
+	
+	pass
 
 func _on_mouse_entered():
-	print('entrando menu')
+	pass

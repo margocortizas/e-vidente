@@ -8,6 +8,7 @@ var body_ref
 var offset: Vector2
 var initialPos: Vector2
 @onready var plato = %Plato
+var condiciones: Array 
 
 
 
@@ -34,10 +35,8 @@ func _on_area_2d_body_entered(body):
 		is_inside_droppable = true
 		body_ref = body
 		if body == plato:
-			plato.elementos.append(name)
-			#print(name)
-			#print(body.elementos)
-		
+			plato.elementos.append_array(condiciones)
+			print(plato.elementos)
 
 
 
@@ -45,8 +44,8 @@ func _on_area_2d_body_exited(body):
 	if body.is_in_group("droppable"):
 		is_inside_droppable = false
 		if body == plato:
-			plato.elementos.erase(name)
-
+			condiciones.map(func(cond): plato.elementos.erase(cond))
+			print(plato.elementos)
 
 func _on_area_2d_mouse_entered():
 	if !global.is_dragging:
