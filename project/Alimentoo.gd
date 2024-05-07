@@ -1,5 +1,5 @@
 extends Resource
-class_name Alimentoo
+class_name Alimento
 
 var condiciones = []
 

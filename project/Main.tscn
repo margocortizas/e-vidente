@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=38 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_6ok1o"]
 [ext_resource type="Texture2D" uid="uid://bcn1gketbiign" path="res://assets-sistema/chat-donde-se-muestran-las-historias.png" id="1_ypth2"]
@@ -18,12 +18,15 @@
 [ext_resource type="Texture2D" uid="uid://ldphgemiwtib" path="res://assets-sistema/alimento-maicena.png" id="6_5gomi"]
 [ext_resource type="Texture2D" uid="uid://cns1ls20xemur" path="res://assets-sistema/personaje-celiaco-1-semi-emfermo.png" id="6_6wk3b"]
 [ext_resource type="Texture2D" uid="uid://csq400dcorw5n" path="res://assets-sistema/personaje-celiaco-1-bastante-emfermo.png" id="7_al3ps"]
+[ext_resource type="Script" path="res://Azucar.gd" id="7_yd16u"]
+[ext_resource type="Script" path="res://Maicena.gd" id="8_64d0t"]
 [ext_resource type="Texture2D" uid="uid://buk180auicc3u" path="res://assets-sistema/personaje-celiaco-1-muy-emfermo.png" id="8_lx7kf"]
 [ext_resource type="Script" path="res://Cebada.gd" id="9_6dbad"]
 [ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/flecha-ir-para-atras-historias.png" id="9_pqbi3"]
 [ext_resource type="Script" path="res://PlayerCambiante.gd" id="9_si0ow"]
 [ext_resource type="Texture2D" uid="uid://dbd1glqsq3i3g" path="res://assets-sistema/flecha-ir-para-adelante-desbloqueada-historias.png" id="10_en7ew"]
 [ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/logro-sin-realizar.png" id="12_3r21c"]
+[ext_resource type="Script" path="res://Avena.gd" id="12_wa3fx"]
 [ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/logro-realizado.png" id="13_lskxi"]
 [ext_resource type="PackedScene" uid="uid://bh4yvpvs73nym" path="res://AlimentoPro.tscn" id="18_k5qlh"]
 [ext_resource type="Script" path="res://Menú.gd" id="19_uc027"]
@@ -147,7 +150,7 @@ visibility_layer = 9
 z_index = 1
 texture_filter = 6
 position = Vector2(532, 625)
-script = ExtResource("2_84oox")
+script = ExtResource("7_yd16u")
 
 [node name="Sprite2D" type="Sprite2D" parent="Azucar"]
 position = Vector2(-2, -2)
@@ -168,7 +171,7 @@ visibility_layer = 9
 z_index = 1
 texture_filter = 6
 position = Vector2(652, 619)
-script = ExtResource("2_84oox")
+script = ExtResource("8_64d0t")
 
 [node name="Sprite2D" type="Sprite2D" parent="Maicena"]
 position = Vector2(-2, -2)
@@ -206,7 +209,7 @@ shape = SubResource("CircleShape2D_wu3vl")
 z_index = 1
 texture_filter = 6
 position = Vector2(838, 625)
-script = ExtResource("2_84oox")
+script = ExtResource("12_wa3fx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Avena"]
 position = Vector2(-2, -2)

@@ -35,7 +35,7 @@ func _on_area_2d_body_entered(body):
 		if body == plato:
 			plato.elementos.append(recurso.resource_name)
 			print(recurso.resource_name)
-			print(body.elementos)
+			#print(body.elementos)
 		#print(body.name)
 		#body_ref.elementos.append(name)
 

@@ -10,4 +10,4 @@ func _process(delta):
 
 
 func _on_mouse_entered():
-	print('entrando plataforma')
+	pass

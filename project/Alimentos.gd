@@ -1,4 +1,5 @@
-extends Aliment
+extends Node2D
+class_name Aliment
 
 
 var draggable = false
@@ -7,7 +8,7 @@ var body_ref
 var offset: Vector2
 var initialPos: Vector2
 @onready var plato = %Plato
-var recurso = load("res://Resource/arroz.tres")
+
 
 
 
@@ -33,10 +34,10 @@ func _on_area_2d_body_entered(body):
 		is_inside_droppable = true
 		body_ref = body
 		if body == plato:
-			plato.elementos.append(recurso.resource_name)
-			print(recurso.resource_name)
-		#print(body.name)
-		#body_ref.elementos.append(name)
+			plato.elementos.append(name)
+			#print(name)
+			#print(body.elementos)
+		
 
 
 
@@ -44,7 +45,7 @@ func _on_area_2d_body_exited(body):
 	if body.is_in_group("droppable"):
 		is_inside_droppable = false
 		if body == plato:
-			plato.elementos.erase(recurso.resource_name)
+			plato.elementos.erase(name)
 
 
 func _on_area_2d_mouse_entered():
