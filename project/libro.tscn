@@ -45,4 +45,5 @@ offset_right = 120.0
 offset_bottom = 770.0
 icon = ExtResource("1_u1c0d")
 
+[connection signal="pressed" from="VBoxContainer/Cap1" to="." method="_on_cap_1_pressed"]
 [connection signal="pressed" from="Atras" to="." method="_on_button_pressed"]

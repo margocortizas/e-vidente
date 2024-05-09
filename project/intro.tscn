@@ -13,29 +13,38 @@ offset_bottom = 800.0
 color = Color(0.482506, 0.830236, 0.748423, 1)
 
 [node name="Start" type="Button" parent="."]
-offset_left = 368.0
-offset_top = 356.0
-offset_right = 782.0
-offset_bottom = 509.0
+offset_left = 376.0
+offset_top = 87.0
+offset_right = 790.0
+offset_bottom = 240.0
 theme_override_font_sizes/font_size = 60
 text = "Start"
 
 [node name="Options" type="Button" parent="."]
-offset_left = 368.0
-offset_top = 189.0
-offset_right = 782.0
-offset_bottom = 342.0
+offset_left = 376.0
+offset_top = 249.0
+offset_right = 790.0
+offset_bottom = 402.0
 theme_override_font_sizes/font_size = 60
 text = "Options"
 
 [node name="Capitulos" type="Button" parent="."]
-offset_left = 370.0
-offset_top = 525.0
-offset_right = 784.0
-offset_bottom = 678.0
+offset_left = 376.0
+offset_top = 412.0
+offset_right = 790.0
+offset_bottom = 565.0
 theme_override_font_sizes/font_size = 60
 text = "Capitulos"
+
+[node name="Salir" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 577.0
+offset_right = 790.0
+offset_bottom = 730.0
+theme_override_font_sizes/font_size = 60
+text = "Salir"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Capitulos" to="." method="_on_capitulos_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
