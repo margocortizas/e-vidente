@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=41 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://Level.gd" id="1_stgl8"]
 [ext_resource type="Script" path="res://PauseMenu.gd" id="2_1ic1e"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://ccmehu2w25tky" path="res://assets-sistema/personaje-celiaco-1-cagado-de-hambre.png" id="27_1hffp"]
 [ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/flecha-ir-para-atras-historias.png" id="28_x71jl"]
 [ext_resource type="Texture2D" uid="uid://dbd1glqsq3i3g" path="res://assets-sistema/flecha-ir-para-adelante-desbloqueada-historias.png" id="29_a0cp5"]
+[ext_resource type="Script" path="res://Logros.gd" id="30_go7gr"]
 [ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/logro-sin-realizar.png" id="30_m84oa"]
 [ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/logro-realizado.png" id="31_m6lbe"]
 [ext_resource type="Texture2D" uid="uid://4m35j685mh0w" path="res://assets-sistema/mensaje-demo-1.png" id="32_mdnro"]
@@ -94,6 +95,11 @@ animations = [{
 
 [node name="Level" type="Node" groups=["pickable"]]
 script = ExtResource("1_stgl8")
+
+[node name="Victory" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1061, 183)
+texture = ExtResource("31_m6lbe")
 
 [node name="UIL" type="CanvasLayer" parent="."]
 
@@ -420,14 +426,20 @@ text = "Adelante
 icon = ExtResource("29_a0cp5")
 
 [node name="Logros" type="Node2D" parent="."]
+visible = false
 position = Vector2(1018, 546)
-
-[node name="NoRealizado" type="Sprite2D" parent="Logros"]
-texture = ExtResource("30_m84oa")
+script = ExtResource("30_go7gr")
 
 [node name="Realizado" type="Sprite2D" parent="Logros"]
 visible = false
+clip_children = 2
+light_mask = 9
+visibility_layer = 9
 texture = ExtResource("31_m6lbe")
+
+[node name="NoRealizado" type="Sprite2D" parent="Logros"]
+visible = false
+texture = ExtResource("30_m84oa")
 
 [node name="Ensenanza" type="Sprite2D" parent="."]
 visible = false
@@ -467,3 +479,4 @@ texture = ExtResource("32_mdnro")
 [connection signal="mouse_exited" from="Avena/Area2D" to="Avena" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="Plato" to="Plato" method="_on_mouse_entered"]
 [connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
+[connection signal="pressed" from="Adelante" to="." method="_on_adelante_pressed"]
