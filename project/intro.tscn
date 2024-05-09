@@ -37,3 +37,5 @@ theme_override_font_sizes/font_size = 60
 text = "Capitulos"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Capitulos" to="." method="_on_capitulos_pressed"]
