@@ -12,6 +12,6 @@ var is_dragging = false
 func _process(delta):
 	pass
 
+func _on_atrás_pressed():
+	get_tree().change_scene_to_file("res://intro.tscn")
 
-#func _on_resume_button_pressed():
-	#get_tree().change_scene_to_file("res://intro.tscn")

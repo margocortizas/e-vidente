@@ -15,17 +15,12 @@ func pauseMenu():
 	pass
 
 func _on_return_button_pressed():
-	emit_signal("return_selected")
+	hide()
+	get_tree().change_scene_to_file("res://intro.tscn")
 
 
 func _on_resume_button_pressed():
 	hide()
 	get_tree().paused = false
 	print("Resume button pressed")
-	
-	
 
-
-func _on_button_pressed():
-	print("as")
-	

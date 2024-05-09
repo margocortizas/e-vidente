@@ -108,8 +108,9 @@ script = ExtResource("2_1ic1e")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UIL/PauseMenu"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = -79.0
+offset_right = 349.0
+offset_bottom = 163.0
 
 [node name="ResumeButton" type="Button" parent="UIL/PauseMenu/VBoxContainer"]
 layout_mode = 2
@@ -117,6 +118,7 @@ shortcut_feedback = false
 text = "Resume"
 
 [node name="ReturnButton" type="Button" parent="UIL/PauseMenu/VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Return"
 
@@ -464,3 +466,4 @@ texture = ExtResource("32_mdnro")
 [connection signal="mouse_entered" from="Avena/Area2D" to="Avena" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Avena/Area2D" to="Avena" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="Plato" to="Plato" method="_on_mouse_entered"]
+[connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
