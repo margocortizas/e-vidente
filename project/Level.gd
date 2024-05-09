@@ -16,6 +16,7 @@ var is_dragging = false
 func _ready():
 	victory.hide()
 	
+	
 func _process(delta):
 	pass
 
