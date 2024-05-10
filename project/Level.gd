@@ -6,14 +6,11 @@ class_name Level
 @onready var victory = $Victory
 @onready var adelante = $Adelante
 @onready var ensenanza = $Ensenanza
+var is_dragging = false
 
 signal return_requested()
-# Reinicia el nivel
 signal restart_requested()
-# Inicia el siguiente nivel
 signal next_level_requested()
-
-var is_dragging = false
 
 func _ready():
 	victory.hide()

@@ -33,7 +33,3 @@ func _process(delta):
 		anim.play("masmochito")
 	elif coincidencias >= 3:
 		anim.play("muelto")
-
-
-
-
