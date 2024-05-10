@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3fl0wttpi5nj"]
+
+[ext_resource type="Script" path="res://intro.gd" id="1_1l6ju"]
+
+[node name="Intro" type="Node2D"]
+z_index = 4
+script = ExtResource("1_1l6ju")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_priority = -1
+offset_right = 1153.0
+offset_bottom = 800.0
+color = Color(0.482506, 0.830236, 0.748423, 1)
+
+[node name="Start" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 87.0
+offset_right = 790.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 60
+text = "Jugar"
+
+[node name="Opciones" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 414.0
+offset_right = 790.0
+offset_bottom = 567.0
+theme_override_font_sizes/font_size = 60
+text = "Opciones"
+
+[node name="Capitulos" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 251.0
+offset_right = 790.0
+offset_bottom = 404.0
+theme_override_font_sizes/font_size = 60
+text = "Capitulos"
+
+[node name="Salir" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 577.0
+offset_right = 790.0
+offset_bottom = 730.0
+theme_override_font_sizes/font_size = 60
+text = "Salir"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Opciones" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Capitulos" to="." method="_on_capitulos_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

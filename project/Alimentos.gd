@@ -36,6 +36,8 @@ func _on_area_2d_body_entered(body):
 		body_ref = body
 		if body == plato:
 			plato.elementos.append_array(condiciones)
+			plato.cantAlimentos += 1
+			print(plato.cantAlimentos)
 			print(plato.elementos)
 
 
@@ -45,6 +47,7 @@ func _on_area_2d_body_exited(body):
 		is_inside_droppable = false
 		if body == plato:
 			condiciones.map(func(cond): plato.elementos.erase(cond))
+			plato.cantAlimentos -= 1
 			print(plato.elementos)
 
 func _on_area_2d_mouse_entered():
