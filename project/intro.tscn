@@ -12,7 +12,7 @@ offset_right = 1153.0
 offset_bottom = 800.0
 color = Color(0.482506, 0.830236, 0.748423, 1)
 
-[node name="Start" type="Button" parent="."]
+[node name="Jugar" type="Button" parent="."]
 offset_left = 376.0
 offset_top = 87.0
 offset_right = 790.0
@@ -28,13 +28,13 @@ offset_bottom = 567.0
 theme_override_font_sizes/font_size = 60
 text = "Opciones"
 
-[node name="Capitulos" type="Button" parent="."]
+[node name="Capítulos" type="Button" parent="."]
 offset_left = 376.0
 offset_top = 251.0
 offset_right = 790.0
 offset_bottom = 404.0
 theme_override_font_sizes/font_size = 60
-text = "Capitulos"
+text = "Capítulos"
 
 [node name="Salir" type="Button" parent="."]
 offset_left = 376.0
@@ -44,7 +44,7 @@ offset_bottom = 730.0
 theme_override_font_sizes/font_size = 60
 text = "Salir"
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Opciones" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Capitulos" to="." method="_on_capitulos_pressed"]
+[connection signal="pressed" from="Capítulos" to="." method="_on_capitulos_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

@@ -1,4 +1,4 @@
 extends Aliment
 
 func _ready():
-	condiciones = ["keto", "diabetico", "testigodejehova"]
+	condiciones = ["keto", "diabetico", "kosher"]
