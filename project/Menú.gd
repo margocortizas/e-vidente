@@ -5,10 +5,3 @@ func _process(delta):
 		visible = true
 	else:
 		visible = false
-
-func _ready():
-	
-	pass
-
-func _on_mouse_entered():
-	pass

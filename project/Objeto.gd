@@ -28,17 +28,14 @@ func _on_area_2d_body_entered(body):
 		is_inside_droppable = true
 		body_ref = body
 
-
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("droppable"):
 		is_inside_droppable = false
-
 
 func _on_area_2d_mouse_entered():
 	if !global.is_dragging:
 		draggable = true
 		scale = Vector2(1.2, 1.2)
-
 
 func _on_area_2d_mouse_exited():
 	if !global.is_dragging:

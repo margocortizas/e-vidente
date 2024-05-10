@@ -1,17 +1,14 @@
 extends Node2D
 class_name Aliment
 
-
 var draggable = false
 var is_inside_droppable = false
 var body_ref 
 var offset: Vector2
 var initialPos: Vector2
-@onready var plato = %Plato
 var condiciones: Array 
 
-
-
+@onready var plato = %Plato
 
 func _process(delta):
 	if draggable:
@@ -29,22 +26,22 @@ func _process(delta):
 			else:
 				tween.tween_property(self, "global_position", initialPos, 0.5).set_ease(Tween.EASE_OUT)
 
-
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("droppable"):
 		is_inside_droppable = true
 		body_ref = body
 		if body == plato:
 			plato.elementos.append_array(condiciones)
+			plato.cantAlimentos += 1
+			print(plato.cantAlimentos)
 			print(plato.elementos)
-
-
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("droppable"):
 		is_inside_droppable = false
 		if body == plato:
 			condiciones.map(func(cond): plato.elementos.erase(cond))
+			plato.cantAlimentos -= 1
 			print(plato.elementos)
 
 func _on_area_2d_mouse_entered():
@@ -52,9 +49,7 @@ func _on_area_2d_mouse_entered():
 		draggable = true
 		scale = Vector2(1.2, 1.2)
 
-
 func _on_area_2d_mouse_exited():
 	if !global.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)
-
