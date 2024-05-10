@@ -285,7 +285,7 @@ offset_top = -2.0
 offset_right = 1156.0
 offset_bottom = 797.0
 mouse_filter = 2
-color = Color(0, 0.25098, 0.254902, 1)
+color = Color(0.887268, 0.637423, 0.462848, 1)
 
 [node name="Alimento-Gluten" parent="." instance=ExtResource("17_xxuhr")]
 visible = false

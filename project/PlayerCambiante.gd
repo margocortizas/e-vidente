@@ -25,7 +25,7 @@ func _process(delta):
 		anim.play("cagadodehambre")
 	if coincidencias == 1:
 		anim.play("mochito")
-	elif plato.cantAlimentos == 1:
+	elif plato.cantAlimentos == 3:
 		get_tree().root.get_child(0)._victory()
 		bien = true
 		anim.play("recontento")
