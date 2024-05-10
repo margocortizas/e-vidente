@@ -420,7 +420,6 @@ offset_left = 954.0
 offset_top = 655.0
 offset_right = 1120.0
 offset_bottom = 748.0
-disabled = true
 text = "Adelante
 "
 icon = ExtResource("29_a0cp5")
@@ -439,11 +438,18 @@ texture = ExtResource("31_m6lbe")
 
 [node name="NoRealizado" type="Sprite2D" parent="Logros"]
 visible = false
+light_mask = 17
+visibility_layer = 16
 texture = ExtResource("30_m84oa")
 
 [node name="Ensenanza" type="Sprite2D" parent="."]
 visible = false
+top_level = true
+light_mask = 256
+visibility_layer = 256
+z_index = 4
 position = Vector2(576, 396)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("32_mdnro")
 
 [connection signal="pressed" from="UIL/PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
