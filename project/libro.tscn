@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://qg7q3a1ubxp7"]
 
-[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/flecha-ir-para-atras-historias.png" id="1_u1c0d"]
+[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="1_u1c0d"]
 [ext_resource type="Script" path="res://libro.gd" id="1_yhea7"]
 
 [node name="Libro" type="Node2D"]
@@ -25,6 +25,8 @@ alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 text = "Capitulo 1"
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Cap1"]
 
 [node name="Cap2" type="Button" parent="VBoxContainer"]
 layout_mode = 2

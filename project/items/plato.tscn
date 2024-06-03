@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://caa3ga7iipsxp"]
+
+[ext_resource type="Script" path="res://Plataforma.gd" id="1_kt43n"]
+[ext_resource type="Texture2D" uid="uid://6x5xusfm63em" path="res://assets-sistema/iconos/pngimg.com - plate_PNG107709.png" id="2_yuh7u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_00apn"]
+size = Vector2(243, 245)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a38rp"]
+size = Vector2(255, 250)
+
+[node name="Plato" type="StaticBody2D" groups=["droppable"]]
+position = Vector2(592, 238)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("1_kt43n")
+
+[node name="PlatoPNG" type="Sprite2D" parent="."]
+visible = false
+z_index = 1
+position = Vector2(-7.99998, 2)
+scale = Vector2(0.560594, 0.555712)
+texture = ExtResource("2_yuh7u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, -2.5)
+shape = SubResource("RectangleShape2D_00apn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.5, 1)
+shape = SubResource("RectangleShape2D_a38rp")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

@@ -1,6 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cr5rgbqf4d36u"]
-
-[ext_resource type="Texture2D" uid="uid://bpaqc3c4kqx5h" path="res://assets-sistema/alimento-cebada.png" id="2_frt5n"]
+[gd_scene load_steps=4 format=3 uid="uid://cluofb2f4iayi"]
 
 [sub_resource type="GDScript" id="GDScript_0tu4y"]
 script/source = "extends Node2D
@@ -81,6 +79,9 @@ script/source = "extends Node2D
 #
 "
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tel6a"]
+load_path = "res://.godot/imported/alimento-cebada.png-f368d57e230cb5abdf566a0fd66a067b.ctex"
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_2qpsa"]
 radius = 39.0512
 
@@ -94,7 +95,7 @@ script = SubResource("GDScript_0tu4y")
 texture_filter = 1
 position = Vector2(11, -5)
 scale = Vector2(1.5519, 1.52515)
-texture = ExtResource("2_frt5n")
+texture = SubResource("CompressedTexture2D_tel6a")
 
 [node name="Area2D" type="Area2D" parent="."]
 

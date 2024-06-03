@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://cbsnhd5wouff1"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_3vabw"]
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_8j4cr"]
+[ext_resource type="Texture2D" uid="uid://bqrhgjg4xcubi" path="res://assets-sistema/iconos/ravioles-0.png" id="3_8egyy"]
+
+[resource]
+script = ExtResource("1_3vabw")
+condiciones = Array[int]([0, 1])
+sprite = ExtResource("3_8egyy")
+escena = ExtResource("1_8j4cr")
+posicion = Vector2(0, 0)

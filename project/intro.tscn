@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3fl0wttpi5nj"]
+[gd_scene load_steps=5 format=3 uid="uid://d3fl0wttpi5nj"]
 
 [ext_resource type="Script" path="res://intro.gd" id="1_1l6ju"]
+[ext_resource type="Texture2D" uid="uid://breggyu6leu5h" path="res://assets-sistema/iconos/titulo-jugar.png" id="2_68fep"]
+[ext_resource type="Texture2D" uid="uid://g2fk0rtysasx" path="res://assets-sistema/iconos/titulo-opciones.png" id="3_2pkvm"]
+[ext_resource type="Texture2D" uid="uid://b0qs42irpynbm" path="res://assets-sistema/iconos/titulo-capitulos.png" id="3_27hyn"]
 
 [node name="Intro" type="Node2D"]
 z_index = 4
@@ -18,7 +21,11 @@ offset_top = 87.0
 offset_right = 790.0
 offset_bottom = 240.0
 theme_override_font_sizes/font_size = 60
-text = "Jugar"
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugar"]
+position = Vector2(209.5, 77.25)
+scale = Vector2(1.29137, 1.12832)
+texture = ExtResource("2_68fep")
 
 [node name="Opciones" type="Button" parent="."]
 offset_left = 376.0
@@ -26,7 +33,10 @@ offset_top = 414.0
 offset_right = 790.0
 offset_bottom = 567.0
 theme_override_font_sizes/font_size = 60
-text = "Opciones"
+
+[node name="Sprite2D" type="Sprite2D" parent="Opciones"]
+position = Vector2(194, 76)
+texture = ExtResource("3_2pkvm")
 
 [node name="Capítulos" type="Button" parent="."]
 offset_left = 376.0
@@ -34,7 +44,10 @@ offset_top = 251.0
 offset_right = 790.0
 offset_bottom = 404.0
 theme_override_font_sizes/font_size = 60
-text = "Capítulos"
+
+[node name="Sprite2D" type="Sprite2D" parent="Capítulos"]
+position = Vector2(208, 78)
+texture = ExtResource("3_27hyn")
 
 [node name="Salir" type="Button" parent="."]
 offset_left = 376.0
@@ -42,7 +55,8 @@ offset_top = 577.0
 offset_right = 790.0
 offset_bottom = 730.0
 theme_override_font_sizes/font_size = 60
-text = "Salir"
+
+[node name="Sprite2D" type="Sprite2D" parent="Salir"]
 
 [connection signal="pressed" from="Jugar" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Opciones" to="." method="_on_options_pressed"]

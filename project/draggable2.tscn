@@ -1,17 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://btw0w387hmkk7"]
+[gd_scene load_steps=3 format=3 uid="uid://dtbwx2p47iqvm"]
 
-[ext_resource type="Script" path="res://Draggable.gd" id="1_vf5qe"]
-[ext_resource type="Texture2D" uid="uid://b2hkwdsef6v8a" path="res://assets-sistema/alimento-avena.png" id="2_nqq11"]
+[sub_resource type="GDScript" id="GDScript_hncb3"]
+script/source = "extends Node2D
+
+func _on_area_2d_mouse_entered():
+	print('entrando')
+
+func _on_area_2d_mouse_exited():
+	pass # Replace with function body.
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwhgo"]
 radius = 27.0185
 
 [node name="Draggable" type="Node2D"]
 position = Vector2(597, 37)
-script = ExtResource("1_vf5qe")
+script = SubResource("GDScript_hncb3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_nqq11")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1, 1)

@@ -1,38 +1,49 @@
-[gd_scene load_steps=41 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=54 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://Level.gd" id="1_stgl8"]
 [ext_resource type="Script" path="res://PauseMenu.gd" id="2_1ic1e"]
+[ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/interfaz/logro-realizado.png" id="2_uyh63"]
 [ext_resource type="Script" path="res://Menú.gd" id="3_oeupe"]
 [ext_resource type="Script" path="res://Arroz.gd" id="4_qlh1n"]
-[ext_resource type="Texture2D" uid="uid://c6be8mrunqjis" path="res://assets-sistema/alimento-arroz.png" id="5_mpohq"]
 [ext_resource type="Script" path="res://Gluten.gd" id="6_e05a3"]
-[ext_resource type="Texture2D" uid="uid://bwoajv0gc5evw" path="res://assets-sistema/alimento-gluten.png" id="7_jwcqh"]
+[ext_resource type="Texture2D" uid="uid://dkq4j47os8lcc" path="res://assets-sistema/iconos/arroz-0.png" id="6_uyi7x"]
 [ext_resource type="Script" path="res://Azucar.gd" id="8_bnsh1"]
-[ext_resource type="Texture2D" uid="uid://dmhdc78ycafkn" path="res://assets-sistema/alimento-azucar.png" id="9_8wjpr"]
+[ext_resource type="Texture2D" uid="uid://c0l7aysxkofeo" path="res://assets-sistema/iconos/pan-0.png" id="8_m04fr"]
+[ext_resource type="Texture2D" uid="uid://lb4apinglsfa" path="res://assets-sistema/iconos/azucar-0.png" id="10_k0tgc"]
 [ext_resource type="Script" path="res://Maicena.gd" id="10_sml6t"]
-[ext_resource type="Texture2D" uid="uid://ldphgemiwtib" path="res://assets-sistema/alimento-maicena.png" id="11_a5ibw"]
+[ext_resource type="Texture2D" uid="uid://cnlgf0eu1usje" path="res://assets-sistema/iconos/maicena-0.png" id="12_hrmci"]
 [ext_resource type="Script" path="res://Cebada.gd" id="12_ytq61"]
-[ext_resource type="Texture2D" uid="uid://bpaqc3c4kqx5h" path="res://assets-sistema/alimento-cebada.png" id="13_ed8lh"]
 [ext_resource type="Script" path="res://Avena.gd" id="14_rxnxx"]
-[ext_resource type="Texture2D" uid="uid://b2hkwdsef6v8a" path="res://assets-sistema/alimento-avena.png" id="15_t4583"]
-[ext_resource type="Script" path="res://Plataforma.gd" id="16_ahq6l"]
-[ext_resource type="PackedScene" uid="uid://bh4yvpvs73nym" path="res://AlimentoPro.tscn" id="17_xxuhr"]
-[ext_resource type="PackedScene" uid="uid://cr5rgbqf4d36u" path="res://Objeto.tscn" id="18_uoc7d"]
-[ext_resource type="Texture2D" uid="uid://bcn1gketbiign" path="res://assets-sistema/chat-donde-se-muestran-las-historias.png" id="19_n4esi"]
-[ext_resource type="Texture2D" uid="uid://bhtsf3tml4xxc" path="res://assets-sistema/escena-fondo-plato-02.png" id="20_ya4t5"]
-[ext_resource type="Texture2D" uid="uid://dv1dun4tf38co" path="res://assets-sistema/escena-fondo-fija-01.png" id="21_hnoew"]
-[ext_resource type="Texture2D" uid="uid://foq3cdi7petn" path="res://assets-sistema/personaje-celiaco-1.png" id="22_6rn1r"]
+[ext_resource type="Texture2D" uid="uid://68d4orjhqr8m" path="res://assets-sistema/iconos/fideos-0.png" id="14_tj37k"]
+[ext_resource type="Texture2D" uid="uid://cgss88iafwjwv" path="res://assets-sistema/iconos/medialunas-0.png" id="16_pdep6"]
+[ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="17_gronn"]
+[ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="19_54i68"]
+[ext_resource type="Texture2D" uid="uid://bcn1gketbiign" path="res://assets-sistema/interfaz/chat-donde-se-muestran-las-historias.png" id="22_7qus8"]
+[ext_resource type="Texture2D" uid="uid://bhtsf3tml4xxc" path="res://assets-sistema/interfaz/escena-fondo-plato-02.png" id="23_q78uf"]
 [ext_resource type="Script" path="res://PlayerCambiante.gd" id="23_qotnh"]
-[ext_resource type="Texture2D" uid="uid://csq400dcorw5n" path="res://assets-sistema/personaje-celiaco-1-bastante-emfermo.png" id="24_glj7u"]
-[ext_resource type="Texture2D" uid="uid://cns1ls20xemur" path="res://assets-sistema/personaje-celiaco-1-semi-emfermo.png" id="25_2o3kl"]
-[ext_resource type="Texture2D" uid="uid://buk180auicc3u" path="res://assets-sistema/personaje-celiaco-1-muy-emfermo.png" id="26_swx21"]
-[ext_resource type="Texture2D" uid="uid://ccmehu2w25tky" path="res://assets-sistema/personaje-celiaco-1-cagado-de-hambre.png" id="27_1hffp"]
-[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/flecha-ir-para-atras-historias.png" id="28_x71jl"]
-[ext_resource type="Texture2D" uid="uid://dbd1glqsq3i3g" path="res://assets-sistema/flecha-ir-para-adelante-desbloqueada-historias.png" id="29_a0cp5"]
+[ext_resource type="Texture2D" uid="uid://dv1dun4tf38co" path="res://assets-sistema/interfaz/escena-fondo-fija-01.png" id="24_t0fwu"]
+[ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="26_cpmvn"]
+[ext_resource type="Texture2D" uid="uid://cw4bjhcs2158q" path="res://assets-sistema/player/personaje-idle-2.png" id="27_gp70w"]
+[ext_resource type="Texture2D" uid="uid://byvhnnk7acmxg" path="res://assets-sistema/player/personaje-idle-3.png" id="28_2a0yw"]
+[ext_resource type="Texture2D" uid="uid://4wg5bh8dfre4" path="res://assets-sistema/player/personaje-mal-malito-1.png" id="29_fjjox"]
+[ext_resource type="Texture2D" uid="uid://botuqbwkd2n4e" path="res://assets-sistema/player/personaje-mal-malito-2.png" id="30_4ol1b"]
 [ext_resource type="Script" path="res://Logros.gd" id="30_go7gr"]
-[ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/logro-sin-realizar.png" id="30_m84oa"]
-[ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/logro-realizado.png" id="31_m6lbe"]
-[ext_resource type="Texture2D" uid="uid://4m35j685mh0w" path="res://assets-sistema/mensaje-demo-1.png" id="32_mdnro"]
+[ext_resource type="Texture2D" uid="uid://co5ypxfvqu2lr" path="res://assets-sistema/player/personaje-malito-1.png" id="31_gicib"]
+[ext_resource type="Texture2D" uid="uid://b3mn3uqqembgn" path="res://assets-sistema/player/personaje-malito-2.png" id="32_epbji"]
+[ext_resource type="Texture2D" uid="uid://dki7xmvxh1xhe" path="res://assets-sistema/player/personaje-malisisisimo-1.png" id="33_lajqi"]
+[ext_resource type="Texture2D" uid="uid://6gg0eqeleaay" path="res://assets-sistema/player/personaje-malisisisimo-2.png" id="34_1imi6"]
+[ext_resource type="Texture2D" uid="uid://bvpeui28k18pq" path="res://assets-sistema/player/personaje-sintiendose-bien-1.png" id="35_hryss"]
+[ext_resource type="Texture2D" uid="uid://qr4b87pgefe2" path="res://assets-sistema/player/personaje-sintiendose-bien-2.png" id="36_1pvg5"]
+[ext_resource type="Texture2D" uid="uid://dxd2xrmjguelv" path="res://assets-sistema/player/personaje-sintiendose-bien-3.png" id="37_mwlm3"]
+[ext_resource type="Texture2D" uid="uid://5e4brkahgd6y" path="res://assets-sistema/player/personaje-sintiendose-mal-1.png" id="38_h3mrw"]
+[ext_resource type="Texture2D" uid="uid://d2mu0bg7aoagg" path="res://assets-sistema/player/personaje-sintiendose-mal-2.png" id="39_dphj2"]
+[ext_resource type="Texture2D" uid="uid://sychosmpy3lp" path="res://assets-sistema/player/personaje-sintiendose-mal-3.png" id="40_n0wkn"]
+[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="41_drjto"]
+[ext_resource type="Texture2D" uid="uid://dbd1glqsq3i3g" path="res://assets-sistema/interfaz/flecha-ir-para-adelante-desbloqueada-historias.png" id="42_hc4fe"]
+[ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/interfaz/logro-sin-realizar.png" id="44_yjnms"]
+[ext_resource type="Texture2D" uid="uid://4m35j685mh0w" path="res://assets-sistema/interfaz/mensaje-demo-1.png" id="45_hujwb"]
+[ext_resource type="Script" path="res://manager_level.gd" id="50_tu6fg"]
+[ext_resource type="Resource" uid="uid://csvrn3qqxspsm" path="res://items/arroz.tres" id="51_ewi23"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2l1p"]
 size = Vector2(600, 100)
@@ -40,21 +51,33 @@ size = Vector2(600, 100)
 [sub_resource type="CircleShape2D" id="CircleShape2D_wu3vl"]
 radius = 20.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_00apn"]
-size = Vector2(243, 245)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a38rp"]
-size = Vector2(255, 250)
-
 [sub_resource type="FontVariation" id="FontVariation_gwpkp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf123"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qdkky"]
+load_path = "res://.godot/imported/personaje-celiaco-1.png-085faedaa8c97b519cfbbd65dcab934c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8qdtu"]
+load_path = "res://.godot/imported/personaje-celiaco-1-bastante-emfermo.png-76645d646246f4c063667e83e44638e0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f768w"]
+load_path = "res://.godot/imported/personaje-celiaco-1-semi-emfermo.png-84491d8eba12cb10b28c50523c69b25b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3x1we"]
+load_path = "res://.godot/imported/personaje-celiaco-1-muy-emfermo.png-d2bfe4d8f5d84525c18d24cef9b29e71.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oduul"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("27_1hffp")
+"texture": ExtResource("26_cpmvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_gp70w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2a0yw")
 }],
 "loop": true,
 "name": &"cagadodehambre",
@@ -62,7 +85,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("24_glj7u")
+"texture": ExtResource("29_fjjox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4ol1b")
 }],
 "loop": true,
 "name": &"masmochito",
@@ -70,7 +96,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("25_2o3kl")
+"texture": ExtResource("31_gicib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_epbji")
 }],
 "loop": true,
 "name": &"mochito",
@@ -78,7 +107,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("26_swx21")
+"texture": ExtResource("33_lajqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1imi6")
 }],
 "loop": true,
 "name": &"muelto",
@@ -86,10 +118,44 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_6rn1r")
+"texture": ExtResource("35_hryss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_1pvg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mwlm3")
 }],
 "loop": true,
 "name": &"recontento",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_hryss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_1pvg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mwlm3")
+}],
+"loop": true,
+"name": &"resonrison",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_h3mrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_dphj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_n0wkn")
+}],
+"loop": false,
+"name": &"retriston",
 "speed": 5.0
 }]
 
@@ -99,7 +165,7 @@ script = ExtResource("1_stgl8")
 [node name="Victory" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(1061, 183)
-texture = ExtResource("31_m6lbe")
+texture = ExtResource("2_uyh63")
 
 [node name="UIL" type="CanvasLayer" parent="."]
 
@@ -140,6 +206,7 @@ script = ExtResource("3_oeupe")
 shape = SubResource("RectangleShape2D_v2l1p")
 
 [node name="Arroz" type="Node2D" parent="."]
+visible = false
 top_level = true
 light_mask = 9
 visibility_layer = 9
@@ -150,7 +217,7 @@ script = ExtResource("4_qlh1n")
 
 [node name="Sprite2D" type="Sprite2D" parent="Arroz"]
 position = Vector2(-2, -2)
-texture = ExtResource("5_mpohq")
+texture = ExtResource("6_uyi7x")
 
 [node name="Area2D" type="Area2D" parent="Arroz"]
 position = Vector2(0, 1)
@@ -162,6 +229,7 @@ position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_wu3vl")
 
 [node name="Gluten" type="Node2D" parent="."]
+visible = false
 light_mask = 9
 visibility_layer = 9
 z_index = 1
@@ -171,7 +239,7 @@ script = ExtResource("6_e05a3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Gluten"]
 position = Vector2(-2, -2)
-texture = ExtResource("7_jwcqh")
+texture = ExtResource("8_m04fr")
 
 [node name="Area2D" type="Area2D" parent="Gluten"]
 position = Vector2(0, 1)
@@ -183,6 +251,7 @@ position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_wu3vl")
 
 [node name="Azucar" type="Node2D" parent="."]
+visible = false
 light_mask = 9
 visibility_layer = 9
 z_index = 1
@@ -192,7 +261,7 @@ script = ExtResource("8_bnsh1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Azucar"]
 position = Vector2(-2, -2)
-texture = ExtResource("9_8wjpr")
+texture = ExtResource("10_k0tgc")
 
 [node name="Area2D" type="Area2D" parent="Azucar"]
 position = Vector2(0, 1)
@@ -204,6 +273,7 @@ position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_wu3vl")
 
 [node name="Maicena" type="Node2D" parent="."]
+visible = false
 light_mask = 9
 visibility_layer = 9
 z_index = 1
@@ -213,7 +283,7 @@ script = ExtResource("10_sml6t")
 
 [node name="Sprite2D" type="Sprite2D" parent="Maicena"]
 position = Vector2(-2, -2)
-texture = ExtResource("11_a5ibw")
+texture = ExtResource("12_hrmci")
 
 [node name="Area2D" type="Area2D" parent="Maicena"]
 position = Vector2(0, 1)
@@ -225,6 +295,7 @@ position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_wu3vl")
 
 [node name="Cebada" type="Node2D" parent="."]
+visible = false
 z_index = 1
 texture_filter = 6
 position = Vector2(747, 623)
@@ -232,7 +303,7 @@ script = ExtResource("12_ytq61")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cebada"]
 position = Vector2(-2, -2)
-texture = ExtResource("13_ed8lh")
+texture = ExtResource("14_tj37k")
 
 [node name="Area2D" type="Area2D" parent="Cebada"]
 position = Vector2(0, 1)
@@ -244,6 +315,7 @@ position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_wu3vl")
 
 [node name="Avena" type="Node2D" parent="."]
+visible = false
 z_index = 1
 texture_filter = 6
 position = Vector2(838, 625)
@@ -251,7 +323,7 @@ script = ExtResource("14_rxnxx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Avena"]
 position = Vector2(-2, -2)
-texture = ExtResource("15_t4583")
+texture = ExtResource("16_pdep6")
 
 [node name="Area2D" type="Area2D" parent="Avena"]
 position = Vector2(0, 1)
@@ -262,22 +334,8 @@ collision_mask = 8
 position = Vector2(-2, -3)
 shape = SubResource("CircleShape2D_wu3vl")
 
-[node name="Plato" type="StaticBody2D" parent="." groups=["droppable"]]
+[node name="Plato" parent="." instance=ExtResource("17_gronn")]
 unique_name_in_owner = true
-position = Vector2(592, 238)
-collision_layer = 8
-collision_mask = 8
-script = ExtResource("16_ahq6l")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plato"]
-position = Vector2(-4.5, -2.5)
-shape = SubResource("RectangleShape2D_00apn")
-
-[node name="Area2D" type="Area2D" parent="Plato"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plato/Area2D"]
-position = Vector2(-3.5, 1)
-shape = SubResource("RectangleShape2D_a38rp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 3.0
@@ -285,23 +343,11 @@ offset_top = -2.0
 offset_right = 1156.0
 offset_bottom = 797.0
 mouse_filter = 2
-color = Color(0.887268, 0.637423, 0.462848, 1)
+color = Color(1, 1, 0.996078, 0.988235)
 
-[node name="Alimento-Gluten" parent="." instance=ExtResource("17_xxuhr")]
-visible = false
-z_index = 2
-position = Vector2(424, 622)
-
-[node name="Alimento-Arroz" parent="." instance=ExtResource("18_uoc7d")]
-visible = false
-visibility_layer = 2
-z_index = 2
-position = Vector2(282, 625)
-
-[node name="Alimento-Maicena" parent="." instance=ExtResource("17_xxuhr")]
-visible = false
-z_index = 2
-position = Vector2(545, 620)
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(574, 403)
+texture = ExtResource("19_54i68")
 
 [node name="GloboTexto" type="Panel" parent="."]
 offset_left = 296.0
@@ -311,7 +357,7 @@ offset_bottom = 469.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GloboTexto"]
 position = Vector2(280, 12)
-texture = ExtResource("19_n4esi")
+texture = ExtResource("22_7qus8")
 
 [node name="TextEdit" type="TextEdit" parent="GloboTexto"]
 layout_mode = 1
@@ -334,17 +380,17 @@ text = "Prepará la cena para tu amigx celíacx! No olvides sus condiciones."
 [node name="Central" type="Sprite2D" parent="."]
 position = Vector2(589, 238)
 scale = Vector2(0.761976, 0.761976)
-texture = ExtResource("20_ya4t5")
+texture = ExtResource("23_q78uf")
 
 [node name="PanelDerecho" type="Sprite2D" parent="."]
 position = Vector2(866, 237)
 scale = Vector2(0.75718, 0.75718)
-texture = ExtResource("21_hnoew")
+texture = ExtResource("24_t0fwu")
 
 [node name="PanelIzquierdo" type="Sprite2D" parent="."]
 position = Vector2(310, 239)
 scale = Vector2(0.760698, 0.760698)
-texture = ExtResource("21_hnoew")
+texture = ExtResource("24_t0fwu")
 
 [node name="PanelCentral" type="Panel" parent="."]
 visible = false
@@ -355,7 +401,7 @@ offset_bottom = 346.0
 
 [node name="PlayerFijo" type="Sprite2D" parent="."]
 position = Vector2(314, 253)
-texture = ExtResource("22_6rn1r")
+texture = SubResource("CompressedTexture2D_qdkky")
 
 [node name="PlayerCambiante" type="Sprite2D" parent="."]
 position = Vector2(865, 259)
@@ -364,7 +410,7 @@ script = ExtResource("23_qotnh")
 [node name="Hambriento" type="Sprite2D" parent="PlayerCambiante"]
 visible = false
 position = Vector2(-17, -4)
-texture = ExtResource("24_glj7u")
+texture = SubResource("CompressedTexture2D_8qdtu")
 
 [node name="TextEdit2" type="TextEdit" parent="PlayerCambiante/Hambriento"]
 light_mask = 0
@@ -388,23 +434,25 @@ text = "Tengo hambre!"
 visible = false
 position = Vector2(4.5, 5.96046e-08)
 scale = Vector2(0.964286, 1.14407)
-texture = ExtResource("25_2o3kl")
+texture = SubResource("CompressedTexture2D_f768w")
 
 [node name="BastanteEnfermo" type="Sprite2D" parent="PlayerCambiante"]
 visible = false
 position = Vector2(17, 14)
 scale = Vector2(0.992754, 1.2381)
-texture = ExtResource("24_glj7u")
+texture = SubResource("CompressedTexture2D_8qdtu")
 
 [node name="MuyEnfermo" type="Sprite2D" parent="PlayerCambiante"]
 visible = false
 position = Vector2(22, 31.75)
 scale = Vector2(0.917722, 1.37755)
-texture = ExtResource("26_swx21")
+texture = SubResource("CompressedTexture2D_3x1we")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerCambiante"]
+position = Vector2(-3, -24)
+scale = Vector2(0.591401, 0.56986)
 sprite_frames = SubResource("SpriteFrames_oduul")
-animation = &"mochito"
+animation = &"recontento"
 
 [node name="Atrás" type="Button" parent="."]
 offset_left = 40.0
@@ -413,7 +461,7 @@ offset_right = 177.0
 offset_bottom = 743.0
 text = "Atrás
 "
-icon = ExtResource("28_x71jl")
+icon = ExtResource("41_drjto")
 
 [node name="Adelante" type="Button" parent="."]
 offset_left = 954.0
@@ -422,7 +470,7 @@ offset_right = 1120.0
 offset_bottom = 748.0
 text = "Adelante
 "
-icon = ExtResource("29_a0cp5")
+icon = ExtResource("42_hc4fe")
 
 [node name="Logros" type="Node2D" parent="."]
 visible = false
@@ -434,13 +482,13 @@ visible = false
 clip_children = 2
 light_mask = 9
 visibility_layer = 9
-texture = ExtResource("31_m6lbe")
+texture = ExtResource("2_uyh63")
 
 [node name="NoRealizado" type="Sprite2D" parent="Logros"]
 visible = false
 light_mask = 17
 visibility_layer = 16
-texture = ExtResource("30_m84oa")
+texture = ExtResource("44_yjnms")
 
 [node name="Ensenanza" type="Sprite2D" parent="."]
 visible = false
@@ -450,7 +498,11 @@ visibility_layer = 256
 z_index = 4
 position = Vector2(576, 396)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("32_mdnro")
+texture = ExtResource("45_hujwb")
+
+[node name="ManagerLevel" type="Node" parent="."]
+script = ExtResource("50_tu6fg")
+level_items = Array[Resource("res://resources/level_item.gd")]([ExtResource("51_ewi23")])
 
 [connection signal="pressed" from="UIL/PauseMenu/VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="UIL/PauseMenu/VBoxContainer/ResumeButton" to="UIL/PauseMenu" method="_on_resume_button_pressed"]
@@ -483,6 +535,5 @@ texture = ExtResource("32_mdnro")
 [connection signal="body_exited" from="Avena/Area2D" to="Avena" method="_on_area_2d_body_exited"]
 [connection signal="mouse_entered" from="Avena/Area2D" to="Avena" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Avena/Area2D" to="Avena" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="Plato" to="Plato" method="_on_mouse_entered"]
 [connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
 [connection signal="pressed" from="Adelante" to="." method="_on_adelante_pressed"]

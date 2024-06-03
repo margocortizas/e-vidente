@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bh1w10h3rjses"]
 
-[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/flecha-ir-para-atras-historias.png" id="1_7mf7v"]
+[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="1_7mf7v"]
 [ext_resource type="Script" path="res://interface/back-button.gd" id="1_l480u"]
 
 [node name="Back" type="Node2D"]

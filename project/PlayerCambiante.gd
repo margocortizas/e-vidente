@@ -21,6 +21,10 @@ func _process(delta):
 	var coincidencias = plato.elementos.count("celiaco")
 	if plato.elementos.is_empty():
 		anim.play("cagadodehambre")
+	elif plato.cantAlimentos >= 1 && coincidencias == 0:
+		anim.play("resonrison")
+		#anim.play("cagadodehambre")
+	#else: anim.play("retriston") 
 	if coincidencias == 1:
 		anim.play("mochito")
 	elif plato.cantAlimentos == 3 && coincidencias == 0:

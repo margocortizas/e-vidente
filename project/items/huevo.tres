@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://cs1y5u1bskp1m"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_eebtv"]
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_n81o3"]
+[ext_resource type="Texture2D" uid="uid://cur35wupk420t" path="res://assets-sistema/iconos/huevo-0.png" id="3_vm3mk"]
+
+[resource]
+script = ExtResource("1_eebtv")
+condiciones = Array[int]([2])
+sprite = ExtResource("3_vm3mk")
+escena = ExtResource("1_n81o3")
+posicion = Vector2(0, 0)
