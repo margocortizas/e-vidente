@@ -1,18 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://bri7a10em12dj"]
+[gd_scene load_steps=3 format=3 uid="uid://bri7a10em12dj"]
 
-[ext_resource type="Script" path="res://ItemLevel.gd" id="1_a6new"]
-[ext_resource type="Texture2D" uid="uid://cx35chblvkkpt" path="res://assets-sistema/iconos/arandano-0.png" id="2_1i2u3"]
+[ext_resource type="Script" path="res://items/ItemLevel.gd" id="1_awvn7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1eoe"]
+radius = 26.0
+height = 52.0
 
-[node name="ItemLevel" type="Node2D"]
+[node name="ItemLevel" type="Node2D" groups=["draggable"]]
 z_index = 4
-script = ExtResource("1_a6new")
+script = ExtResource("1_awvn7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_1i2u3")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_h1eoe")

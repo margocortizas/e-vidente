@@ -1,13 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://caa3ga7iipsxp"]
 
-[ext_resource type="Script" path="res://Plataforma.gd" id="1_kt43n"]
+[ext_resource type="Script" path="res://niveles/nivel_1/Plataforma.gd" id="1_kt43n"]
 [ext_resource type="Texture2D" uid="uid://6x5xusfm63em" path="res://assets-sistema/iconos/pngimg.com - plate_PNG107709.png" id="2_yuh7u"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_00apn"]
-size = Vector2(243, 245)
+[sub_resource type="CircleShape2D" id="CircleShape2D_pxs61"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a38rp"]
-size = Vector2(255, 250)
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbw2w"]
 
 [node name="Plato" type="StaticBody2D" groups=["droppable"]]
 position = Vector2(592, 238)
@@ -15,21 +13,27 @@ collision_layer = 8
 collision_mask = 8
 script = ExtResource("1_kt43n")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(12.4, 12.04)
+shape = SubResource("CircleShape2D_pxs61")
+
 [node name="PlatoPNG" type="Sprite2D" parent="."]
-visible = false
+light_mask = 16
+visibility_layer = 16
 z_index = 1
 position = Vector2(-7.99998, 2)
 scale = Vector2(0.560594, 0.555712)
 texture = ExtResource("2_yuh7u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4.5, -2.5)
-shape = SubResource("RectangleShape2D_00apn")
-
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-3.5, 1)
-shape = SubResource("RectangleShape2D_a38rp")
+position = Vector2(-4, -4)
+scale = Vector2(12.72, 12.4849)
+shape = SubResource("CircleShape2D_pbw2w")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

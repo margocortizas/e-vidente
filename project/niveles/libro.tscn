@@ -1,11 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://qg7q3a1ubxp7"]
 
-[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="1_u1c0d"]
-[ext_resource type="Script" path="res://libro.gd" id="1_yhea7"]
+[ext_resource type="Script" path="res://niveles/libro.gd" id="1_o1qid"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b50jp"]
+load_path = "res://.godot/imported/flecha-ir-para-atras-historias.png-83409338da2b5fe798fe8cc0bb323689.ctex"
 
 [node name="Libro" type="Node2D"]
 z_index = 4
-script = ExtResource("1_yhea7")
+script = ExtResource("1_o1qid")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -49,7 +51,7 @@ offset_left = 28.0
 offset_top = 677.0
 offset_right = 120.0
 offset_bottom = 770.0
-icon = ExtResource("1_u1c0d")
+icon = SubResource("CompressedTexture2D_b50jp")
 
 [connection signal="pressed" from="VBoxContainer/Cap1" to="." method="_on_cap_1_pressed"]
 [connection signal="pressed" from="Atras" to="." method="_on_button_pressed"]

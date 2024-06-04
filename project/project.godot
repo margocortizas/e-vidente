@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Evidente"
-run/main_scene="res://intro.tscn"
+run/main_scene="res://niveles/intro.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-global="*res://Level.tscn"
+Global="*res://niveles/global.gd"
 
 [display]
 

@@ -17,7 +17,7 @@ func _ready():
 	adelante.disabled = true
 
 func _on_atrás_pressed():
-	get_tree().change_scene_to_file("res://intro.tscn")
+	get_tree().change_scene_to_file("res://niveles/intro.tscn")
 
 func _victory():
 	victory.show()

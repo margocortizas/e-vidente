@@ -1,0 +1,319 @@
+[gd_scene load_steps=39 format=3 uid="uid://cjad1e317i0v1"]
+
+[ext_resource type="Script" path="res://niveles/nivel_1/Level.gd" id="1_g0f04"]
+[ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/interfaz/logro-realizado.png" id="2_2aii7"]
+[ext_resource type="Script" path="res://niveles/Menú.gd" id="3_7cyqn"]
+[ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="4_tsdj3"]
+[ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="5_0hx18"]
+[ext_resource type="Texture2D" uid="uid://bcn1gketbiign" path="res://assets-sistema/interfaz/chat-donde-se-muestran-las-historias.png" id="6_2di3k"]
+[ext_resource type="Texture2D" uid="uid://bhtsf3tml4xxc" path="res://assets-sistema/interfaz/escena-fondo-plato-02.png" id="7_2p4i1"]
+[ext_resource type="Texture2D" uid="uid://dv1dun4tf38co" path="res://assets-sistema/interfaz/escena-fondo-fija-01.png" id="8_rkoil"]
+[ext_resource type="Script" path="res://niveles/nivel_1/PlayerCambiante.gd" id="9_u833i"]
+[ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="10_tr7fe"]
+[ext_resource type="Texture2D" uid="uid://cw4bjhcs2158q" path="res://assets-sistema/player/personaje-idle-2.png" id="11_w1r46"]
+[ext_resource type="Texture2D" uid="uid://byvhnnk7acmxg" path="res://assets-sistema/player/personaje-idle-3.png" id="12_offgp"]
+[ext_resource type="Texture2D" uid="uid://4wg5bh8dfre4" path="res://assets-sistema/player/personaje-mal-malito-1.png" id="13_go4hp"]
+[ext_resource type="Texture2D" uid="uid://botuqbwkd2n4e" path="res://assets-sistema/player/personaje-mal-malito-2.png" id="14_hqn7t"]
+[ext_resource type="Texture2D" uid="uid://co5ypxfvqu2lr" path="res://assets-sistema/player/personaje-malito-1.png" id="15_qu3yk"]
+[ext_resource type="Texture2D" uid="uid://b3mn3uqqembgn" path="res://assets-sistema/player/personaje-malito-2.png" id="16_l3ao5"]
+[ext_resource type="Texture2D" uid="uid://dki7xmvxh1xhe" path="res://assets-sistema/player/personaje-malisisisimo-1.png" id="17_o7baa"]
+[ext_resource type="Texture2D" uid="uid://6gg0eqeleaay" path="res://assets-sistema/player/personaje-malisisisimo-2.png" id="18_qaf6e"]
+[ext_resource type="Texture2D" uid="uid://bvpeui28k18pq" path="res://assets-sistema/player/personaje-sintiendose-bien-1.png" id="19_nxc4x"]
+[ext_resource type="Texture2D" uid="uid://qr4b87pgefe2" path="res://assets-sistema/player/personaje-sintiendose-bien-2.png" id="20_ugv60"]
+[ext_resource type="Texture2D" uid="uid://dxd2xrmjguelv" path="res://assets-sistema/player/personaje-sintiendose-bien-3.png" id="21_snoff"]
+[ext_resource type="Texture2D" uid="uid://5e4brkahgd6y" path="res://assets-sistema/player/personaje-sintiendose-mal-1.png" id="22_p0psy"]
+[ext_resource type="Texture2D" uid="uid://d2mu0bg7aoagg" path="res://assets-sistema/player/personaje-sintiendose-mal-2.png" id="23_ybm77"]
+[ext_resource type="Texture2D" uid="uid://sychosmpy3lp" path="res://assets-sistema/player/personaje-sintiendose-mal-3.png" id="24_n3ghu"]
+[ext_resource type="Texture2D" uid="uid://be7owswhnwf4y" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="25_x7g2d"]
+[ext_resource type="Texture2D" uid="uid://dbd1glqsq3i3g" path="res://assets-sistema/interfaz/flecha-ir-para-adelante-desbloqueada-historias.png" id="26_6so0i"]
+[ext_resource type="Script" path="res://niveles/nivel_1/Logros.gd" id="27_oqk2c"]
+[ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/interfaz/logro-sin-realizar.png" id="28_cd4pm"]
+[ext_resource type="Texture2D" uid="uid://4m35j685mh0w" path="res://assets-sistema/interfaz/mensaje-demo-1.png" id="29_4vbuy"]
+[ext_resource type="Script" path="res://niveles/manager_level.gd" id="30_ycctx"]
+[ext_resource type="Resource" uid="uid://dv8mbvssvpr6i" path="res://niveles/nivel_1/level_1.tres" id="31_3bfvs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2l1p"]
+size = Vector2(600, 100)
+
+[sub_resource type="FontVariation" id="FontVariation_gwpkp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf123"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8qdtu"]
+load_path = "res://.godot/imported/personaje-celiaco-1-bastante-emfermo.png-76645d646246f4c063667e83e44638e0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f768w"]
+load_path = "res://.godot/imported/personaje-celiaco-1-semi-emfermo.png-84491d8eba12cb10b28c50523c69b25b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3x1we"]
+load_path = "res://.godot/imported/personaje-celiaco-1-muy-emfermo.png-d2bfe4d8f5d84525c18d24cef9b29e71.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oduul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_tr7fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w1r46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_offgp")
+}],
+"loop": true,
+"name": &"cagadodehambre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_go4hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hqn7t")
+}],
+"loop": true,
+"name": &"masmochito",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_qu3yk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_l3ao5")
+}],
+"loop": true,
+"name": &"mochito",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_o7baa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qaf6e")
+}],
+"loop": true,
+"name": &"muelto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_nxc4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ugv60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_snoff")
+}],
+"loop": true,
+"name": &"recontento",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_nxc4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ugv60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_snoff")
+}],
+"loop": true,
+"name": &"resonrison",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_p0psy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ybm77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n3ghu")
+}],
+"loop": false,
+"name": &"retriston",
+"speed": 5.0
+}]
+
+[node name="Level" type="Node" groups=["pickable"]]
+script = ExtResource("1_g0f04")
+
+[node name="Victory" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1061, 183)
+texture = ExtResource("2_2aii7")
+
+[node name="Menú" type="StaticBody2D" parent="." groups=["droppable"]]
+light_mask = 8
+visibility_layer = 9
+position = Vector2(600, 642)
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("3_7cyqn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Menú"]
+shape = SubResource("RectangleShape2D_v2l1p")
+
+[node name="Plato" parent="." instance=ExtResource("4_tsdj3")]
+unique_name_in_owner = true
+z_index = 3
+
+[node name="FondoFicha" type="ColorRect" parent="."]
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 1156.0
+offset_bottom = 797.0
+mouse_filter = 2
+color = Color(1, 1, 0.996078, 0.988235)
+
+[node name="ImagenFicha" type="Sprite2D" parent="FondoFicha"]
+position = Vector2(574, 403)
+texture = ExtResource("5_0hx18")
+
+[node name="GloboTexto" type="Panel" parent="."]
+offset_left = 296.0
+offset_top = 437.0
+offset_right = 854.0
+offset_bottom = 469.0
+
+[node name="Sprite2D" type="Sprite2D" parent="GloboTexto"]
+position = Vector2(280, 12)
+texture = ExtResource("6_2di3k")
+
+[node name="TextEdit" type="TextEdit" parent="GloboTexto"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.095
+anchor_top = -0.437
+anchor_right = -0.095
+anchor_bottom = -0.437
+offset_left = 0.0100021
+offset_top = -0.0159998
+offset_right = 628.01
+offset_bottom = 52.984
+theme_override_colors/background_color = Color(0.8, 1, 0.8, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_gwpkp")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hf123")
+text = "Prepará la cena para tu amigx celíacx! No olvides sus condiciones."
+
+[node name="Central" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(589, 238)
+scale = Vector2(0.761976, 0.761976)
+texture = ExtResource("7_2p4i1")
+
+[node name="PanelDerecho" type="Sprite2D" parent="."]
+position = Vector2(866, 237)
+scale = Vector2(0.75718, 0.75718)
+texture = ExtResource("8_rkoil")
+
+[node name="PlayerCambiante" type="Sprite2D" parent="."]
+position = Vector2(865, 259)
+script = ExtResource("9_u833i")
+
+[node name="Hambriento" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(-17, -4)
+texture = SubResource("CompressedTexture2D_8qdtu")
+
+[node name="TextEdit2" type="TextEdit" parent="PlayerCambiante/Hambriento"]
+light_mask = 0
+anchors_preset = -1
+anchor_left = -0.095
+anchor_top = -0.437
+anchor_right = -0.095
+anchor_bottom = -0.437
+offset_left = -62.905
+offset_top = -69.694
+offset_right = 88.095
+offset_bottom = -16.694
+theme_override_colors/background_color = Color(0.901961, 0.901961, 0.901961, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_gwpkp")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hf123")
+text = "Tengo hambre!"
+
+[node name="SemiEnfermo" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(4.5, 5.96046e-08)
+scale = Vector2(0.964286, 1.14407)
+texture = SubResource("CompressedTexture2D_f768w")
+
+[node name="BastanteEnfermo" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(17, 14)
+scale = Vector2(0.992754, 1.2381)
+texture = SubResource("CompressedTexture2D_8qdtu")
+
+[node name="MuyEnfermo" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(22, 31.75)
+scale = Vector2(0.917722, 1.37755)
+texture = SubResource("CompressedTexture2D_3x1we")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerCambiante"]
+position = Vector2(-3, -24)
+scale = Vector2(0.591401, 0.56986)
+sprite_frames = SubResource("SpriteFrames_oduul")
+animation = &"recontento"
+
+[node name="Atrás" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 650.0
+offset_right = 177.0
+offset_bottom = 743.0
+text = "Atrás
+"
+icon = ExtResource("25_x7g2d")
+
+[node name="Adelante" type="Button" parent="."]
+offset_left = 954.0
+offset_top = 655.0
+offset_right = 1120.0
+offset_bottom = 748.0
+text = "Adelante
+"
+icon = ExtResource("26_6so0i")
+
+[node name="Logros" type="Node2D" parent="."]
+visible = false
+position = Vector2(1018, 546)
+script = ExtResource("27_oqk2c")
+
+[node name="Realizado" type="Sprite2D" parent="Logros"]
+visible = false
+clip_children = 2
+light_mask = 9
+visibility_layer = 9
+texture = ExtResource("2_2aii7")
+
+[node name="NoRealizado" type="Sprite2D" parent="Logros"]
+visible = false
+light_mask = 17
+visibility_layer = 16
+texture = ExtResource("28_cd4pm")
+
+[node name="Ensenanza" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+light_mask = 256
+visibility_layer = 256
+z_index = 4
+position = Vector2(576, 396)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("29_4vbuy")
+
+[node name="ManagerLevel" type="Node" parent="."]
+script = ExtResource("30_ycctx")
+level_resource = ExtResource("31_3bfvs")
+
+[connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
+[connection signal="pressed" from="Adelante" to="." method="_on_adelante_pressed"]

@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_1dwsp"]
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_obnj1"]
-[ext_resource type="Texture2D" uid="uid://dkq4j47os8lcc" path="res://assets-sistema/iconos/arroz-0.png" id="2_lh3fh"]
+[ext_resource type="Texture2D" uid="uid://dkq4j47os8lcc" path="res://assets-sistema/iconos/arroz-0.png" id="3_8ohdc"]
 
 [resource]
 script = ExtResource("1_1dwsp")
-condiciones = Array[String](["Keto:0", "Celiaco:1", "Vegano:2"])
-sprite = ExtResource("2_lh3fh")
+condiciones = Array[int]([])
+sprite = ExtResource("3_8ohdc")
 escena = ExtResource("1_obnj1")
 posicion = Vector2(333, 624)

@@ -8,21 +8,22 @@ var is_inside_droppable = false
 var body_ref 
 var offset: Vector2
 var initialPos: Vector2
-@onready var plato = %Plato
+var plato 
 @onready var area_2d = $Area2D
 
 
 func _ready():
-	plato = get_node("/root/PathToYourMainScene/PathToPlatoNode")
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
 	area_2d.mouse_entered.connect(_on_area_2d_mouse_entered)
 	area_2d.mouse_exited.connect(_on_area_2d_mouse_exited)
 	area_2d.body_exited.connect(_on_area_2d_body_exited)
+	
 
 
-func setup(sprite, condiciones):
+func setup(sprite, condiciones, plato):
 	$Sprite2D.texture = sprite
 	condiciones = condiciones
+	plato = plato
 	
 
 
@@ -31,11 +32,11 @@ func _process(delta):
 		if Input.is_action_just_pressed("click"):
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
-			global.is_dragging = true
+			Global.is_dragging = true
 		if Input.is_action_pressed("click"):
 			global_position = get_global_mouse_position() - offset
 		elif Input.is_action_just_released("click"):
-			global.is_dragging = false
+			Global.is_dragging = false
 			var tween = get_tree().create_tween()
 			if is_inside_droppable:
 				tween.tween_property(self, "position", get_global_mouse_position(), 0.5).set_ease(Tween.EASE_OUT)
@@ -61,12 +62,12 @@ func _on_area_2d_body_exited(body):
 			print(plato.elementos)
 
 func _on_area_2d_mouse_entered():
-	if !global.is_dragging:
+	if !Global.is_dragging:
 		draggable = true
 		scale = Vector2(1.2, 1.2)
 
 func _on_area_2d_mouse_exited():
-	if !global.is_dragging:
+	if !Global.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)
 
