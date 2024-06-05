@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=39 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://niveles/nivel_1/Level.gd" id="1_g0f04"]
 [ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/interfaz/logro-realizado.png" id="2_2aii7"]
@@ -6,13 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="4_tsdj3"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="5_0hx18"]
 [ext_resource type="Texture2D" uid="uid://bcn1gketbiign" path="res://assets-sistema/interfaz/chat-donde-se-muestran-las-historias.png" id="6_2di3k"]
+[ext_resource type="Texture2D" uid="uid://bhtsf3tml4xxc" path="res://assets-sistema/interfaz/escena-fondo-plato-02.png" id="7_2p4i1"]
 [ext_resource type="Texture2D" uid="uid://dv1dun4tf38co" path="res://assets-sistema/interfaz/escena-fondo-fija-01.png" id="8_rkoil"]
 [ext_resource type="Script" path="res://niveles/nivel_1/PlayerCambiante.gd" id="9_u833i"]
 [ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="10_tr7fe"]
 [ext_resource type="Texture2D" uid="uid://cw4bjhcs2158q" path="res://assets-sistema/player/personaje-idle-2.png" id="11_w1r46"]
-[ext_resource type="Texture2D" uid="uid://qfxplhav3c1h" path="res://assets-sistema/player/personaje-mal-mal--malito-1.png" id="12_eyxs6"]
 [ext_resource type="Texture2D" uid="uid://byvhnnk7acmxg" path="res://assets-sistema/player/personaje-idle-3.png" id="12_offgp"]
-[ext_resource type="Texture2D" uid="uid://ctibbenuomnoq" path="res://assets-sistema/player/personaje-mal-mal--malito-2.png" id="13_57egu"]
 [ext_resource type="Texture2D" uid="uid://4wg5bh8dfre4" path="res://assets-sistema/player/personaje-mal-malito-1.png" id="13_go4hp"]
 [ext_resource type="Texture2D" uid="uid://botuqbwkd2n4e" path="res://assets-sistema/player/personaje-mal-malito-2.png" id="14_hqn7t"]
 [ext_resource type="Texture2D" uid="uid://co5ypxfvqu2lr" path="res://assets-sistema/player/personaje-malito-1.png" id="15_qu3yk"]
@@ -25,21 +24,13 @@
 [ext_resource type="Texture2D" uid="uid://5e4brkahgd6y" path="res://assets-sistema/player/personaje-sintiendose-mal-1.png" id="22_p0psy"]
 [ext_resource type="Texture2D" uid="uid://d2mu0bg7aoagg" path="res://assets-sistema/player/personaje-sintiendose-mal-2.png" id="23_ybm77"]
 [ext_resource type="Texture2D" uid="uid://sychosmpy3lp" path="res://assets-sistema/player/personaje-sintiendose-mal-3.png" id="24_n3ghu"]
-[ext_resource type="Script" path="res://assets-sistema/player/AbstractState.gd" id="24_ngqma"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirHambre.gd" id="25_gudht"]
 [ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="25_x7g2d"]
 [ext_resource type="Texture2D" uid="uid://d1mc36oujtnxe" path="res://assets-sistema/interfaz/flecha-ir-para-adelante-desbloqueada-historias.png" id="26_6so0i"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseMal.gd" id="26_rxlfy"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseMuyMal.gd" id="27_mqdxw"]
 [ext_resource type="Script" path="res://niveles/nivel_1/Logros.gd" id="27_oqk2c"]
 [ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/interfaz/logro-sin-realizar.png" id="28_cd4pm"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseBastanteMal.gd" id="28_y1gv0"]
 [ext_resource type="Texture2D" uid="uid://4m35j685mh0w" path="res://assets-sistema/interfaz/mensaje-demo-1.png" id="29_4vbuy"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseMorir.gd" id="29_udr2j"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseBien.gd" id="30_sgrb2"]
 [ext_resource type="Script" path="res://niveles/manager_level.gd" id="30_ycctx"]
 [ext_resource type="Resource" uid="uid://dv8mbvssvpr6i" path="res://niveles/nivel_1/level_1.tres" id="31_3bfvs"]
-[ext_resource type="AudioStream" uid="uid://wvisbdda1ofu" path="res://assets-sistema/sonidos/simple-relaxing-guitar-loop-60828.mp3" id="31_6lgcq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2l1p"]
 size = Vector2(600, 100)
@@ -47,6 +38,15 @@ size = Vector2(600, 100)
 [sub_resource type="FontVariation" id="FontVariation_gwpkp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf123"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8qdtu"]
+load_path = "res://.godot/imported/personaje-celiaco-1-bastante-emfermo.png-76645d646246f4c063667e83e44638e0.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f768w"]
+load_path = "res://.godot/imported/personaje-celiaco-1-semi-emfermo.png-84491d8eba12cb10b28c50523c69b25b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3x1we"]
+load_path = "res://.godot/imported/personaje-celiaco-1-muy-emfermo.png-d2bfe4d8f5d84525c18d24cef9b29e71.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oduul"]
 animations = [{
@@ -62,17 +62,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"cagadodehambre",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_eyxs6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_57egu")
-}],
-"loop": true,
-"name": &"masmasmochito",
 "speed": 5.0
 }, {
 "frames": [{
@@ -132,7 +121,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("21_snoff")
 }],
-"loop": false,
+"loop": true,
 "name": &"resonrison",
 "speed": 5.0
 }, {
@@ -217,8 +206,13 @@ theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_hf123")
 text = "Prepará la cena para tu amigx celíacx! No olvides sus condiciones."
 
-[node name="PanelDerecho" type="Sprite2D" parent="."]
+[node name="Central" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(589, 238)
+scale = Vector2(0.761976, 0.761976)
+texture = ExtResource("7_2p4i1")
+
+[node name="PanelDerecho" type="Sprite2D" parent="."]
 position = Vector2(727, 243)
 scale = Vector2(0.75718, 0.75718)
 texture = ExtResource("8_rkoil")
@@ -227,32 +221,52 @@ texture = ExtResource("8_rkoil")
 position = Vector2(865, 259)
 script = ExtResource("9_u833i")
 
+[node name="Hambriento" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(-17, -4)
+texture = SubResource("CompressedTexture2D_8qdtu")
+
+[node name="TextEdit2" type="TextEdit" parent="PlayerCambiante/Hambriento"]
+light_mask = 0
+anchors_preset = -1
+anchor_left = -0.095
+anchor_top = -0.437
+anchor_right = -0.095
+anchor_bottom = -0.437
+offset_left = -62.905
+offset_top = -69.694
+offset_right = 88.095
+offset_bottom = -16.694
+theme_override_colors/background_color = Color(0.901961, 0.901961, 0.901961, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_gwpkp")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hf123")
+text = "Tengo hambre!"
+
+[node name="SemiEnfermo" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(4.5, 5.96046e-08)
+scale = Vector2(0.964286, 1.14407)
+texture = SubResource("CompressedTexture2D_f768w")
+
+[node name="BastanteEnfermo" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(17, 14)
+scale = Vector2(0.992754, 1.2381)
+texture = SubResource("CompressedTexture2D_8qdtu")
+
+[node name="MuyEnfermo" type="Sprite2D" parent="PlayerCambiante"]
+visible = false
+position = Vector2(22, 31.75)
+scale = Vector2(0.917722, 1.37755)
+texture = SubResource("CompressedTexture2D_3x1we")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerCambiante"]
 position = Vector2(-135, -12)
 scale = Vector2(0.591401, 0.56986)
 sprite_frames = SubResource("SpriteFrames_oduul")
-animation = &"masmasmochito"
-
-[node name="AbstractState" type="Node" parent="PlayerCambiante"]
-script = ExtResource("24_ngqma")
-
-[node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("25_gudht")
-
-[node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("26_rxlfy")
-
-[node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("27_mqdxw")
-
-[node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("28_y1gv0")
-
-[node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("29_udr2j")
-
-[node name="SentirseBien" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("30_sgrb2")
+animation = &"recontento"
 
 [node name="Atrás" type="Button" parent="."]
 offset_left = 35.0
@@ -307,11 +321,6 @@ texture = ExtResource("29_4vbuy")
 [node name="ManagerLevel" type="Node" parent="."]
 script = ExtResource("30_ycctx")
 level_resource = ExtResource("31_3bfvs")
-
-[node name="Background" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("31_6lgcq")
-volume_db = -4.962
-attenuation = 2.07053
 
 [connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
 [connection signal="pressed" from="Adelante" to="." method="_on_adelante_pressed"]

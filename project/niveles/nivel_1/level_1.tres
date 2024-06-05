@@ -16,5 +16,5 @@
 script = ExtResource("11_gaylt")
 itemsPositivos = Array[Resource("res://resources/level_item.gd")]([ExtResource("6_axbds"), ExtResource("7_ivrcq"), ExtResource("8_v2ris"), ExtResource("9_emw8b"), ExtResource("10_qkgqa")])
 itemsNegativos = Array[Resource("res://resources/level_item.gd")]([ExtResource("1_clon8"), ExtResource("2_wjfco"), ExtResource("3_6h7ao"), ExtResource("4_ujo02"), ExtResource("5_ue3vw")])
-cantidadPositivos = 1
-cantidadNegativos = 1
+cantidadPositivos = 3
+cantidadNegativos = 3

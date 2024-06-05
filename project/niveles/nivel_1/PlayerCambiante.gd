@@ -1,39 +1,28 @@
 extends Sprite2D
 
-var texture_hambriento : CompressedTexture2D
-var texture_semienfermo : CompressedTexture2D
-var texture_bastanteenfermo : CompressedTexture2D
-var texture_muyenfermo : CompressedTexture2D
-
 @onready var plato = $"../Plato"
 @onready var anim = $AnimatedSprite2D
 @onready var adelante = $"../Adelante"
 @onready var ensenanza = $"../Ensenanza"
+var tipo: LevelItem.Condicion
+var current_animation = "cagadodehambre" 
+@onready var abstract_state : Estado
+@onready var sentir_hambre = $AbstractState/SentirHambre
 
-var tipo: String
-var bien: bool = false
 
 func _ready():
-	anim.play("cagadodehambre")
-	tipo = "celiaco"
+	tipo = LevelItem.Condicion.CELIACO
+	abstract_state = sentir_hambre
+
 
 func _process(delta):
-	var coincidencias = plato.elementos.count("celiaco")
-	if plato.elementos.is_empty():
-		anim.play("cagadodehambre")
-	elif plato.cantAlimentos >= 1 && coincidencias == 0:
-		anim.play("resonrison")
-		#anim.play("cagadodehambre")
-	#else: anim.play("retriston") 
-	if coincidencias == 1:
-		anim.play("mochito")
-	elif plato.cantAlimentos == 3 && coincidencias == 0:
-		get_tree().root.get_child(0)._victory()
-		bien = true
-		adelante.disabled = false
-		ensenanza.show()
-		anim.play("recontento")
-	elif coincidencias == 2:
-		anim.play("masmochito")
-	elif coincidencias >= 3:
-		anim.play("muelto")
+	anim.play(current_animation)
+		
+func item_en_plato(item):
+	if item.esPositivo:
+		current_animation = "resonrison"
+		abstract_state.entra_item_plato(item, self)
+	else: 
+		current_animation="retriston"
+		abstract_state.entra_item_plato(item, self)
+	

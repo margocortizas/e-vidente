@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=43 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://niveles/nivel_1/Level.gd" id="1_g0f04"]
 [ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/interfaz/logro-realizado.png" id="2_2aii7"]
@@ -10,9 +10,7 @@
 [ext_resource type="Script" path="res://niveles/nivel_1/PlayerCambiante.gd" id="9_u833i"]
 [ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="10_tr7fe"]
 [ext_resource type="Texture2D" uid="uid://cw4bjhcs2158q" path="res://assets-sistema/player/personaje-idle-2.png" id="11_w1r46"]
-[ext_resource type="Texture2D" uid="uid://qfxplhav3c1h" path="res://assets-sistema/player/personaje-mal-mal--malito-1.png" id="12_eyxs6"]
 [ext_resource type="Texture2D" uid="uid://byvhnnk7acmxg" path="res://assets-sistema/player/personaje-idle-3.png" id="12_offgp"]
-[ext_resource type="Texture2D" uid="uid://ctibbenuomnoq" path="res://assets-sistema/player/personaje-mal-mal--malito-2.png" id="13_57egu"]
 [ext_resource type="Texture2D" uid="uid://4wg5bh8dfre4" path="res://assets-sistema/player/personaje-mal-malito-1.png" id="13_go4hp"]
 [ext_resource type="Texture2D" uid="uid://botuqbwkd2n4e" path="res://assets-sistema/player/personaje-mal-malito-2.png" id="14_hqn7t"]
 [ext_resource type="Texture2D" uid="uid://co5ypxfvqu2lr" path="res://assets-sistema/player/personaje-malito-1.png" id="15_qu3yk"]
@@ -62,17 +60,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"cagadodehambre",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_eyxs6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_57egu")
-}],
-"loop": true,
-"name": &"masmasmochito",
 "speed": 5.0
 }, {
 "frames": [{
@@ -231,7 +218,7 @@ script = ExtResource("9_u833i")
 position = Vector2(-135, -12)
 scale = Vector2(0.591401, 0.56986)
 sprite_frames = SubResource("SpriteFrames_oduul")
-animation = &"masmasmochito"
+animation = &"mochito"
 
 [node name="AbstractState" type="Node" parent="PlayerCambiante"]
 script = ExtResource("24_ngqma")

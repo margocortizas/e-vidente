@@ -1,31 +1,28 @@
 extends Node2D
-
+class_name Item_level
 
 @onready var sprite_2d = $Sprite2D
-var condiciones
-var draggable = false
-var is_inside_droppable = false
+@onready var area_2d = $Area2D
+var condiciones : Array[LevelItem.Condicion]
 var body_ref 
+var plato 
 var offset: Vector2
 var initialPos: Vector2
-var plato 
-@onready var area_2d = $Area2D
-
+var esPositivo = true
+var draggable = false
+var is_inside_droppable = false
 
 func _ready():
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
 	area_2d.mouse_entered.connect(_on_area_2d_mouse_entered)
 	area_2d.mouse_exited.connect(_on_area_2d_mouse_exited)
 	area_2d.body_exited.connect(_on_area_2d_body_exited)
-	
 
-
-func setup(sprite, condiciones, plato):
+func setup(sprite, condicion, superficie, booleano):
 	$Sprite2D.texture = sprite
-	condiciones = condiciones
-	plato = plato
-	
-
+	condiciones = condicion
+	plato = superficie
+	esPositivo = booleano
 
 func _process(delta):
 	if draggable:
@@ -48,10 +45,9 @@ func _on_area_2d_body_entered(body):
 		is_inside_droppable = true
 		body_ref = body
 		if body == plato:
-			plato.elementos.append_array(condiciones)
-			plato.cantAlimentos += 1
-			print(plato.cantAlimentos)
+			plato.elementos.append_array(self.condiciones)
 			print(plato.elementos)
+			plato.cantAlimentos += 1
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("droppable"):
@@ -59,7 +55,7 @@ func _on_area_2d_body_exited(body):
 		if body == plato:
 			condiciones.map(func(cond): plato.elementos.erase(cond))
 			plato.cantAlimentos -= 1
-			print(plato.elementos)
+
 
 func _on_area_2d_mouse_entered():
 	if !Global.is_dragging:

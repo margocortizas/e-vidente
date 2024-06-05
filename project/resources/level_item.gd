@@ -12,5 +12,6 @@ enum Condicion {
 @export var sprite:Texture2D
 @export var escena:PackedScene
 @export var posicion:Vector2
+@export var esPositivo:bool
 
 
