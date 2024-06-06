@@ -13,10 +13,10 @@ var draggable = false
 var is_inside_droppable = false
 
 func _ready():
-	area_2d.body_entered.connect(_on_area_2d_body_entered)
+	area_2d.area_entered.connect(_on_area_2d_body_entered)
 	area_2d.mouse_entered.connect(_on_area_2d_mouse_entered)
 	area_2d.mouse_exited.connect(_on_area_2d_mouse_exited)
-	area_2d.body_exited.connect(_on_area_2d_body_exited)
+	area_2d.area_exited.connect(_on_area_2d_body_exited)
 
 func setup(sprite, condicion, superficie, booleano):
 	$Sprite2D.texture = sprite
@@ -29,11 +29,11 @@ func _process(delta):
 		if Input.is_action_just_pressed("click"):
 			initialPos = global_position
 			offset = get_global_mouse_position() - global_position
-			Global.is_dragging = true
-		if Input.is_action_pressed("click"):
+			Global.is_dragging = self
+		if Input.is_action_pressed("click") && Global.is_dragging == self:
 			global_position = get_global_mouse_position() - offset
-		elif Input.is_action_just_released("click"):
-			Global.is_dragging = false
+		elif Input.is_action_just_released("click") && Global.is_dragging == self:
+			Global.is_dragging = null
 			var tween = get_tree().create_tween()
 			if is_inside_droppable:
 				tween.tween_property(self, "position", get_global_mouse_position(), 0.5).set_ease(Tween.EASE_OUT)

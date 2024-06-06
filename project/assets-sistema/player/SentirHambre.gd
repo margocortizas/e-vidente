@@ -1,9 +1,8 @@
 extends "res://assets-sistema/player/AbstractState.gd"
 
-@onready var sentirse_mal = $"../SentirseMal"
+@export var level : Level
 
 func entra_item_plato(item, player):
-	if !item.esPositivo:
-		player.current_animation = "mochito"
-		player.abstract_state = sentirse_mal
-
+	super.entra_item_plato(item, player)
+	if item.esPositivo && player.plato.cantAlimentos == player.manager_level.level_resource.cantidadPositivos +1:
+		level._victory()

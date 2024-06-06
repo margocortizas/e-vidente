@@ -1,13 +1,15 @@
-[gd_scene load_steps=45 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=43 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://niveles/nivel_1/Level.gd" id="1_g0f04"]
 [ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/interfaz/logro-realizado.png" id="2_2aii7"]
 [ext_resource type="Script" path="res://niveles/Menú.gd" id="3_7cyqn"]
 [ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="4_tsdj3"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="5_0hx18"]
+[ext_resource type="Texture2D" uid="uid://ddfuldw2no51i" path="res://assets-sistema/interfaz/fondo-lupa-01.png" id="5_ie2lo"]
+[ext_resource type="Script" path="res://niveles/Lupa.gd" id="5_s52e6"]
 [ext_resource type="Texture2D" uid="uid://bcn1gketbiign" path="res://assets-sistema/interfaz/chat-donde-se-muestran-las-historias.png" id="6_2di3k"]
-[ext_resource type="Texture2D" uid="uid://dv1dun4tf38co" path="res://assets-sistema/interfaz/escena-fondo-fija-01.png" id="8_rkoil"]
 [ext_resource type="Script" path="res://niveles/nivel_1/PlayerCambiante.gd" id="9_u833i"]
+[ext_resource type="Texture2D" uid="uid://qvb1xjnby13q" path="res://assets-sistema/interfaz/tengo hambre.png" id="10_hom3g"]
 [ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="10_tr7fe"]
 [ext_resource type="Texture2D" uid="uid://cw4bjhcs2158q" path="res://assets-sistema/player/personaje-idle-2.png" id="11_w1r46"]
 [ext_resource type="Texture2D" uid="uid://qfxplhav3c1h" path="res://assets-sistema/player/personaje-mal-mal--malito-1.png" id="12_eyxs6"]
@@ -29,20 +31,18 @@
 [ext_resource type="Script" path="res://assets-sistema/player/SentirHambre.gd" id="25_gudht"]
 [ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="25_x7g2d"]
 [ext_resource type="Texture2D" uid="uid://d1mc36oujtnxe" path="res://assets-sistema/interfaz/flecha-ir-para-adelante-desbloqueada-historias.png" id="26_6so0i"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseMal.gd" id="26_rxlfy"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseMuyMal.gd" id="27_mqdxw"]
 [ext_resource type="Script" path="res://niveles/nivel_1/Logros.gd" id="27_oqk2c"]
 [ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/interfaz/logro-sin-realizar.png" id="28_cd4pm"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseBastanteMal.gd" id="28_y1gv0"]
 [ext_resource type="Texture2D" uid="uid://4m35j685mh0w" path="res://assets-sistema/interfaz/mensaje-demo-1.png" id="29_4vbuy"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseMorir.gd" id="29_udr2j"]
-[ext_resource type="Script" path="res://assets-sistema/player/SentirseBien.gd" id="30_sgrb2"]
 [ext_resource type="Script" path="res://niveles/manager_level.gd" id="30_ycctx"]
 [ext_resource type="Resource" uid="uid://dv8mbvssvpr6i" path="res://niveles/nivel_1/level_1.tres" id="31_3bfvs"]
 [ext_resource type="AudioStream" uid="uid://wvisbdda1ofu" path="res://assets-sistema/sonidos/simple-relaxing-guitar-loop-60828.mp3" id="31_6lgcq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2l1p"]
 size = Vector2(600, 100)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tpp3g"]
+radius = 128.565
 
 [sub_resource type="FontVariation" id="FontVariation_gwpkp"]
 
@@ -138,10 +138,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("22_p0psy")
+"texture": ExtResource("23_ybm77")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_ybm77")
+"texture": ExtResource("22_p0psy")
 }, {
 "duration": 1.0,
 "texture": ExtResource("24_n3ghu")
@@ -159,13 +159,12 @@ z_index = 1
 position = Vector2(1061, 183)
 texture = ExtResource("2_2aii7")
 
-[node name="Menú" type="StaticBody2D" parent="." groups=["droppable"]]
+[node name="Menú" type="Area2D" parent="." groups=["droppable"]]
 light_mask = 8
 visibility_layer = 9
 position = Vector2(600, 642)
 collision_layer = 8
 collision_mask = 8
-input_pickable = true
 script = ExtResource("3_7cyqn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Menú"]
@@ -177,6 +176,29 @@ z_index = 3
 position = Vector2(357, 263)
 scale = Vector2(1.2, 1.2)
 
+[node name="Lupa" type="Area2D" parent="." groups=["droppable"]]
+light_mask = 8
+visibility_layer = 8
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("5_s52e6")
+
+[node name="lupita" type="Sprite2D" parent="Lupa"]
+light_mask = 8
+visibility_layer = 8
+z_index = 4
+position = Vector2(1053, 414)
+rotation = 0.284919
+scale = Vector2(0.980843, 0.980843)
+texture = ExtResource("5_ie2lo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lupa"]
+light_mask = 8
+visibility_layer = 8
+z_index = 3
+position = Vector2(992, 382.97)
+shape = SubResource("CircleShape2D_tpp3g")
+
 [node name="FondoFicha" type="ColorRect" parent="."]
 offset_left = 3.0
 offset_top = -2.0
@@ -186,17 +208,17 @@ mouse_filter = 2
 color = Color(1, 1, 0.996078, 0.988235)
 
 [node name="ImagenFicha" type="Sprite2D" parent="FondoFicha"]
-position = Vector2(574, 403)
+position = Vector2(576, 406)
 texture = ExtResource("5_0hx18")
 
 [node name="GloboTexto" type="Panel" parent="."]
-offset_left = 296.0
-offset_top = 437.0
-offset_right = 854.0
-offset_bottom = 469.0
+offset_left = 280.0
+offset_top = 455.0
+offset_right = 838.0
+offset_bottom = 487.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GloboTexto"]
-position = Vector2(280, 12)
+position = Vector2(216, 46)
 texture = ExtResource("6_2di3k")
 
 [node name="TextEdit" type="TextEdit" parent="GloboTexto"]
@@ -206,10 +228,10 @@ anchor_left = -0.095
 anchor_top = -0.437
 anchor_right = -0.095
 anchor_bottom = -0.437
-offset_left = 0.0100021
-offset_top = -0.0159998
-offset_right = 628.01
-offset_bottom = 52.984
+offset_left = -83.99
+offset_top = 40.984
+offset_right = 544.01
+offset_bottom = 93.984
 theme_override_colors/background_color = Color(0.8, 1, 0.8, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_gwpkp")
@@ -217,42 +239,50 @@ theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_hf123")
 text = "Prepará la cena para tu amigx celíacx! No olvides sus condiciones."
 
-[node name="PanelDerecho" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(727, 243)
-scale = Vector2(0.75718, 0.75718)
-texture = ExtResource("8_rkoil")
-
 [node name="PlayerCambiante" type="Sprite2D" parent="."]
 position = Vector2(865, 259)
 script = ExtResource("9_u833i")
 
+[node name="hambre" type="Sprite2D" parent="PlayerCambiante"]
+position = Vector2(-83, -92.25)
+scale = Vector2(0.474684, 0.425234)
+texture = ExtResource("10_hom3g")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerCambiante"]
-position = Vector2(-135, -12)
-scale = Vector2(0.591401, 0.56986)
+position = Vector2(-176, 29)
+scale = Vector2(0.798719, 0.769626)
 sprite_frames = SubResource("SpriteFrames_oduul")
-animation = &"masmasmochito"
+animation = &"retriston"
+frame = 2
+frame_progress = 1.0
 
 [node name="AbstractState" type="Node" parent="PlayerCambiante"]
 script = ExtResource("24_ngqma")
 
-[node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState"]
+[node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante")]
 script = ExtResource("25_gudht")
+level = NodePath("../../..")
+player_cambiante = NodePath("../..")
+animation_name = "cagadodehambre"
 
-[node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("26_rxlfy")
+[node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante")]
+script = ExtResource("24_ngqma")
+player_cambiante = NodePath("../..")
+animation_name = "mochito"
 
-[node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("27_mqdxw")
+[node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante")]
+script = ExtResource("24_ngqma")
+player_cambiante = NodePath("../..")
+animation_name = "masmochito"
 
-[node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("28_y1gv0")
+[node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante")]
+script = ExtResource("24_ngqma")
+player_cambiante = NodePath("../..")
+animation_name = "masmasmochito"
 
 [node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("29_udr2j")
-
-[node name="SentirseBien" type="Node" parent="PlayerCambiante/AbstractState"]
-script = ExtResource("30_sgrb2")
+script = ExtResource("24_ngqma")
+animation_name = "muelto"
 
 [node name="Atrás" type="Button" parent="."]
 offset_left = 35.0
@@ -299,7 +329,7 @@ visible = false
 top_level = true
 light_mask = 256
 visibility_layer = 256
-z_index = 4
+z_index = 9
 position = Vector2(576, 396)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("29_4vbuy")
@@ -313,5 +343,8 @@ stream = ExtResource("31_6lgcq")
 volume_db = -4.962
 attenuation = 2.07053
 
+[connection signal="area_entered" from="Lupa" to="Lupa" method="_on_area_entered"]
+[connection signal="area_exited" from="Lupa" to="Lupa" method="_on_area_exited"]
+[connection signal="animation_finished" from="PlayerCambiante/AnimatedSprite2D" to="PlayerCambiante" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
 [connection signal="pressed" from="Adelante" to="." method="_on_adelante_pressed"]

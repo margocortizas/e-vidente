@@ -9,10 +9,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pbw2w"]
 
-[node name="Plato" type="StaticBody2D" groups=["droppable"]]
-position = Vector2(592, 238)
-collision_layer = 8
-collision_mask = 8
+[node name="Plato" type="Area2D" groups=["droppable"]]
+position = Vector2(0, 2)
+collision_mask = 0
 script = ExtResource("1_kt43n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,8 +27,9 @@ scale = Vector2(0.560594, 0.555712)
 texture = ExtResource("2_yuh7u")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 8
+collision_layer = 0
 collision_mask = 8
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-4, -4)
@@ -44,8 +44,5 @@ volume_db = -0.25
 stream = ExtResource("4_tn4me")
 attenuation = 1.07177
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
