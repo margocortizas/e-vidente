@@ -8,7 +8,7 @@ var lista_items = []
 
 
 func _ready():
-	posicion = Vector2(220,670)
+	posicion = Vector2(230,680)
 	items_aleatorios()
 	lista_items.shuffle()
 	for i in lista_items:

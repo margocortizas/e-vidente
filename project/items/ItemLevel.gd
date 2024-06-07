@@ -29,7 +29,6 @@ func setup(sprite, condicion, superficie, booleano, texturaInfo):
 
 func show_info():
 	$Sprite2D.texture = info
-	scale = Vector2(0.7,0.7)
 	
 func show_texture():
 	$Sprite2D.texture = textSprite
