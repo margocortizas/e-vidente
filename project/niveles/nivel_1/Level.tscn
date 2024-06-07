@@ -1,13 +1,16 @@
-[gd_scene load_steps=43 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=47 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://niveles/nivel_1/Level.gd" id="1_g0f04"]
 [ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/interfaz/logro-realizado.png" id="2_2aii7"]
+[ext_resource type="Texture2D" uid="uid://tbbyh563rakt" path="res://assets-sistema/iconos/titulo-celiaquia.png" id="2_ggrgs"]
 [ext_resource type="Script" path="res://niveles/Menú.gd" id="3_7cyqn"]
+[ext_resource type="Texture2D" uid="uid://dip61dcjlq1dk" path="res://assets-sistema/iconos/alimentos-info/victoria-1.png" id="3_see7y"]
+[ext_resource type="Texture2D" uid="uid://cjvrmdv4j443i" path="res://assets-sistema/iconos/alimentos-info/victoria-2.png" id="4_n0nr7"]
 [ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="4_tsdj3"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="5_0hx18"]
 [ext_resource type="Texture2D" uid="uid://ddfuldw2no51i" path="res://assets-sistema/interfaz/fondo-lupa-01.png" id="5_ie2lo"]
 [ext_resource type="Script" path="res://niveles/Lupa.gd" id="5_s52e6"]
-[ext_resource type="Texture2D" uid="uid://bcn1gketbiign" path="res://assets-sistema/interfaz/chat-donde-se-muestran-las-historias.png" id="6_2di3k"]
+[ext_resource type="Texture2D" uid="uid://dr8gr3fyppexu" path="res://assets-sistema/interfaz/globito-celiaquia.png" id="9_ahnvr"]
 [ext_resource type="Script" path="res://niveles/nivel_1/PlayerCambiante.gd" id="9_u833i"]
 [ext_resource type="Texture2D" uid="uid://qvb1xjnby13q" path="res://assets-sistema/interfaz/tengo hambre.png" id="10_hom3g"]
 [ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="10_tr7fe"]
@@ -37,6 +40,20 @@
 [ext_resource type="Script" path="res://niveles/manager_level.gd" id="30_ycctx"]
 [ext_resource type="Resource" uid="uid://dv8mbvssvpr6i" path="res://niveles/nivel_1/level_1.tres" id="31_3bfvs"]
 [ext_resource type="AudioStream" uid="uid://wvisbdda1ofu" path="res://assets-sistema/sonidos/simple-relaxing-guitar-loop-60828.mp3" id="31_6lgcq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_054us"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_see7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n0nr7")
+}],
+"loop": true,
+"name": &"victory",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2l1p"]
 size = Vector2(600, 100)
@@ -154,15 +171,24 @@ animations = [{
 [node name="Level" type="Node" groups=["pickable"]]
 script = ExtResource("1_g0f04")
 
-[node name="Victory" type="Sprite2D" parent="."]
+[node name="TituloNivel" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(1061, 183)
-texture = ExtResource("2_2aii7")
+position = Vector2(158, 75)
+texture = ExtResource("2_ggrgs")
+
+[node name="Victory" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(1018, 137)
+scale = Vector2(0.570331, 0.570331)
+sprite_frames = SubResource("SpriteFrames_054us")
+animation = &"victory"
 
 [node name="Menú" type="Area2D" parent="." groups=["droppable"]]
 light_mask = 8
 visibility_layer = 9
-position = Vector2(600, 642)
+z_index = 1
+position = Vector2(556, 686)
+scale = Vector2(1.2843, 1)
 collision_layer = 8
 collision_mask = 8
 script = ExtResource("3_7cyqn")
@@ -173,8 +199,8 @@ shape = SubResource("RectangleShape2D_v2l1p")
 [node name="Plato" parent="." instance=ExtResource("4_tsdj3")]
 unique_name_in_owner = true
 z_index = 3
-position = Vector2(357, 263)
-scale = Vector2(1.2, 1.2)
+position = Vector2(484, 433)
+scale = Vector2(1.27333, 1.23705)
 
 [node name="Lupa" type="Area2D" parent="." groups=["droppable"]]
 light_mask = 8
@@ -208,20 +234,24 @@ mouse_filter = 2
 color = Color(1, 1, 0.996078, 0.988235)
 
 [node name="ImagenFicha" type="Sprite2D" parent="FondoFicha"]
-position = Vector2(576, 406)
+position = Vector2(577, 407)
 texture = ExtResource("5_0hx18")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(188, 237)
+scale = Vector2(0.638614, 0.638614)
+texture = ExtResource("9_ahnvr")
+
 [node name="GloboTexto" type="Panel" parent="."]
+visible = false
+show_behind_parent = true
 offset_left = 280.0
 offset_top = 455.0
 offset_right = 838.0
 offset_bottom = 487.0
 
-[node name="Sprite2D" type="Sprite2D" parent="GloboTexto"]
-position = Vector2(216, 46)
-texture = ExtResource("6_2di3k")
-
 [node name="TextEdit" type="TextEdit" parent="GloboTexto"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.095
@@ -249,8 +279,8 @@ scale = Vector2(0.474684, 0.425234)
 texture = ExtResource("10_hom3g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerCambiante"]
-position = Vector2(-176, 29)
-scale = Vector2(0.798719, 0.769626)
+position = Vector2(-143, 12)
+scale = Vector2(0.870184, 0.838488)
 sprite_frames = SubResource("SpriteFrames_oduul")
 animation = &"retriston"
 frame = 2
@@ -259,11 +289,12 @@ frame_progress = 1.0
 [node name="AbstractState" type="Node" parent="PlayerCambiante"]
 script = ExtResource("24_ngqma")
 
-[node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "entra_item_negativo")]
+[node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "entra_item_positivo", "entra_item_negativo")]
 script = ExtResource("25_gudht")
 level = NodePath("../../..")
 player_cambiante = NodePath("../..")
 animation_name = "cagadodehambre"
+entra_item_positivo = NodePath(".")
 entra_item_negativo = NodePath("../SentirseMal")
 
 [node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]

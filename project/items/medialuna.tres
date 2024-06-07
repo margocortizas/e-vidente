@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://c7nhq6rau5gu4"]
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://c7nhq6rau5gu4"]
 
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_l0v3a"]
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_rhqnq"]
+[ext_resource type="Texture2D" uid="uid://dya8sm020rmyk" path="res://assets-sistema/iconos/alimentos-info/medialuna-info.png" id="2_c8eui"]
 [ext_resource type="Texture2D" uid="uid://cgss88iafwjwv" path="res://assets-sistema/iconos/medialunas-0.png" id="3_qotbv"]
 
 [resource]
@@ -11,3 +12,4 @@ sprite = ExtResource("3_qotbv")
 escena = ExtResource("1_l0v3a")
 posicion = Vector2(0, 0)
 esPositivo = false
+info = ExtResource("2_c8eui")

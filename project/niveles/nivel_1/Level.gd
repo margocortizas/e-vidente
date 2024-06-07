@@ -19,6 +19,7 @@ func _on_atrás_pressed():
 
 func _victory():
 	victory.show()
+	victory.play("victory")
 	adelante.disabled = false
 	ensenanza.show()
 

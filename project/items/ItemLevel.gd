@@ -11,18 +11,28 @@ var initialPos: Vector2
 var esPositivo = true
 var draggable = false
 var is_inside_droppable = false
-
+var info: Texture2D
+var textSprite: Texture2D
 func _ready():
 	area_2d.area_entered.connect(_on_area_2d_body_entered)
 	area_2d.mouse_entered.connect(_on_area_2d_mouse_entered)
 	area_2d.mouse_exited.connect(_on_area_2d_mouse_exited)
 	area_2d.area_exited.connect(_on_area_2d_body_exited)
 
-func setup(sprite, condicion, superficie, booleano):
+func setup(sprite, condicion, superficie, booleano, texturaInfo):
 	$Sprite2D.texture = sprite
+	textSprite = sprite
 	condiciones = condicion
 	plato = superficie
 	esPositivo = booleano
+	info = texturaInfo
+
+func show_info():
+	$Sprite2D.texture = info
+	scale = Vector2(0.7,0.7)
+	
+func show_texture():
+	$Sprite2D.texture = textSprite
 
 func _process(delta):
 	if draggable:
@@ -46,15 +56,13 @@ func _on_area_2d_body_entered(body):
 		body_ref = body
 		if body == plato:
 			plato.elementos.append_array(self.condiciones)
-			print(plato.elementos)
-			plato.cantAlimentos += 1
 
 func _on_area_2d_body_exited(body):
 	if body.is_in_group("droppable"):
 		is_inside_droppable = false
 		if body == plato:
 			condiciones.map(func(cond): plato.elementos.erase(cond))
-			plato.cantAlimentos -= 1
+			
 
 
 func _on_area_2d_mouse_entered():

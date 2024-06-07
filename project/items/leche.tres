@@ -10,3 +10,4 @@ condiciones = Array[int]([2])
 sprite = ExtResource("3_gkxg1")
 escena = ExtResource("1_qt7lm")
 posicion = Vector2(0, 0)
+esPositivo = false
