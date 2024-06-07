@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://ct2vacy1vl6yo"]
+
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_80t6u"]
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_kmuqu"]
+[ext_resource type="Texture2D" uid="uid://cq25h1mncbss8" path="res://assets-sistema/iconos/alimentos-info/azucar-info.png" id="2_kx016"]
+[ext_resource type="Texture2D" uid="uid://lb4apinglsfa" path="res://assets-sistema/iconos/azucar-0.png" id="3_0gr7m"]
+
+[resource]
+script = ExtResource("1_kmuqu")
+condiciones = Array[int]([0, 3])
+sprite = ExtResource("3_0gr7m")
+escena = ExtResource("1_80t6u")
+posicion = Vector2(433, 624)
+esPositivo = false
+info = ExtResource("2_kx016")

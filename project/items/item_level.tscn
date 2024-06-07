@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bri7a10em12dj"]
+
+[ext_resource type="Script" path="res://items/ItemLevel.gd" id="1_awvn7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1eoe"]
+radius = 32.0
+height = 64.0
+
+[node name="ItemLevel" type="Node2D" groups=["draggable"]]
+z_index = 4
+script = ExtResource("1_awvn7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_h1eoe")

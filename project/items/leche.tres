@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://d20tb0bkh3o2l"]
+
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_qt7lm"]
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_x772c"]
+[ext_resource type="Texture2D" uid="uid://d0c1h1soojtif" path="res://assets-sistema/iconos/leche-0.png" id="3_gkxg1"]
+
+[resource]
+script = ExtResource("1_x772c")
+condiciones = Array[int]([2])
+sprite = ExtResource("3_gkxg1")
+escena = ExtResource("1_qt7lm")
+posicion = Vector2(0, 0)
+esPositivo = false

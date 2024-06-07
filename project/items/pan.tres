@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://cjypcmjbfuv8m"]
+
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_bcfcv"]
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_r1352"]
+[ext_resource type="Texture2D" uid="uid://ckkib8q1crne3" path="res://assets-sistema/iconos/alimentos-info/pan-info.png" id="2_166s8"]
+[ext_resource type="Texture2D" uid="uid://c0l7aysxkofeo" path="res://assets-sistema/iconos/pan-0.png" id="3_4bk3j"]
+
+[resource]
+script = ExtResource("1_r1352")
+condiciones = Array[int]([0, 1])
+sprite = ExtResource("3_4bk3j")
+escena = ExtResource("1_bcfcv")
+posicion = Vector2(0, 0)
+esPositivo = false
+info = ExtResource("2_166s8")

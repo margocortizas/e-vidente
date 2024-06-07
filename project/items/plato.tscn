@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://caa3ga7iipsxp"]
+
+[ext_resource type="Script" path="res://niveles/nivel_1/Plataforma.gd" id="1_kt43n"]
+[ext_resource type="Texture2D" uid="uid://dgq7cwas7ig4p" path="res://assets-sistema/iconos/alimentos-info/plato-flor.png" id="2_jjbdx"]
+[ext_resource type="AudioStream" uid="uid://dg0p68ks0kokp" path="res://assets-sistema/sonidos/bonus-points-190035.mp3" id="3_4bwg4"]
+[ext_resource type="AudioStream" uid="uid://cs4y37nqpc17w" path="res://assets-sistema/sonidos/sound5-106358.mp3" id="4_tn4me"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pxs61"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbw2w"]
+
+[node name="Plato" type="Area2D" groups=["droppable"]]
+position = Vector2(0, 2)
+script = ExtResource("1_kt43n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(12.4, 12.04)
+shape = SubResource("CircleShape2D_pxs61")
+
+[node name="PlatoPNG" type="Sprite2D" parent="."]
+light_mask = 16
+visibility_layer = 16
+z_index = 1
+position = Vector2(-7.99998, 2)
+scale = Vector2(0.560594, 0.555712)
+texture = ExtResource("2_jjbdx")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -4)
+scale = Vector2(12.72, 12.4849)
+shape = SubResource("CircleShape2D_pbw2w")
+
+[node name="Bien" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4bwg4")
+volume_db = -0.25
+
+[node name="Mal" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_tn4me")
+attenuation = 1.07177
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

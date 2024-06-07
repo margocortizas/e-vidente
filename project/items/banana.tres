@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://bgxl3axkjcufp"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_3laei"]
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_i7k18"]
+[ext_resource type="Texture2D" uid="uid://cu5ivg20unx1r" path="res://assets-sistema/iconos/alimentos-info/banana-info.png" id="2_kiaw6"]
+[ext_resource type="Texture2D" uid="uid://bx4tddf5ivfby" path="res://assets-sistema/iconos/banana-0.png" id="3_hxv81"]
+
+[resource]
+script = ExtResource("1_3laei")
+condiciones = Array[int]([0, 3])
+sprite = ExtResource("3_hxv81")
+escena = ExtResource("1_i7k18")
+posicion = Vector2(0, 0)
+esPositivo = false
+info = ExtResource("2_kiaw6")

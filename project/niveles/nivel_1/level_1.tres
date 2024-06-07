@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="LevelResource" load_steps=15 format=3 uid="uid://dv8mbvssvpr6i"]
+
+[ext_resource type="Resource" uid="uid://cc0dltkuax1jt" path="res://items/fideos.tres" id="1_clon8"]
+[ext_resource type="Texture2D" uid="uid://cewalxebeejtu" path="res://assets-sistema/interfaz/almuerzo.png" id="1_hjtvf"]
+[ext_resource type="Resource" uid="uid://c7nhq6rau5gu4" path="res://items/medialuna.tres" id="2_wjfco"]
+[ext_resource type="Resource" uid="uid://cjypcmjbfuv8m" path="res://items/pan.tres" id="3_6h7ao"]
+[ext_resource type="Resource" uid="uid://cbsnhd5wouff1" path="res://items/raviol.tres" id="4_ujo02"]
+[ext_resource type="Resource" uid="uid://csvrn3qqxspsm" path="res://items/arroz.tres" id="6_axbds"]
+[ext_resource type="Resource" uid="uid://2ey1djhjdkhr" path="res://items/pescado.tres" id="7_ivrcq"]
+[ext_resource type="Resource" uid="uid://ct2vacy1vl6yo" path="res://items/azucar.tres" id="8_v2ris"]
+[ext_resource type="Resource" uid="uid://bt3bkhmswoty0" path="res://items/arandano.tres" id="9_emw8b"]
+[ext_resource type="Resource" uid="uid://drh24yrlgyicc" path="res://items/manzana.tres" id="10_qkgqa"]
+[ext_resource type="Script" path="res://resources/level_resource.gd" id="11_gaylt"]
+[ext_resource type="Resource" uid="uid://bgxl3axkjcufp" path="res://items/banana.tres" id="11_ycrkl"]
+[ext_resource type="Resource" uid="uid://c4huqxyt1et54" path="res://items/maicena.tres" id="12_00lvk"]
+[ext_resource type="Resource" uid="uid://b6gha3xb44f7e" path="res://items/fideosarroz.tres" id="12_5nuyp"]
+
+[resource]
+script = ExtResource("11_gaylt")
+itemsPositivos = Array[Resource("res://resources/level_item.gd")]([ExtResource("6_axbds"), ExtResource("7_ivrcq"), ExtResource("8_v2ris"), ExtResource("9_emw8b"), ExtResource("10_qkgqa"), ExtResource("11_ycrkl"), ExtResource("12_00lvk"), ExtResource("12_5nuyp")])
+itemsNegativos = Array[Resource("res://resources/level_item.gd")]([ExtResource("1_clon8"), ExtResource("2_wjfco"), ExtResource("3_6h7ao"), ExtResource("4_ujo02")])
+cantidadPositivos = 3
+cantidadNegativos = 4
+comida = ExtResource("1_hjtvf")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://b6gha3xb44f7e"]
+
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_yt0sh"]
+[ext_resource type="Texture2D" uid="uid://djfwyglu6obho" path="res://assets-sistema/iconos/alimentos-info/fideos-arroz-info.png" id="2_85vdt"]
+[ext_resource type="Script" path="res://resources/level_item.gd" id="3_s2lnp"]
+[ext_resource type="Texture2D" uid="uid://dvf81cqm48hpu" path="res://assets-sistema/iconos/fideos-arroz-0.png" id="4_bpuri"]
+
+[resource]
+script = ExtResource("3_s2lnp")
+condiciones = Array[int]([3])
+sprite = ExtResource("4_bpuri")
+escena = ExtResource("1_yt0sh")
+posicion = Vector2(0, 0)
+esPositivo = false
+info = ExtResource("2_85vdt")
