@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://items/ItemLevel.gd" id="1_awvn7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h1eoe"]
-radius = 26.0
-height = 52.0
+radius = 32.0
+height = 64.0
 
 [node name="ItemLevel" type="Node2D" groups=["draggable"]]
 z_index = 4

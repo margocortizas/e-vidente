@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="LevelResource" load_steps=14 format=3 uid="uid://dv8mbvssvpr6i"]
+[gd_resource type="Resource" script_class="LevelResource" load_steps=15 format=3 uid="uid://dv8mbvssvpr6i"]
 
 [ext_resource type="Resource" uid="uid://cc0dltkuax1jt" path="res://items/fideos.tres" id="1_clon8"]
+[ext_resource type="Texture2D" uid="uid://cewalxebeejtu" path="res://assets-sistema/interfaz/almuerzo.png" id="1_hjtvf"]
 [ext_resource type="Resource" uid="uid://c7nhq6rau5gu4" path="res://items/medialuna.tres" id="2_wjfco"]
 [ext_resource type="Resource" uid="uid://cjypcmjbfuv8m" path="res://items/pan.tres" id="3_6h7ao"]
 [ext_resource type="Resource" uid="uid://cbsnhd5wouff1" path="res://items/raviol.tres" id="4_ujo02"]
@@ -19,4 +20,5 @@ script = ExtResource("11_gaylt")
 itemsPositivos = Array[Resource("res://resources/level_item.gd")]([ExtResource("6_axbds"), ExtResource("7_ivrcq"), ExtResource("8_v2ris"), ExtResource("9_emw8b"), ExtResource("10_qkgqa"), ExtResource("11_ycrkl"), ExtResource("12_00lvk"), ExtResource("12_5nuyp")])
 itemsNegativos = Array[Resource("res://resources/level_item.gd")]([ExtResource("1_clon8"), ExtResource("2_wjfco"), ExtResource("3_6h7ao"), ExtResource("4_ujo02")])
 cantidadPositivos = 3
-cantidadNegativos = 3
+cantidadNegativos = 4
+comida = ExtResource("1_hjtvf")

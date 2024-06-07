@@ -1,6 +1,7 @@
 extends Area2D
 class_name Lupa
 
+@onready var ayudin = $ayudin
 
 func _on_area_entered(area):
 	var item_level = area.get_parent()

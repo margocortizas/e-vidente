@@ -2,12 +2,16 @@ extends Node
 class_name ManagerLevel
 
 @export var level_resource : LevelResource
+
 @onready var plato = %Plato
 var posicion:Vector2
 var lista_items = []
 
+@onready var meal = $"../Globo texto/Meal"
+
 
 func _ready():
+	meal.texture = level_resource.comida
 	posicion = Vector2(230,680)
 	items_aleatorios()
 	lista_items.shuffle()
