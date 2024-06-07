@@ -218,7 +218,6 @@ scale = Vector2(0.980843, 0.980843)
 texture = ExtResource("5_ie2lo")
 
 [node name="ayudin" type="Sprite2D" parent="Lupa"]
-visible = false
 z_index = 3
 position = Vector2(979, 284)
 scale = Vector2(0.737654, 0.737654)
