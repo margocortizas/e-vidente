@@ -27,4 +27,4 @@ func _victory():
 	ensenanza.show()
 
 func _on_adelante_pressed():
-	print("Ganaste!")
+	get_tree().change_scene_to_file("res://niveles/libro.tscn")

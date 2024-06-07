@@ -41,8 +41,6 @@ size_flags_vertical = 3
 icon = ExtResource("3_7d1hq")
 flat = true
 
-[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/Cap1"]
-
 [node name="Cap2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_d0fp7")
@@ -73,4 +71,8 @@ icon = SubResource("CompressedTexture2D_b50jp")
 flat = true
 
 [connection signal="pressed" from="VBoxContainer/Cap1" to="." method="_on_cap_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap2" to="." method="_on_cap_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap3" to="." method="_on_cap_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap4" to="." method="_on_cap_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap5" to="." method="_on_cap_5_pressed"]
 [connection signal="pressed" from="Atras" to="." method="_on_button_pressed"]

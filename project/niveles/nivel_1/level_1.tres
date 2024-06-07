@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelResource" load_steps=15 format=3 uid="uid://dv8mbvssvpr6i"]
+[gd_resource type="Resource" script_class="LevelResource" load_steps=20 format=3 uid="uid://dv8mbvssvpr6i"]
 
 [ext_resource type="Resource" uid="uid://cc0dltkuax1jt" path="res://items/fideos.tres" id="1_clon8"]
 [ext_resource type="Texture2D" uid="uid://cewalxebeejtu" path="res://assets-sistema/interfaz/almuerzo.png" id="1_hjtvf"]
@@ -14,10 +14,15 @@
 [ext_resource type="Resource" uid="uid://bgxl3axkjcufp" path="res://items/banana.tres" id="11_ycrkl"]
 [ext_resource type="Resource" uid="uid://c4huqxyt1et54" path="res://items/maicena.tres" id="12_00lvk"]
 [ext_resource type="Resource" uid="uid://b6gha3xb44f7e" path="res://items/fideosarroz.tres" id="12_5nuyp"]
+[ext_resource type="Resource" uid="uid://clomnmrnq082h" path="res://items/chocolate.tres" id="14_cv3fr"]
+[ext_resource type="Resource" uid="uid://cs1y5u1bskp1m" path="res://items/huevo.tres" id="15_27icd"]
+[ext_resource type="Resource" uid="uid://d20tb0bkh3o2l" path="res://items/leche.tres" id="16_5clmd"]
+[ext_resource type="Resource" uid="uid://dqd7jiq6m76cv" path="res://items/pollo.tres" id="17_ggkwf"]
+[ext_resource type="Resource" uid="uid://bj0tptg7n5ipk" path="res://items/queso.tres" id="18_ra35c"]
 
 [resource]
 script = ExtResource("11_gaylt")
-itemsPositivos = Array[Resource("res://resources/level_item.gd")]([ExtResource("6_axbds"), ExtResource("7_ivrcq"), ExtResource("8_v2ris"), ExtResource("9_emw8b"), ExtResource("10_qkgqa"), ExtResource("11_ycrkl"), ExtResource("12_00lvk"), ExtResource("12_5nuyp")])
+itemsPositivos = Array[Resource("res://resources/level_item.gd")]([ExtResource("6_axbds"), ExtResource("7_ivrcq"), ExtResource("8_v2ris"), ExtResource("9_emw8b"), ExtResource("10_qkgqa"), ExtResource("11_ycrkl"), ExtResource("12_00lvk"), ExtResource("12_5nuyp"), ExtResource("14_cv3fr"), ExtResource("15_27icd"), ExtResource("16_5clmd"), ExtResource("17_ggkwf"), ExtResource("18_ra35c")])
 itemsNegativos = Array[Resource("res://resources/level_item.gd")]([ExtResource("1_clon8"), ExtResource("2_wjfco"), ExtResource("3_6h7ao"), ExtResource("4_ujo02")])
 cantidadPositivos = 3
 cantidadNegativos = 4
