@@ -264,9 +264,7 @@ texture = ExtResource("10_hom3g")
 position = Vector2(-123, 22)
 scale = Vector2(1.04551, 1.00743)
 sprite_frames = SubResource("SpriteFrames_oduul")
-animation = &"retriston"
-frame = 2
-frame_progress = 1.0
+animation = &"recontento"
 
 [node name="AbstractState" type="Node" parent="PlayerCambiante"]
 script = ExtResource("24_ngqma")
