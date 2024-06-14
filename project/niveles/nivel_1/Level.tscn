@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://cjvrmdv4j443i" path="res://assets-sistema/iconos/alimentos-info/victoria-2.png" id="4_n0nr7"]
 [ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="4_tsdj3"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="5_0hx18"]
-[ext_resource type="Texture2D" uid="uid://ddfuldw2no51i" path="res://assets-sistema/interfaz/fondo-lupa-01.png" id="5_ie2lo"]
 [ext_resource type="Script" path="res://niveles/Lupa.gd" id="5_s52e6"]
 [ext_resource type="Texture2D" uid="uid://dr8gr3fyppexu" path="res://assets-sistema/interfaz/globito-celiaquia.png" id="9_ahnvr"]
-[ext_resource type="Texture2D" uid="uid://b65er4cixkk6c" path="res://assets-sistema/interfaz/lupita.png" id="9_b2yt3"]
+[ext_resource type="Texture2D" uid="uid://bbybi1g73qawn" path="res://assets-sistema/iconos/info-lupa.png" id="9_h1eqa"]
+[ext_resource type="Texture2D" uid="uid://cbqcihsa0yu72" path="res://assets-sistema/iconos/lupa.png" id="9_jks01"]
 [ext_resource type="Script" path="res://niveles/nivel_1/PlayerCambiante.gd" id="9_u833i"]
 [ext_resource type="Texture2D" uid="uid://qvb1xjnby13q" path="res://assets-sistema/interfaz/tengo hambre.png" id="10_hom3g"]
 [ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="10_tr7fe"]
@@ -209,19 +209,21 @@ collision_mask = 8
 script = ExtResource("5_s52e6")
 
 [node name="lupita" type="Sprite2D" parent="Lupa"]
+modulate = Color(1, 1, 1, 0.882353)
 light_mask = 8
 visibility_layer = 8
 z_index = 4
-position = Vector2(1053, 414)
-rotation = 0.284919
-scale = Vector2(0.980843, 0.980843)
-texture = ExtResource("5_ie2lo")
+position = Vector2(1002, 434)
+rotation = -0.182897
+scale = Vector2(0.64646, 0.654301)
+texture = ExtResource("9_jks01")
 
 [node name="ayudin" type="Sprite2D" parent="Lupa"]
 z_index = 3
-position = Vector2(979, 284)
-scale = Vector2(0.737654, 0.737654)
-texture = ExtResource("9_b2yt3")
+position = Vector2(971, 398)
+rotation = -0.206947
+scale = Vector2(0.627672, 0.66231)
+texture = ExtResource("9_h1eqa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lupa"]
 light_mask = 8
