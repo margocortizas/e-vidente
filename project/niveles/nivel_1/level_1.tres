@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://resources/level_resource.gd" id="11_gaylt"]
 [ext_resource type="Resource" uid="uid://bgxl3axkjcufp" path="res://items/banana.tres" id="11_ycrkl"]
 [ext_resource type="Resource" uid="uid://c4huqxyt1et54" path="res://items/maicena.tres" id="12_00lvk"]
-[ext_resource type="Resource" path="res://items/fideosarroz.tres" id="12_5nuyp"]
+[ext_resource type="Resource" uid="uid://b6gha3xb44f7e" path="res://items/fideosarroz.tres" id="12_5nuyp"]
 [ext_resource type="Resource" uid="uid://clomnmrnq082h" path="res://items/chocolate.tres" id="14_cv3fr"]
 [ext_resource type="Resource" uid="uid://cs1y5u1bskp1m" path="res://items/huevo.tres" id="15_27icd"]
 [ext_resource type="Resource" uid="uid://d20tb0bkh3o2l" path="res://items/leche.tres" id="16_5clmd"]
