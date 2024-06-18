@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0qs42irpynbm"
-path="res://.godot/imported/titulo-capitulos.png-6b83ac28af581c54fede3f44e6b74713.ctex"
+uid="uid://bjepuig5bs2cn"
+path="res://.godot/imported/titulo-vegetarianismo.png-c7dd519f81f001fc3fa132aa14454105.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets-sistema/iconos/titulo-capitulos.png"
-dest_files=["res://.godot/imported/titulo-capitulos.png-6b83ac28af581c54fede3f44e6b74713.ctex"]
+source_file="res://assets-sistema/interfaz/titulo-vegetarianismo.png"
+dest_files=["res://.godot/imported/titulo-vegetarianismo.png-c7dd519f81f001fc3fa132aa14454105.ctex"]
 
 [params]
 

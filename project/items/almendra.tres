@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=3 format=3 uid="uid://b4roryfvi82oh"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_tafl5"]
+[ext_resource type="Texture2D" uid="uid://cmbr8gowwk68c" path="res://assets-sistema/iconos/almendra-0.png" id="2_xhlgf"]
+
+[resource]
+script = ExtResource("1_tafl5")
+condiciones = Array[int]([0])
+sprite = ExtResource("2_xhlgf")
+posicion = Vector2(0, 0)
+esPositivo = false

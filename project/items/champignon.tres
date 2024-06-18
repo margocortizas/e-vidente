@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://bbl108pobjclw"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_50atc"]
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_btwr0"]
+[ext_resource type="Texture2D" uid="uid://drea2mpc0dlf5" path="res://assets-sistema/iconos/champignon-0.png" id="3_royy2"]
+
+[resource]
+script = ExtResource("1_50atc")
+condiciones = Array[int]([])
+sprite = ExtResource("3_royy2")
+escena = ExtResource("1_btwr0")
+posicion = Vector2(0, 0)
+esPositivo = false

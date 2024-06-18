@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=3 format=3 uid="uid://b4tgwmde4liev"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_0h6oj"]
+[ext_resource type="Texture2D" uid="uid://dtcm35pmrjmnj" path="res://assets-sistema/iconos/papas-fritas-0.png" id="2_ybgab"]
+
+[resource]
+script = ExtResource("1_0h6oj")
+condiciones = Array[int]([0])
+sprite = ExtResource("2_ybgab")
+posicion = Vector2(0, 0)
+esPositivo = false

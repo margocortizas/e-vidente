@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://nfcbdkblmfvx"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_8oywv"]
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_cuqot"]
+[ext_resource type="Texture2D" uid="uid://boew1xyvswho7" path="res://assets-sistema/iconos/patita-pollo-0.png" id="3_tr6n0"]
+
+[resource]
+script = ExtResource("1_8oywv")
+condiciones = Array[int]([2, 1, 4])
+sprite = ExtResource("3_tr6n0")
+escena = ExtResource("1_cuqot")
+posicion = Vector2(0, 0)
+esPositivo = false

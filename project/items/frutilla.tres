@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://60d58capsdxx"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_6oyuh"]
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_48hpf"]
+[ext_resource type="Texture2D" uid="uid://brdvplvdyfbj" path="res://assets-sistema/iconos/frutilla-0.png" id="3_atj86"]
+
+[resource]
+script = ExtResource("1_6oyuh")
+condiciones = Array[int]([])
+sprite = ExtResource("3_atj86")
+escena = ExtResource("1_48hpf")
+posicion = Vector2(0, 0)
+esPositivo = false

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=3 format=3 uid="uid://4tigm1bf0vob"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_xpmho"]
+[ext_resource type="Texture2D" uid="uid://nnnci05w5jsa" path="res://assets-sistema/iconos/tofu-0.png" id="2_ww65g"]
+
+[resource]
+script = ExtResource("1_xpmho")
+condiciones = Array[int]([0])
+sprite = ExtResource("2_ww65g")
+posicion = Vector2(0, 0)
+esPositivo = false

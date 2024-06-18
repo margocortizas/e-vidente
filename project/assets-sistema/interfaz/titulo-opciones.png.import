@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://breggyu6leu5h"
-path="res://.godot/imported/titulo-jugar.png-bcafa7c96425114717334aca0f6ce480.ctex"
+uid="uid://g2fk0rtysasx"
+path="res://.godot/imported/titulo-opciones.png-d82aafa31ab75e8ffa160cb79c063be2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets-sistema/iconos/titulo-jugar.png"
-dest_files=["res://.godot/imported/titulo-jugar.png-bcafa7c96425114717334aca0f6ce480.ctex"]
+source_file="res://assets-sistema/interfaz/titulo-opciones.png"
+dest_files=["res://.godot/imported/titulo-opciones.png-d82aafa31ab75e8ffa160cb79c063be2.ctex"]
 
 [params]
 

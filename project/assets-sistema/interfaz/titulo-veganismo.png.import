@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g2fk0rtysasx"
-path="res://.godot/imported/titulo-opciones.png-99822e977b37bd1ae11b476fb069171b.ctex"
+uid="uid://co1pyrsftjr2y"
+path="res://.godot/imported/titulo-veganismo.png-6fd2cf42280571a6c0706c041e42fc7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets-sistema/iconos/titulo-opciones.png"
-dest_files=["res://.godot/imported/titulo-opciones.png-99822e977b37bd1ae11b476fb069171b.ctex"]
+source_file="res://assets-sistema/interfaz/titulo-veganismo.png"
+dest_files=["res://.godot/imported/titulo-veganismo.png-6fd2cf42280571a6c0706c041e42fc7f.ctex"]
 
 [params]
 

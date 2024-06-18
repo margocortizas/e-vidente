@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctica0o6iyiw"
-path="res://.godot/imported/titulo-keto.png-c3f2bc7eca96021fede5c8bd41e39fff.ctex"
+uid="uid://tbbyh563rakt"
+path="res://.godot/imported/titulo-celiaquia.png-a748506a610ee1c4e92dd68e9b5114d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets-sistema/iconos/titulo-keto.png"
-dest_files=["res://.godot/imported/titulo-keto.png-c3f2bc7eca96021fede5c8bd41e39fff.ctex"]
+source_file="res://assets-sistema/interfaz/titulo-celiaquia.png"
+dest_files=["res://.godot/imported/titulo-celiaquia.png-a748506a610ee1c4e92dd68e9b5114d9.ctex"]
 
 [params]
 
