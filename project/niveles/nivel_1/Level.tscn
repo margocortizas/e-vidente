@@ -40,7 +40,7 @@
 [ext_resource type="Script" path="res://niveles/manager_level.gd" id="30_ycctx"]
 [ext_resource type="Resource" uid="uid://dv8mbvssvpr6i" path="res://niveles/nivel_1/level_1.tres" id="31_3bfvs"]
 [ext_resource type="AudioStream" uid="uid://wvisbdda1ofu" path="res://assets-sistema/sonidos/simple-relaxing-guitar-loop-60828.mp3" id="31_6lgcq"]
-[ext_resource type="Texture2D" uid="uid://dmepnh0u4euai" path="res://assets-sistema/interfaz/ensenanza-3.png" id="37_cegeu"]
+[ext_resource type="Texture2D" uid="uid://dsu1kjuqa4obw" path="res://assets-sistema/ensenanza/ensenanza-celiaquia-1.png" id="38_hnxgu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_054us"]
 animations = [{
@@ -170,7 +170,7 @@ script = ExtResource("1_g0f04")
 
 [node name="TituloNivel" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(220, 92)
+position = Vector2(200, 77)
 scale = Vector2(1.31416, 1.31416)
 texture = ExtResource("2_ggrgs")
 
@@ -248,7 +248,7 @@ scale = Vector2(0.638614, 0.638614)
 texture = ExtResource("9_ahnvr")
 
 [node name="Meal" type="Sprite2D" parent="Globo texto"]
-position = Vector2(75.1628, -79.8604)
+position = Vector2(4.69768, -20.3566)
 
 [node name="PlayerCambiante" type="Sprite2D" parent="."]
 position = Vector2(882, 255)
@@ -260,8 +260,8 @@ scale = Vector2(0.474684, 0.425234)
 texture = ExtResource("10_hom3g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PlayerCambiante"]
-position = Vector2(-123, 22)
-scale = Vector2(1.04551, 1.00743)
+position = Vector2(-155, 22)
+scale = Vector2(1.7094, 1.64714)
 sprite_frames = SubResource("SpriteFrames_oduul")
 animation = &"recontento"
 
@@ -349,9 +349,9 @@ top_level = true
 light_mask = 256
 visibility_layer = 256
 z_index = 9
-position = Vector2(576, 396)
-scale = Vector2(0.912399, 0.912399)
-texture = ExtResource("37_cegeu")
+position = Vector2(577, 407)
+scale = Vector2(1.33952, 1.33952)
+texture = ExtResource("38_hnxgu")
 
 [node name="ManagerLevel" type="Node" parent="."]
 script = ExtResource("30_ycctx")
