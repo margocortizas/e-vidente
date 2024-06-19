@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://bqvuug4j1metj"]
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://bqvuug4j1metj"]
 
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_kxpj0"]
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_qxb58"]
+[ext_resource type="Texture2D" uid="uid://b7d8as4g2edql" path="res://assets-sistema/iconos/alimentos-info/aceite-oliva-info.png" id="2_exhuu"]
 [ext_resource type="Texture2D" uid="uid://cdo7307lp8aij" path="res://assets-sistema/iconos/oliva-0.png" id="3_iaw8g"]
 
 [resource]
@@ -11,3 +12,4 @@ sprite = ExtResource("3_iaw8g")
 escena = ExtResource("1_kxpj0")
 posicion = Vector2(0, 0)
 esPositivo = false
+info = ExtResource("2_exhuu")

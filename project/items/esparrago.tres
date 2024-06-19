@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://xs8thatvfasw"]
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://xs8thatvfasw"]
 
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_s58q7"]
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_ylt3s"]
+[ext_resource type="Texture2D" uid="uid://lx6og02xjxbs" path="res://assets-sistema/iconos/alimentos-info/esparrago-info.png" id="2_m5gge"]
 [ext_resource type="Texture2D" uid="uid://b4mc53myfqq4b" path="res://assets-sistema/iconos/esparrago-0.png" id="3_yhwlv"]
 
 [resource]
@@ -11,3 +12,4 @@ sprite = ExtResource("3_yhwlv")
 escena = ExtResource("1_ylt3s")
 posicion = Vector2(0, 0)
 esPositivo = false
+info = ExtResource("2_m5gge")

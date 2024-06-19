@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://dycnex63toy5k"]
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://dycnex63toy5k"]
 
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_p6g2v"]
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_ub26k"]
+[ext_resource type="Texture2D" uid="uid://bllch8ertcajo" path="res://assets-sistema/iconos/alimentos-info/ajo-info.png" id="2_8s0ik"]
 [ext_resource type="Texture2D" uid="uid://fbosdnjqnmtt" path="res://assets-sistema/iconos/ajo-0.png" id="3_4nqwe"]
 
 [resource]
@@ -11,3 +12,4 @@ sprite = ExtResource("3_4nqwe")
 escena = ExtResource("1_p6g2v")
 posicion = Vector2(0, 0)
 esPositivo = false
+info = ExtResource("2_8s0ik")

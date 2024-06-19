@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://bxxfkljd4hkjq"]
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://bxxfkljd4hkjq"]
 
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_7rs7w"]
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_qpgb3"]
+[ext_resource type="Texture2D" uid="uid://g1giihkikr8q" path="res://assets-sistema/iconos/alimentos-info/hummus-info.png" id="2_nnub5"]
 [ext_resource type="Texture2D" uid="uid://cn7p327wp6nup" path="res://assets-sistema/iconos/hummus-0.png" id="3_m4w5s"]
 
 [resource]
@@ -11,3 +12,4 @@ sprite = ExtResource("3_m4w5s")
 escena = ExtResource("1_qpgb3")
 posicion = Vector2(0, 0)
 esPositivo = false
+info = ExtResource("2_nnub5")

@@ -1,7 +1,6 @@
-[gd_scene load_steps=46 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=43 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://niveles/nivel_1/Level.gd" id="1_g0f04"]
-[ext_resource type="Texture2D" uid="uid://drjk233vh1v0y" path="res://assets-sistema/interfaz/logro-realizado.png" id="2_2aii7"]
 [ext_resource type="Texture2D" uid="uid://tbbyh563rakt" path="res://assets-sistema/interfaz/titulo-celiaquia.png" id="2_l8wda"]
 [ext_resource type="Script" path="res://niveles/Menú.gd" id="3_7cyqn"]
 [ext_resource type="Texture2D" uid="uid://dip61dcjlq1dk" path="res://assets-sistema/iconos/alimentos-info/victoria-1.png" id="3_see7y"]
@@ -35,8 +34,6 @@
 [ext_resource type="Script" path="res://assets-sistema/player/SentirHambre.gd" id="25_gudht"]
 [ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="25_x7g2d"]
 [ext_resource type="Texture2D" uid="uid://d1mc36oujtnxe" path="res://assets-sistema/interfaz/flecha-ir-para-adelante-desbloqueada-historias.png" id="26_6so0i"]
-[ext_resource type="Script" path="res://niveles/nivel_1/Logros.gd" id="27_oqk2c"]
-[ext_resource type="Texture2D" uid="uid://cj2qgkbralhq3" path="res://assets-sistema/interfaz/logro-sin-realizar.png" id="28_cd4pm"]
 [ext_resource type="Script" path="res://niveles/manager_level.gd" id="30_ycctx"]
 [ext_resource type="Resource" uid="uid://dv8mbvssvpr6i" path="res://niveles/nivel_1/level_1.tres" id="31_3bfvs"]
 [ext_resource type="AudioStream" uid="uid://wvisbdda1ofu" path="res://assets-sistema/sonidos/simple-relaxing-guitar-loop-60828.mp3" id="31_6lgcq"]
@@ -176,8 +173,8 @@ texture = ExtResource("2_l8wda")
 
 [node name="Victory" type="AnimatedSprite2D" parent="."]
 z_index = 1
-position = Vector2(1018, 137)
-scale = Vector2(0.461539, 0.461539)
+position = Vector2(1079, 54)
+scale = Vector2(0.252046, 0.252046)
 sprite_frames = SubResource("SpriteFrames_054us")
 animation = &"victory"
 
@@ -213,16 +210,16 @@ modulate = Color(1, 1, 1, 0.882353)
 light_mask = 8
 visibility_layer = 8
 z_index = 4
-position = Vector2(1002, 434)
+position = Vector2(992, 422)
 rotation = -0.182897
-scale = Vector2(0.64646, 0.654301)
+scale = Vector2(1.16865, 1.18283)
 texture = ExtResource("8_l1124")
 
 [node name="ayudin" type="Sprite2D" parent="Lupa"]
 z_index = 3
-position = Vector2(971, 398)
-rotation = -0.206947
-scale = Vector2(0.627672, 0.66231)
+position = Vector2(987, 386)
+rotation = -0.208888
+scale = Vector2(1.15745, 1.22133)
 texture = ExtResource("9_ijval")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lupa"]
@@ -240,7 +237,6 @@ mouse_filter = 2
 color = Color(1, 1, 0.996078, 0.988235)
 
 [node name="ImagenFicha" type="Sprite2D" parent="FondoFicha"]
-self_modulate = Color(1, 1, 1, 0.270588)
 position = Vector2(577, 407)
 scale = Vector2(1.09575, 1.09575)
 texture = ExtResource("5_0hx18")
@@ -327,24 +323,6 @@ text = "
 "
 icon = ExtResource("26_6so0i")
 flat = true
-
-[node name="Logros" type="Node2D" parent="."]
-visible = false
-position = Vector2(1018, 546)
-script = ExtResource("27_oqk2c")
-
-[node name="Realizado" type="Sprite2D" parent="Logros"]
-visible = false
-clip_children = 2
-light_mask = 9
-visibility_layer = 9
-texture = ExtResource("2_2aii7")
-
-[node name="NoRealizado" type="Sprite2D" parent="Logros"]
-visible = false
-light_mask = 17
-visibility_layer = 16
-texture = ExtResource("28_cd4pm")
 
 [node name="Ensenanza" type="Sprite2D" parent="."]
 visible = false

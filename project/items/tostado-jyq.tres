@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://yj7qq0gln8q4"]
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://yj7qq0gln8q4"]
 
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_fntyg"]
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_s3c6i"]
+[ext_resource type="Texture2D" uid="uid://bpdll6muimv2" path="res://assets-sistema/iconos/alimentos-info/tostado-jyq-info.png" id="2_ucjfl"]
 [ext_resource type="Texture2D" uid="uid://duko6woibjfl8" path="res://assets-sistema/iconos/tostado-jyq-0.png" id="3_h1pvx"]
 
 [resource]
@@ -11,3 +12,4 @@ sprite = ExtResource("3_h1pvx")
 escena = ExtResource("1_s3c6i")
 posicion = Vector2(0, 0)
 esPositivo = false
+info = ExtResource("2_ucjfl")

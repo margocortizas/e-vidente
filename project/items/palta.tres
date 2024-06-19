@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelItem" load_steps=4 format=3 uid="uid://ixtbx07d2op7"]
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://ixtbx07d2op7"]
 
 [ext_resource type="Script" path="res://resources/level_item.gd" id="1_3utbj"]
 [ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_lay26"]
+[ext_resource type="Texture2D" uid="uid://dryj0vtjnvooy" path="res://assets-sistema/iconos/alimentos-info/palta-info.png" id="2_s7uel"]
 [ext_resource type="Texture2D" uid="uid://bu8mf7tnldm8o" path="res://assets-sistema/iconos/palta-0.png" id="3_sxlpg"]
 
 [resource]
@@ -11,3 +12,4 @@ sprite = ExtResource("3_sxlpg")
 escena = ExtResource("1_lay26")
 posicion = Vector2(0, 0)
 esPositivo = false
+info = ExtResource("2_s7uel")
