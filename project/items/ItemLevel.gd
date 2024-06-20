@@ -13,6 +13,7 @@ var draggable = false
 var is_inside_droppable = false
 var info: Texture2D
 var textSprite: Texture2D
+
 func _ready():
 	area_2d.area_entered.connect(_on_area_2d_body_entered)
 	area_2d.mouse_entered.connect(_on_area_2d_mouse_entered)

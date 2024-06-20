@@ -249,6 +249,8 @@ texture = ExtResource("9_ahnvr")
 [node name="Meal" type="Sprite2D" parent="Globo texto"]
 position = Vector2(6.2636, -3.13165)
 
+[node name="Condition" type="Sprite2D" parent="Globo texto"]
+
 [node name="PlayerCambiante" type="Sprite2D" parent="."]
 position = Vector2(882, 255)
 script = ExtResource("9_u833i")

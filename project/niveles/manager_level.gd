@@ -6,12 +6,14 @@ class_name ManagerLevel
 @onready var plato = %Plato
 var posicion:Vector2
 var lista_items = []
-
+@onready var condition = $"../Globo texto/Condition"
 @onready var meal = $"../Globo texto/Meal"
+
 
 
 func _ready():
 	meal.texture = level_resource.comida
+	condition.texture = level_resource.condicion
 	posicion = Vector2(230,680)
 	items_aleatorios()
 	lista_items.shuffle()

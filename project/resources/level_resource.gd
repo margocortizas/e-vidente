@@ -6,3 +6,4 @@ class_name LevelResource
 @export var cantidadPositivos : int
 @export var cantidadNegativos : int
 @export var comida : Texture2D
+@export var condicion : Texture2D

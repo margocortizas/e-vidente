@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="LevelResource" load_steps=87 format=3 uid="uid://dv8mbvssvpr6i"]
+[gd_resource type="Resource" script_class="LevelResource" load_steps=88 format=3 uid="uid://dv8mbvssvpr6i"]
 
 [ext_resource type="Resource" uid="uid://cc0dltkuax1jt" path="res://items/fideos.tres" id="1_clon8"]
 [ext_resource type="Texture2D" uid="uid://cewalxebeejtu" path="res://assets-sistema/interfaz/almuerzo.png" id="1_hjtvf"]
+[ext_resource type="Texture2D" uid="uid://c1fpkc63gr3dk" path="res://assets-sistema/interfaz/prepara-celiaquia.png" id="2_iu4pu"]
 [ext_resource type="Resource" uid="uid://c7nhq6rau5gu4" path="res://items/medialuna.tres" id="2_wjfco"]
 [ext_resource type="Resource" uid="uid://cjypcmjbfuv8m" path="res://items/pan.tres" id="3_6h7ao"]
 [ext_resource type="Resource" uid="uid://cbsnhd5wouff1" path="res://items/raviol.tres" id="4_ujo02"]
@@ -94,3 +95,4 @@ itemsNegativos = Array[Resource("res://resources/level_item.gd")]([ExtResource("
 cantidadPositivos = 3
 cantidadNegativos = 4
 comida = ExtResource("1_hjtvf")
+condicion = ExtResource("2_iu4pu")
