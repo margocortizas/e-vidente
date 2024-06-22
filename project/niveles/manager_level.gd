@@ -8,12 +8,21 @@ var posicion:Vector2
 var lista_items = []
 @onready var condition = $"../Globo texto/Condition"
 @onready var meal = $"../Globo texto/Meal"
+@onready var ensenanza = $"../Ensenanza"
 
 
 
 func _ready():
+	level_resource.cantidadNegativos = Global.items_level[Global.current_level][0]
+	level_resource.cantidadPositivos = Global.items_level[Global.current_level][1]
+	level_resource.comida = Global.items_level[Global.current_level][2]
+	level_resource.condicion = Global.items_level[Global.current_level][3]
+	level_resource.ensenanza = Global.items_level[Global.current_level][4]
+	
+	ensenanza.texture = level_resource.ensenanza
 	meal.texture = level_resource.comida
 	condition.texture = level_resource.condicion
+	
 	posicion = Vector2(230,680)
 	items_aleatorios()
 	lista_items.shuffle()
