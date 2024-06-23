@@ -31,20 +31,30 @@ func _ready():
 		posicion.x += 110
 	
 func items_aleatorios():
-	var listaPositivos = level_resource.itemsPositivos.duplicate()
-	listaPositivos.shuffle()
 	var listaNegativos = level_resource.itemsNegativos.duplicate()
+	var listaPositivos = level_resource.itemsPositivos.duplicate()
+	#Acá quise filtrar por categoria pero no se pudo porque como el item no está creado aún no puedo filtrarlo por dicha categoria. 
+	#Pensar mejor como hacer esto!!!!
+	
+	#if Global.items_level[2] == Global.ALMUERZO || Global.CENA: 
+		#listaNegativos.filter(level_item.categoria == ALMCENA)
+		#listaPositivos.filter(level_item.categoria == ALMCENA)
+		#elif Global.items_level[2] == DESAYUNO || MERIENDA: 
+			#listaNegativos.filter(Categoria == ALMCENA)
+			#listaPositivos.filter(Categoria == ALMCENA)
+			
+	listaPositivos.shuffle()
 	listaNegativos.shuffle()
 
 	for c in level_resource.cantidadPositivos:
 		var level_item = listaPositivos.pop_front()
 		var new_item = level_item.escena.instantiate()
-		new_item.setup(level_item.sprite, level_item.condiciones, plato, true, level_item.info)
+		new_item.setup(level_item.sprite, level_item.condiciones, plato, true, level_item.info, level_item.categoria)
 		add_child(new_item)
 		lista_items.append(new_item)
 	for c in level_resource.cantidadNegativos:
 		var level_item = listaNegativos.pop_front()
 		var new_item = level_item.escena.instantiate()
-		new_item.setup(level_item.sprite, level_item.condiciones, plato, false, level_item.info)
+		new_item.setup(level_item.sprite, level_item.condiciones, plato, false, level_item.info, level_item.categoria)
 		add_child(new_item)
 		lista_items.append(new_item)

@@ -10,6 +10,7 @@ var offset: Vector2
 var initialPos: Vector2
 var esPositivo = true
 var draggable = false
+var categoria 
 var is_inside_droppable = false
 var info: Texture2D
 var textSprite: Texture2D
@@ -20,13 +21,14 @@ func _ready():
 	area_2d.mouse_exited.connect(_on_area_2d_mouse_exited)
 	area_2d.area_exited.connect(_on_area_2d_body_exited)
 
-func setup(sprite, condicion, superficie, booleano, texturaInfo):
+func setup(sprite, condicion, superficie, booleano, texturaInfo, categorias):
 	$Sprite2D.texture = sprite
 	textSprite = sprite
 	condiciones = condicion
 	plato = superficie
 	esPositivo = booleano
 	info = texturaInfo
+	categoria = categorias
 
 func show_info():
 	$Sprite2D.texture = info

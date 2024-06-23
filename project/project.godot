@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://niveles/global.gd"
 Ensenanzas="*res://niveles/ensenanzas.gd"
+Ensenanzaveganismo="*res://niveles/ensenanzaveganismo.gd"
 
 [display]
 

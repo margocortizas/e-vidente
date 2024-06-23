@@ -1,12 +1,14 @@
 extends Node
 
-
 const DESAYUNO = preload("res://assets-sistema/interfaz/desayuno.png")
 const ALMUERZO = preload("res://assets-sistema/interfaz/almuerzo.png")
 const MERIENDA = preload("res://assets-sistema/interfaz/merienda.png")
 const CENA = preload("res://assets-sistema/interfaz/cena.png")
 
 const PREPARA_CELIAQUIA = preload("res://assets-sistema/interfaz/prepara-celiaquia.png")
+const PREPARA_DIABETES = preload("res://assets-sistema/interfaz/prepara-diabetes.png")
+const PREPARA_VEGANE = preload("res://assets-sistema/interfaz/prepara-vegane.png")
+const PREPARA_VEGETARIANE = preload("res://assets-sistema/interfaz/prepara-vegetariane.png")
 
 var is_dragging : Object
 var manager_level 
