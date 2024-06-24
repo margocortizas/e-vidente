@@ -13,3 +13,4 @@ escena = ExtResource("1_753or")
 posicion = Vector2(0, 0)
 esPositivo = false
 info = ExtResource("2_c8y0b")
+categoria = 0
