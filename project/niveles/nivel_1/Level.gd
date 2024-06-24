@@ -1,7 +1,6 @@
 extends Node
 class_name Level
 
-
 @onready var background = $Background
 @onready var victory = $Victory
 @onready var adelante = $Adelante

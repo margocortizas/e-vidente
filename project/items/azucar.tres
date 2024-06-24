@@ -13,4 +13,4 @@ escena = ExtResource("1_80t6u")
 posicion = Vector2(433, 624)
 esPositivo = false
 info = ExtResource("2_kx016")
-categoria = 1
+categoria = "DESAYMER"

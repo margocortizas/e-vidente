@@ -210,14 +210,14 @@ modulate = Color(1, 1, 1, 0.882353)
 light_mask = 8
 visibility_layer = 8
 z_index = 4
-position = Vector2(1007.42, 420.624)
+position = Vector2(975.643, 410.722)
 rotation = -0.276803
 scale = Vector2(1.10134, 1.1147)
 texture = ExtResource("8_l1124")
 
 [node name="ayudin" type="Sprite2D" parent="Lupa"]
 z_index = 3
-position = Vector2(1002.42, 384.624)
+position = Vector2(970.643, 374.722)
 rotation = -0.302794
 scale = Vector2(1.09019, 1.15035)
 texture = ExtResource("9_ijval")
@@ -226,7 +226,7 @@ texture = ExtResource("9_ijval")
 light_mask = 8
 visibility_layer = 8
 z_index = 3
-position = Vector2(1019, 383)
+position = Vector2(987.223, 373.098)
 rotation = -0.0939056
 shape = SubResource("CircleShape2D_tpp3g")
 
