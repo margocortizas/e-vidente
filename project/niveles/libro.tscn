@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://qg7q3a1ubxp7"]
+[gd_scene load_steps=11 format=3 uid="uid://qg7q3a1ubxp7"]
 
 [ext_resource type="Script" path="res://niveles/libro.gd" id="1_o1qid"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_tlk3q"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://iavu3mbffpmt" path="res://assets-sistema/interfaz/cap-3.png" id="5_cr3ii"]
 [ext_resource type="Texture2D" uid="uid://dlo1ym437o2kh" path="res://assets-sistema/interfaz/cap-4.png" id="6_5yxmo"]
 [ext_resource type="Texture2D" uid="uid://cw2t3rhpxdndl" path="res://assets-sistema/interfaz/cap-5.png" id="7_ci3cu"]
+[ext_resource type="Texture2D" uid="uid://cvfuav230k4hf" path="res://assets-sistema/interfaz/cap-6.png" id="8_g4om8"]
+[ext_resource type="Texture2D" uid="uid://cp82ofmqtb8g1" path="res://assets-sistema/interfaz/archivero-celiaquia.png" id="9_0j0nq"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b50jp"]
 load_path = "res://.godot/imported/flecha-ir-para-atras-historias.png-83409338da2b5fe798fe8cc0bb323689.ctex"
@@ -27,11 +29,12 @@ texture = ExtResource("2_tlk3q")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 texture_filter = 3
-offset_left = 434.0
-offset_top = 100.0
-offset_right = 741.0
-offset_bottom = 800.0
-scale = Vector2(0.952857, 0.952857)
+offset_left = 477.0
+offset_top = 80.0
+offset_right = 756.0
+offset_bottom = 924.0
+scale = Vector2(0.752857, 0.752857)
+size_flags_stretch_ratio = 1.73
 theme_override_constants/separation = 20
 alignment = 1
 
@@ -61,6 +64,11 @@ layout_mode = 2
 icon = ExtResource("7_ci3cu")
 flat = true
 
+[node name="Cap6" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("8_g4om8")
+flat = true
+
 [node name="Atras" type="Button" parent="."]
 offset_left = 27.0
 offset_top = 590.0
@@ -70,9 +78,15 @@ scale = Vector2(0.698795, 0.626145)
 icon = SubResource("CompressedTexture2D_b50jp")
 flat = true
 
+[node name="ArchiveroCeliaquia" type="Sprite2D" parent="."]
+position = Vector2(608, 736)
+scale = Vector2(0.960001, 0.960001)
+texture = ExtResource("9_0j0nq")
+
 [connection signal="pressed" from="VBoxContainer/Cap1" to="." method="_on_cap_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Cap2" to="." method="_on_cap_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Cap3" to="." method="_on_cap_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/Cap4" to="." method="_on_cap_4_pressed"]
 [connection signal="pressed" from="VBoxContainer/Cap5" to="." method="_on_cap_5_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap6" to="." method="_on_cap_6_pressed"]
 [connection signal="pressed" from="Atras" to="." method="_on_button_pressed"]
