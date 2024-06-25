@@ -281,29 +281,29 @@ entra_item_negativo = NodePath("../SentirseMal")
 
 [node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "mochito"
 player_cambiante = NodePath("../..")
+animation_name = "mochito"
 entra_item_negativo = NodePath("../SentirseMuyMal")
 sale_item_negativo = NodePath("../SentirHambre")
 
 [node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "masmochito"
 player_cambiante = NodePath("../..")
+animation_name = "masmochito"
 entra_item_negativo = NodePath("../SentirseBastanteMal")
 sale_item_negativo = NodePath("../SentirseMal")
 
 [node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "masmasmochito"
 player_cambiante = NodePath("../..")
+animation_name = "masmasmochito"
 entra_item_negativo = NodePath("../SentirseMorir")
 sale_item_negativo = NodePath("../SentirseMuyMal")
 
 [node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "muelto"
 player_cambiante = NodePath("../..")
+animation_name = "muelto"
 sale_item_negativo = NodePath("../SentirseBastanteMal")
 
 [node name="Atrás" type="Button" parent="."]

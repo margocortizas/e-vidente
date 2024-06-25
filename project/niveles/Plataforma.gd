@@ -8,10 +8,7 @@ class_name Plato
 var elementos : Array[LevelItem.Condicion]
 var cantAlimentos = 0
 
-func _ready():
-	pass
-	
-func _on_area_2d_area_entered(area):
+func _on_area_entered(area):
 	var item_level = area.get_parent()
 	player_cambiante.item_en_plato(item_level)
 	cantAlimentos = cantAlimentos + 1
@@ -19,10 +16,8 @@ func _on_area_2d_area_entered(area):
 		bien.play()
 	else: 
 		mal.play()
-	
 
-
-func _on_area_2d_area_exited(area):
+func _on_area_exited(area):
 	var item_level = area.get_parent()
 	player_cambiante.item_sale_plato(item_level)
 	cantAlimentos -= 1

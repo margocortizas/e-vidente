@@ -1,11 +1,5 @@
 extends Area2D
 
-#func _process(delta):
-	#if global.is_dragging:
-		#visible = true
-	#else:
-		#visible = false
-
 func _ready(): 
 	input_event.connect(_on_input_event)
 	
