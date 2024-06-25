@@ -11,10 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://cbqcihsa0yu72" path="res://assets-sistema/interfaz/lupa.png" id="8_l1124"]
 [ext_resource type="Texture2D" uid="uid://dr8gr3fyppexu" path="res://assets-sistema/interfaz/globito-celiaquia.png" id="9_ahnvr"]
 [ext_resource type="Texture2D" uid="uid://bbybi1g73qawn" path="res://assets-sistema/interfaz/info-lupa.png" id="9_ijval"]
+[ext_resource type="Script" path="res://niveles/PlayerCambiante.gd" id="9_u833i"]
 [ext_resource type="Texture2D" uid="uid://qvb1xjnby13q" path="res://assets-sistema/interfaz/tengo hambre.png" id="10_hom3g"]
 [ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="10_tr7fe"]
 [ext_resource type="Texture2D" uid="uid://cw4bjhcs2158q" path="res://assets-sistema/player/personaje-idle-2.png" id="11_w1r46"]
-[ext_resource type="Script" path="res://niveles/PlayerCambiante.gd" id="12_4i2s4"]
 [ext_resource type="Texture2D" uid="uid://qfxplhav3c1h" path="res://assets-sistema/player/personaje-mal-mal--malito-1.png" id="12_eyxs6"]
 [ext_resource type="Texture2D" uid="uid://byvhnnk7acmxg" path="res://assets-sistema/player/personaje-idle-3.png" id="12_offgp"]
 [ext_resource type="Texture2D" uid="uid://ctibbenuomnoq" path="res://assets-sistema/player/personaje-mal-mal--malito-2.png" id="13_57egu"]
@@ -254,7 +254,7 @@ position = Vector2(6.2636, -3.13165)
 
 [node name="PlayerCambiante" type="Sprite2D" parent="."]
 position = Vector2(882, 255)
-script = ExtResource("12_4i2s4")
+script = ExtResource("9_u833i")
 
 [node name="hambre" type="Sprite2D" parent="PlayerCambiante"]
 position = Vector2(-17, -104)
@@ -281,29 +281,29 @@ entra_item_negativo = NodePath("../SentirseMal")
 
 [node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "mochito"
 player_cambiante = NodePath("../..")
+animation_name = "mochito"
 entra_item_negativo = NodePath("../SentirseMuyMal")
 sale_item_negativo = NodePath("../SentirHambre")
 
 [node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "masmochito"
 player_cambiante = NodePath("../..")
+animation_name = "masmochito"
 entra_item_negativo = NodePath("../SentirseBastanteMal")
 sale_item_negativo = NodePath("../SentirseMal")
 
 [node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "masmasmochito"
 player_cambiante = NodePath("../..")
+animation_name = "masmasmochito"
 entra_item_negativo = NodePath("../SentirseMorir")
 sale_item_negativo = NodePath("../SentirseMuyMal")
 
 [node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "sale_item_negativo")]
 script = ExtResource("24_ngqma")
-animation_name = "muelto"
 player_cambiante = NodePath("../..")
+animation_name = "muelto"
 sale_item_negativo = NodePath("../SentirseBastanteMal")
 
 [node name="Atrás" type="Button" parent="."]

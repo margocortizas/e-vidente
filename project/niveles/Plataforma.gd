@@ -1,5 +1,5 @@
 extends Area2D
-class_name Plato 
+class_name Plato
 
 @onready var player_cambiante = $"../PlayerCambiante"
 @onready var bien = $Bien

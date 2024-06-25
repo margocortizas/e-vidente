@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://caa3ga7iipsxp"]
 
-[ext_resource type="Script" path="res://niveles/nivel_1/Plataforma.gd" id="1_kt43n"]
+[ext_resource type="Script" path="res://niveles/Plataforma.gd" id="1_kt43n"]
 [ext_resource type="Texture2D" uid="uid://dgq7cwas7ig4p" path="res://assets-sistema/iconos/alimentos-info/plato-flor.png" id="2_jjbdx"]
 [ext_resource type="AudioStream" uid="uid://dg0p68ks0kokp" path="res://assets-sistema/sonidos/bonus-points-190035.mp3" id="3_4bwg4"]
 [ext_resource type="AudioStream" uid="uid://cs4y37nqpc17w" path="res://assets-sistema/sonidos/sound5-106358.mp3" id="4_tn4me"]

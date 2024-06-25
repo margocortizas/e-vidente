@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://drf3fidqykf11"]
 
-[ext_resource type="Script" path="res://interface/Level-Vegan.gd" id="1_64ycw"]
+[ext_resource type="Script" path="res://niveles/nivel_2/Level-Vegan.gd" id="1_64ycw"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_6hd83"]
 
 [node name="Level-Vegan" type="Node"]
