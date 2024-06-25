@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvr7uw8f6eoc4"]
+
+[ext_resource type="Script" path="res://interface/Container.gd" id="1_jr3v2"]
+
+[sub_resource type="Animation" id="Animation_0hwkw"]
+resource_name = "select"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Archivero-Celiaco:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(479, 111), Vector2(479, 48), Vector2(479, -8)]
+}
+
+[sub_resource type="Animation" id="Animation_aqps6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Archivero-Celiaco:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(479, 111)]
+}
+
+[sub_resource type="Animation" id="Animation_81afd"]
+resource_name = "deselect"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Archivero-Celiaco:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(479, 48), Vector2(479, 111)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rm1ok"]
+_data = {
+"RESET": SubResource("Animation_aqps6"),
+"deselect": SubResource("Animation_81afd"),
+"select": SubResource("Animation_0hwkw")
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vrawd"]
+load_path = "res://.godot/imported/archivero-celiaquia.png-951acb8e712cfed4f5c1899b9e66057e.ctex"
+
+[node name="Carpeta-Archivero" type="Container"]
+custom_minimum_size = Vector2(950, 300)
+offset_right = 200.0
+offset_bottom = 200.0
+script = ExtResource("1_jr3v2")
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rm1ok")
+}
+
+[node name="Archivero-Celiaco" type="Sprite2D" parent="."]
+position = Vector2(479, 111)
+texture = SubResource("CompressedTexture2D_vrawd")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

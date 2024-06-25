@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cso4b30jkq1v4"]
+
+[ext_resource type="Texture2D" uid="uid://cp82ofmqtb8g1" path="res://assets-sistema/interfaz/archivero-celiaquia.png" id="2_bt2cg"]
+
+[sub_resource type="GDScript" id="GDScript_vjdu5"]
+script/source = "extends Container
+
+var archive_held = \"\"
+
+func _process(delta):
+	self.global_position = get_global_mouse_position()
+"
+
+[node name="Carpeta-Archivero" type="Container"]
+custom_minimum_size = Vector2(950, 300)
+offset_left = 1.0
+offset_right = 951.0
+offset_bottom = 300.0
+script = SubResource("GDScript_vjdu5")
+
+[node name="Archivero-Celiaco" type="Sprite2D" parent="."]
+position = Vector2(0, 3)
+texture = ExtResource("2_bt2cg")
