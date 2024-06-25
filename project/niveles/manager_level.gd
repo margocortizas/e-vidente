@@ -24,12 +24,16 @@ func _ready():
 	meal.texture = level_resource.comida
 	condition.texture = level_resource.condicion
 	
-	posicion = Vector2(230,680)
+	
 	items_aleatorios()
 	lista_items.shuffle()
+	if level_resource.cantidadNegativos < 3 :
+		posicion = Vector2(420,680) 
+	else:
+		posicion = Vector2(230,680)
 	for i in lista_items:
 		i.position = posicion
-		posicion.x += 110
+		posicion.x += 120
 	
 func items_aleatorios():
 	var listaNegativos = level_resource.itemsNegativos.duplicate()
