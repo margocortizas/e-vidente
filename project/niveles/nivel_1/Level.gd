@@ -26,4 +26,8 @@ func _victory():
 	ensenanza.show()
 
 func _on_adelante_pressed():
-	get_tree().change_scene_to_file("res://niveles/libro.tscn")
+	if Global.current_level <= 5: 
+		get_tree().change_scene_to_file("res://niveles/nivel_1/Level.tscn")
+		Global.current_level +=1
+	else: 
+		get_tree().change_scene_to_file("res://niveles/intro.tscn")
