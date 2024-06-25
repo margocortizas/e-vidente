@@ -12,5 +12,5 @@ func _on_mouse_exited():
 	archive_highlighted = false
 
 
-func _on_gui_input(event):
-	pass # Replace with function body.
+func _on_atrás_pressed():
+	get_tree().change_scene_to_file("res://niveles/intro.tscn")

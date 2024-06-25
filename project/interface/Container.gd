@@ -1,14 +1,12 @@
 extends Container
+class_name ARCHIVERO_NIVELES
 
 @onready var archivero = preload("res://interface/containerHolder.tscn")
-@export var sprite : Sprite2D
-@onready var archivero_celiaco = $"Archivero-Celiaco"
+@export var file : String 
 
 var start_position
 var archive_highlighted = false
-func _ready():
-	archivero_celiaco.texture = sprite
-	
+
 func _on_mouse_entered():
 	$Anim.play("select")
 	archive_highlighted = true
@@ -23,7 +21,7 @@ func _on_gui_input(event):
 		if event.button_mask == 1:
 			if archive_highlighted: 
 				var archive_temp = archivero.instantiate()
-				get_tree().get_root().get_node("interface/archivero/containter/conteinerHolder").add_child(archive_temp)
 				archive_highlighted = true
+				get_tree().change_scene_to_file(file)
 		elif event.button_mask == 0:
 			pass

@@ -60,9 +60,17 @@ _data = {
 load_path = "res://.godot/imported/archivero-celiaquia.png-951acb8e712cfed4f5c1899b9e66057e.ctex"
 
 [node name="Carpeta-Archivero" type="Container"]
-custom_minimum_size = Vector2(950, 300)
-offset_right = 200.0
-offset_bottom = 200.0
+custom_minimum_size = Vector2(950, 200)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -475.0
+offset_top = -300.0
+offset_right = 475.0
+grow_horizontal = 2
+grow_vertical = 0
 script = ExtResource("1_jr3v2")
 
 [node name="Anim" type="AnimationPlayer" parent="."]
