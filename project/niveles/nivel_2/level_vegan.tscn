@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cbqcihsa0yu72" path="res://assets-sistema/interfaz/lupa.png" id="9_busdo"]
 [ext_resource type="Texture2D" uid="uid://bbybi1g73qawn" path="res://assets-sistema/interfaz/info-lupa.png" id="10_rbgcf"]
 [ext_resource type="Texture2D" uid="uid://dr8gr3fyppexu" path="res://assets-sistema/interfaz/globito-celiaquia.png" id="11_tc4hd"]
-[ext_resource type="Script" path="res://niveles/PlayerCambiante.gd" id="12_itls6"]
+[ext_resource type="Script" path="res://niveles/PlayerCambianteVegan.gd" id="12_xwbtl"]
 [ext_resource type="Texture2D" uid="uid://qvb1xjnby13q" path="res://assets-sistema/interfaz/tengo hambre.png" id="13_dqdvd"]
 [ext_resource type="Texture2D" uid="uid://j8u4su0tu253" path="res://assets-sistema/player/player - vegan/personaje-idle-1.png" id="14_2es25"]
 [ext_resource type="Texture2D" uid="uid://cchopktlp0ygj" path="res://assets-sistema/player/player - vegan/personaje-idle-2.png" id="15_v7d7a"]
@@ -252,7 +252,7 @@ position = Vector2(6.2636, -3.13165)
 
 [node name="PlayerCambiante" type="Sprite2D" parent="."]
 position = Vector2(882, 255)
-script = ExtResource("12_itls6")
+script = ExtResource("12_xwbtl")
 
 [node name="hambre" type="Sprite2D" parent="PlayerCambiante"]
 position = Vector2(-17, -104)
@@ -263,31 +263,46 @@ texture = ExtResource("13_dqdvd")
 position = Vector2(-155, 22)
 scale = Vector2(1.7094, 1.64714)
 sprite_frames = SubResource("SpriteFrames_gh3ri")
-animation = &"cagadodehambre"
+animation = &"retriston"
 
 [node name="AbstractState" type="Node" parent="PlayerCambiante"]
 script = ExtResource("31_xkl8d")
 animation_name = null
 
-[node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState"]
+[node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "entra_item_positivo", "entra_item_negativo")]
 script = ExtResource("32_j4rl2")
+level = NodePath("../../..")
+player_cambiante = NodePath("../..")
 animation_name = "cagadodehambre"
+entra_item_positivo = NodePath(".")
+entra_item_negativo = NodePath("../SentirseMal")
 
-[node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState"]
+[node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("31_xkl8d")
+player_cambiante = NodePath("../..")
 animation_name = "mochito"
+entra_item_negativo = NodePath("../SentirseMuyMal")
+sale_item_negativo = NodePath("../SentirHambre")
 
-[node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState"]
+[node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("31_xkl8d")
+player_cambiante = NodePath("../..")
 animation_name = "masmochito"
+entra_item_negativo = NodePath("../SentirseBastanteMal")
+sale_item_negativo = NodePath("../SentirseMal")
 
-[node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState"]
+[node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("31_xkl8d")
+player_cambiante = NodePath("../..")
 animation_name = "masmasmochito"
+entra_item_negativo = NodePath("../SentirseMorir")
+sale_item_negativo = NodePath("../SentirseMuyMal")
 
-[node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState"]
+[node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "sale_item_negativo")]
 script = ExtResource("31_xkl8d")
+player_cambiante = NodePath("../..")
 animation_name = "muelto"
+sale_item_negativo = NodePath("../SentirseBastanteMal")
 
 [node name="Atrás" type="Button" parent="."]
 offset_left = 14.0
@@ -336,3 +351,5 @@ attenuation = 2.07053
 [connection signal="area_entered" from="Lupa" to="Lupa" method="_on_area_entered"]
 [connection signal="area_exited" from="Lupa" to="Lupa" method="_on_area_exited"]
 [connection signal="animation_finished" from="PlayerCambiante/AnimatedSprite2D" to="PlayerCambiante" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
+[connection signal="pressed" from="Adelante" to="." method="_on_adelante_pressed"]

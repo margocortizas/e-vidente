@@ -41,5 +41,5 @@ var items_level_vegan = {
 					3: [3,3, CENA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_3, almuerzo_cena],
 					4: [3,3, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_4, desayuno_merienda],
 					5: [3,4, ALMUERZO, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_5, almuerzo_cena],
-					6: [1,3, BEBIDA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_6, bebida]
+					6: [1,1, BEBIDA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_6, bebida]
 					}
