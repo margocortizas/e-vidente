@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://qoge2msthra0"]
+
+[ext_resource type="Script" path="res://interface/Archivero.gd" id="1_vbpnf"]
+[ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_4l60g"]
+[ext_resource type="Script" path="res://interface/ArchiveroContainer.gd" id="3_c38ao"]
+[ext_resource type="PackedScene" uid="uid://dvr7uw8f6eoc4" path="res://interface/container.tscn" id="4_wmw33"]
+[ext_resource type="Texture2D" uid="uid://yank5dcbacjh" path="res://assets-sistema/interfaz/archivero-celiaquia-veganismo.png" id="5_fxxew"]
+[ext_resource type="Texture2D" uid="uid://dwvlyxbf2glwa" path="res://assets-sistema/interfaz/archivero-veganismo.png" id="6_oto7i"]
+[ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="7_rysnj"]
+
+[node name="Archivero" type="Node2D"]
+script = ExtResource("1_vbpnf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 5.0
+offset_right = 1157.0
+offset_bottom = 800.0
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+self_modulate = Color(1, 1, 1, 0.478431)
+position = Vector2(576, 400)
+scale = Vector2(1.01691, 1.08165)
+texture = ExtResource("2_4l60g")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ArchiveroContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 123.0
+offset_top = 167.0
+offset_right = 1155.0
+offset_bottom = 1675.0
+scale = Vector2(0.959998, 0.959998)
+script = ExtResource("3_c38ao")
+
+[node name="celiaco-vegano2" parent="CanvasLayer/ArchiveroContainer" instance=ExtResource("4_wmw33")]
+layout_mode = 2
+file = "res://niveles/nivel_1/Level.tscn"
+
+[node name="Archivero-Celiaco" parent="CanvasLayer/ArchiveroContainer/celiaco-vegano2" index="1"]
+texture = ExtResource("5_fxxew")
+
+[node name="vegano" parent="CanvasLayer/ArchiveroContainer" instance=ExtResource("4_wmw33")]
+layout_mode = 2
+file = "res://niveles/nivel_1/Level.tscn"
+
+[node name="Archivero-Celiaco" parent="CanvasLayer/ArchiveroContainer/vegano" index="1"]
+texture = ExtResource("6_oto7i")
+
+[node name="celiaco" parent="CanvasLayer/ArchiveroContainer" instance=ExtResource("4_wmw33")]
+layout_mode = 2
+file = "res://niveles/nivel_1/Level.tscn"
+
+[node name="Node" type="Node" parent="CanvasLayer"]
+
+[node name="Atrás" type="Button" parent="."]
+offset_left = 14.0
+offset_top = 623.0
+offset_right = 243.0
+offset_bottom = 891.0
+scale = Vector2(0.64, 0.56)
+text = "
+"
+icon = ExtResource("7_rysnj")
+flat = true
+
+[connection signal="mouse_entered" from="CanvasLayer/ArchiveroContainer" to="CanvasLayer/ArchiveroContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ArchiveroContainer" to="CanvasLayer/ArchiveroContainer" method="_on_mouse_exited"]
+[connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]
+
+[editable path="CanvasLayer/ArchiveroContainer/celiaco-vegano2"]
+[editable path="CanvasLayer/ArchiveroContainer/vegano"]
+[editable path="CanvasLayer/ArchiveroContainer/celiaco"]
