@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://chwj41bq7v6vd"]
+[gd_scene load_steps=4 format=3 uid="uid://csuvn0gxauhaq"]
 
 [ext_resource type="PackedScene" uid="uid://qg7q3a1ubxp7" path="res://niveles/libro.tscn" id="1_cb1l7"]
 [ext_resource type="Texture2D" uid="uid://dwvlyxbf2glwa" path="res://assets-sistema/interfaz/archivero-veganismo.png" id="2_4jvkj"]

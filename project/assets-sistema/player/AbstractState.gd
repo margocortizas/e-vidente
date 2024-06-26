@@ -16,7 +16,6 @@ func entra_item_plato(item, player):
 	else:
 		if entra_item_positivo :
 			player.abstract_state = entra_item_positivo 
-		
 
 func sale_item_plato(item, player):
 	if !item.esPositivo:
@@ -25,7 +24,6 @@ func sale_item_plato(item, player):
 	else:
 		if sale_item_positivo :
 			player.abstract_state = sale_item_positivo 
-	
 
 func aplicar_animacion(): 
 	player_cambiante.current_animation = animation_name

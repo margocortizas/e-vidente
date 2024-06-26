@@ -4,9 +4,9 @@ class_name ManagerLevel
 @export var level_resource : LevelResource
 
 @onready var plato = %Plato
+
 var posicion:Vector2
 var lista_items = []
-var lista = []
 @onready var condition = $"../Globo texto/Condition"
 @onready var meal = $"../Globo texto/Meal"
 @onready var ensenanza = $"../Ensenanza"
