@@ -15,11 +15,19 @@ const PREPARA_CELIAQUIA = preload("res://assets-sistema/interfaz/prepara-celiaqu
 const PREPARA_DIABETES = preload("res://assets-sistema/interfaz/prepara-diabetes.png")
 const PREPARA_VEGANE = preload("res://assets-sistema/interfaz/prepara-vegane.png")
 const PREPARA_VEGETARIANE = preload("res://assets-sistema/interfaz/prepara-vegetariane.png")
-
+const PREPARA_VEGAN_GF = preload("res://assets-sistema/interfaz/prepara-vegan-gf.png")
 
 var is_dragging : Object
 var manager_level 
 var current_level = 1
+
+func items_segun_nivel(nivel):
+	if nivel.name == "Level": 
+		return items_level 
+	elif nivel.name == "Level-Vegan": 
+		return items_level_vegan
+	elif nivel.name == "Level-Vegan-GF":
+		return items_level_vegan_gf 
 
 func item_categoria(items, cate):
 	var items_categoria = []
@@ -27,6 +35,8 @@ func item_categoria(items, cate):
 		if i.categoria == cate:
 			items_categoria.append(i)
 	return items_categoria
+
+
 
 var items_level = {	
 					1: [1,1, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_1, almuerzo_cena], 
@@ -47,10 +57,10 @@ var items_level_vegan = {
 					}
 
 var items_level_vegan_gf = {	
-					1: [1,1, ALMUERZO, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_3, almuerzo_cena], 
-					2: [2,2, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_7, desayuno_merienda],
-					3: [3,3, CENA, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_4, almuerzo_cena],
-					4: [3,3, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_8, desayuno_merienda],
-					5: [3,4, ALMUERZO, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_9, almuerzo_cena],
-					6: [1,1, BEBIDA, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida]
+					1: [1,1, ALMUERZO, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_3, almuerzo_cena], 
+					2: [2,2, DESAYUNO, PREPARA_VEGAN_GF,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_7, desayuno_merienda],
+					3: [3,3, CENA, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_4, almuerzo_cena],
+					4: [3,3, DESAYUNO, PREPARA_VEGAN_GF,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_8, desayuno_merienda],
+					5: [3,4, ALMUERZO, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_9, almuerzo_cena],
+					6: [1,1, BEBIDA, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida]
 					}

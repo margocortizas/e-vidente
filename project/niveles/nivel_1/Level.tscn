@@ -330,6 +330,7 @@ flat = true
 
 [node name="Ensenanza" type="Sprite2D" parent="."]
 visible = false
+self_modulate = Color(1, 1, 1, 0.921569)
 top_level = true
 light_mask = 256
 visibility_layer = 256

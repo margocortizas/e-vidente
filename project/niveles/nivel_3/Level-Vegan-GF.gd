@@ -1,5 +1,5 @@
 extends Level
-class_name LevelVegan
+class_name LevelVeganGF
 
 
 func _ready():
@@ -20,8 +20,7 @@ func _victory():
 func _on_adelante_pressed():
 	if Global.current_level <= 5: 
 		Global.current_level += 1
-		get_tree().change_scene_to_file("res://niveles/nivel_2/level_vegan.tscn")
-	else:
+		get_tree().change_scene_to_file("res://niveles/nivel_3/Level-Vegan-GF.tscn")
+	else: 
 		get_tree().change_scene_to_file("res://niveles/intro.tscn")
-
 

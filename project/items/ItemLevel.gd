@@ -66,8 +66,6 @@ func _on_area_2d_body_exited(body):
 		is_inside_droppable = false
 		if body == plato:
 			condiciones.map(func(cond): plato.elementos.erase(cond))
-			
-
 
 func _on_area_2d_mouse_entered():
 	if !Global.is_dragging:
@@ -78,5 +76,3 @@ func _on_area_2d_mouse_exited():
 	if !Global.is_dragging:
 		draggable = false
 		scale = Vector2(1,1)
-
-

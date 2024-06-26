@@ -10,36 +10,24 @@ var lista_items = []
 @onready var condition = $"../Globo texto/Condition"
 @onready var meal = $"../Globo texto/Meal"
 @onready var ensenanza = $"../Ensenanza"
-@onready var level_vegan = $".."
-@onready var level = $".."
-
+var nivelActual
 
 func _ready():
 	pass
 
 func setup(nivel):
-	
-	if nivel.name == "Level-Vegan":
-		level_resource.cantidadNegativos = Global.items_level_vegan[Global.current_level][0]
-		level_resource.cantidadPositivos = Global.items_level_vegan[Global.current_level][1]
-		level_resource.comida = Global.items_level_vegan[Global.current_level][2]
-		level_resource.condicion = Global.items_level_vegan[Global.current_level][3]
-		level_resource.ensenanza = Global.items_level_vegan[Global.current_level][4]
+
+	nivelActual = Global.items_segun_nivel(nivel)
 		
-	else:
-		level_resource.cantidadNegativos = Global.items_level[Global.current_level][0]
-		level_resource.cantidadPositivos = Global.items_level[Global.current_level][1]
-		level_resource.comida = Global.items_level[Global.current_level][2]
-		level_resource.condicion = Global.items_level[Global.current_level][3]
-		level_resource.ensenanza = Global.items_level[Global.current_level][4]
-		
-	
-	
+	level_resource.cantidadNegativos = nivelActual[Global.current_level][0]
+	level_resource.cantidadPositivos = nivelActual[Global.current_level][1]
+	level_resource.comida = nivelActual[Global.current_level][2]
+	level_resource.condicion = nivelActual[Global.current_level][3]
+	level_resource.ensenanza = nivelActual[Global.current_level][4]
 	
 	ensenanza.texture = level_resource.ensenanza
 	meal.texture = level_resource.comida
 	condition.texture = level_resource.condicion
-	
 	
 	items_aleatorios()
 	lista_items.shuffle()
@@ -58,8 +46,8 @@ func items_aleatorios():
 	listaNegativos.shuffle()
 	listaPositivos.shuffle()
 
-	var filtradosPositivos = Global.item_categoria(listaPositivos, Global.items_level[Global.current_level][5])
-	var filtradosNegativos = Global.item_categoria(listaNegativos, Global.items_level[Global.current_level][5])
+	var filtradosPositivos = Global.item_categoria(listaPositivos, nivelActual[Global.current_level][5])
+	var filtradosNegativos = Global.item_categoria(listaNegativos, nivelActual[Global.current_level][5])
 	
 	for c in level_resource.cantidadPositivos:
 		var level_item = filtradosPositivos.pop_front()

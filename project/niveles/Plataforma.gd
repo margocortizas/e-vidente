@@ -8,12 +8,14 @@ class_name Plato
 var elementos : Array[LevelItem.Condicion]
 var cantAlimentos = 0
 
-func _on_area_2d_area_entered(area):
-	var item_level = area.get_parent()
-	print(item_level)
-	player_cambiante.item_en_plato(item_level)
+func _ready():
+	pass
+	
+
+func _react_food(item):
+	player_cambiante.item_en_plato(item)
 	cantAlimentos = cantAlimentos + 1
-	if  item_level.esPositivo:
+	if  item.esPositivo:
 		bien.play()
 	else: 
 		mal.play()

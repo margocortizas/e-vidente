@@ -1,12 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://csuvn0gxauhaq"]
 
-[ext_resource type="PackedScene" uid="uid://qg7q3a1ubxp7" path="res://niveles/libro.tscn" id="1_cb1l7"]
+[ext_resource type="PackedScene" uid="uid://cn2ngevnyf2h6" path="res://interface/libro.tscn" id="1_cb1l7"]
 [ext_resource type="Texture2D" uid="uid://dwvlyxbf2glwa" path="res://assets-sistema/interfaz/archivero-veganismo.png" id="2_4jvkj"]
 [ext_resource type="Script" path="res://niveles/libro-vegan.gd" id="2_fhwm5"]
 
 [node name="Libro" instance=ExtResource("1_cb1l7")]
 script = ExtResource("2_fhwm5")
 
+[node name="VBoxContainer" parent="." index="1"]
+offset_left = 509.0
+offset_right = 788.0
+
 [node name="ArchiveroCeliaquia" parent="." index="3"]
-position = Vector2(590, 984)
+position = Vector2(590, 876)
 texture = ExtResource("2_4jvkj")
