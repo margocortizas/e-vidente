@@ -14,11 +14,8 @@ var lista_items = []
 @onready var level = $".."
 
 
-
-
 func _ready():
 	pass
-	
 
 func setup(nivel):
 	
