@@ -1,4 +1,5 @@
 extends Node
+
 var almuerzo_cena = "ALMCENA"
 var desayuno_merienda = "DESAMER"
 var bebida = "BEBIDA"
@@ -16,6 +17,10 @@ const PREPARA_VEGANE = preload("res://assets-sistema/interfaz/prepara-vegane.png
 const PREPARA_VEGETARIANE = preload("res://assets-sistema/interfaz/prepara-vegetariane.png")
 
 
+var is_dragging : Object
+var manager_level 
+var current_level = 1
+
 func item_categoria(items, cate):
 	var items_categoria = []
 	for i in items : 
@@ -23,9 +28,6 @@ func item_categoria(items, cate):
 			items_categoria.append(i)
 	return items_categoria
 
-var is_dragging : Object
-var manager_level 
-var current_level = 1
 var items_level = {	
 					1: [1,1, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_1, almuerzo_cena], 
 					2: [2,2, DESAYUNO, PREPARA_CELIAQUIA,Ensenanzas.ENSENANZA_CELIAQUIA_2, desayuno_merienda],
@@ -33,8 +35,8 @@ var items_level = {
 					4: [3,3, DESAYUNO, PREPARA_CELIAQUIA,Ensenanzas.ENSENANZA_CELIAQUIA_8, desayuno_merienda],
 					5: [3,4, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_5, almuerzo_cena],
 					6: [1,3, BEBIDA, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida]
-					
 					}
+
 var items_level_vegan = {	
 					1: [1,1, ALMUERZO, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_1, almuerzo_cena], 
 					2: [2,2, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_2, desayuno_merienda],
@@ -42,4 +44,13 @@ var items_level_vegan = {
 					4: [3,3, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_4, desayuno_merienda],
 					5: [3,4, ALMUERZO, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_5, almuerzo_cena],
 					6: [1,1, BEBIDA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_6, bebida]
+					}
+
+var items_level_vegan_gf = {	
+					1: [1,1, ALMUERZO, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_3, almuerzo_cena], 
+					2: [2,2, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_7, desayuno_merienda],
+					3: [3,3, CENA, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_4, almuerzo_cena],
+					4: [3,3, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_8, desayuno_merienda],
+					5: [3,4, ALMUERZO, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_9, almuerzo_cena],
+					6: [1,1, BEBIDA, PREPARA_VEGANE, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida]
 					}
