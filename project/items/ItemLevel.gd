@@ -77,3 +77,4 @@ func _on_area_2d_mouse_exited():
 		draggable = false
 		scale = Vector2(1,1)
 
+

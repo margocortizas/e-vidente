@@ -165,16 +165,6 @@ animations = [{
 [node name="Level-Vegan" type="Node"]
 script = ExtResource("1_64ycw")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 1152.0
-offset_bottom = 800.0
-color = Color(0.623183, 0.999127, 0.762443, 1)
-
-[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
-position = Vector2(576, 400)
-scale = Vector2(1.01691, 1.08165)
-texture = ExtResource("2_6hd83")
-
 [node name="TituloNivel" type="Sprite2D" parent="."]
 z_index = 1
 position = Vector2(206, 47)
@@ -239,6 +229,17 @@ z_index = 3
 position = Vector2(987.223, 373.098)
 rotation = -0.0939056
 shape = SubResource("CircleShape2D_wvg7e")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 800.0
+mouse_filter = 2
+color = Color(0.623183, 0.999127, 0.762443, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(576, 400)
+scale = Vector2(1.01691, 1.08165)
+texture = ExtResource("2_6hd83")
 
 [node name="Globo texto" type="Sprite2D" parent="."]
 position = Vector2(206, 253)
@@ -346,8 +347,10 @@ volume_db = -4.962
 attenuation = 2.07053
 
 [connection signal="input_event" from="Menú" to="Menú" method="_on_input_event"]
+[connection signal="mouse_entered" from="Menú" to="." method="_on_menú_mouse_entered"]
 [connection signal="area_entered" from="Plato" to="Plato" method="_on_area_entered"]
 [connection signal="area_exited" from="Plato" to="Plato" method="_on_area_exited"]
+[connection signal="mouse_entered" from="Plato" to="." method="_on_plato_mouse_entered"]
 [connection signal="area_entered" from="Lupa" to="Lupa" method="_on_area_entered"]
 [connection signal="area_exited" from="Lupa" to="Lupa" method="_on_area_exited"]
 [connection signal="animation_finished" from="PlayerCambiante/AnimatedSprite2D" to="PlayerCambiante" method="_on_animated_sprite_2d_animation_finished"]

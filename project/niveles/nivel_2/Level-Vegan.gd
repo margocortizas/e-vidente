@@ -19,6 +19,8 @@ func _victory():
 func _on_adelante_pressed():
 	if Global.current_level_vegan >= 6: 
 		get_tree().change_scene_to_file("res://niveles/intro.tscn")
-	else: Global.current_level_vegan += 1
-	get_tree().change_scene_to_file("res://niveles/nivel_2/level_vegan.tscn")
+	else: 
+		Global.current_level_vegan += 1
+		get_tree().change_scene_to_file("res://niveles/nivel_2/level_vegan.tscn")
 #Acá hay que mejorar esto porque no funca bien!
+

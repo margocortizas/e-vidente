@@ -5,6 +5,6 @@ func _ready():
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
-	if event is InputEventMouseButton : 
+	if event is InputEventMouseButton:
 		visible = event.is_pressed()
 	
