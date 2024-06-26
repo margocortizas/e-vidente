@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://drf3fidqykf11"]
+[gd_scene load_steps=42 format=3 uid="uid://drf3fidqykf11"]
 
 [ext_resource type="Script" path="res://niveles/nivel_2/Level-Vegan.gd" id="1_64ycw"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_6hd83"]
@@ -34,7 +34,6 @@
 [ext_resource type="Script" path="res://assets-sistema/player/SentirHambre.gd" id="32_j4rl2"]
 [ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="33_fecjc"]
 [ext_resource type="Texture2D" uid="uid://d1mc36oujtnxe" path="res://assets-sistema/interfaz/flecha-ir-para-adelante-desbloqueada-historias.png" id="34_spc0y"]
-[ext_resource type="Texture2D" uid="uid://dsu1kjuqa4obw" path="res://assets-sistema/ensenanza/ensenanza-celiaquia-1.png" id="35_gyvuy"]
 [ext_resource type="Script" path="res://niveles/manager_level.gd" id="36_klwte"]
 [ext_resource type="Resource" uid="uid://djf1usrw10hsi" path="res://niveles/nivel_2/level_2.tres" id="37_cemvk"]
 [ext_resource type="AudioStream" uid="uid://wvisbdda1ofu" path="res://assets-sistema/sonidos/simple-relaxing-guitar-loop-60828.mp3" id="38_qgt73"]
@@ -335,7 +334,6 @@ visibility_layer = 256
 z_index = 9
 position = Vector2(577, 407)
 scale = Vector2(1.33952, 1.33952)
-texture = ExtResource("35_gyvuy")
 
 [node name="ManagerLevel" type="Node" parent="."]
 script = ExtResource("36_klwte")

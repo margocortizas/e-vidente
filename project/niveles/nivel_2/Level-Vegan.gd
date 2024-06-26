@@ -1,11 +1,12 @@
 extends Level
 class_name LevelVegan
 
+
 func _ready():
 	victory.hide()
 	adelante.disabled = true
 	background.play()
-	
+	manager_level.setup(self)
 
 func _on_atrás_pressed():
 	get_tree().change_scene_to_file("res://niveles/intro.tscn")

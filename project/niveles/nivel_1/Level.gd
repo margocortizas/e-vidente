@@ -7,6 +7,7 @@ class_name Level
 @onready var ensenanza = $Ensenanza
 @onready var meal = $"Globo texto/Meal"
 @onready var abstract_condition = $"Globo texto/Condition"
+@onready var manager_level = $ManagerLevel
 
 var is_dragging = false
 
@@ -14,6 +15,7 @@ func _ready():
 	victory.hide()
 	adelante.disabled = true
 	background.play()
+	manager_level.setup(self)
 	
 
 func _on_atrás_pressed():
