@@ -49,6 +49,8 @@ func _process(delta):
 			var tween = get_tree().create_tween()
 			if is_inside_droppable:
 				tween.tween_property(self, "position", get_global_mouse_position(), 0.5).set_ease(Tween.EASE_OUT)
+				if body_ref == plato:
+					plato._react_food(self)
 			else:
 				tween.tween_property(self, "global_position", initialPos, 0.5).set_ease(Tween.EASE_OUT)
 
