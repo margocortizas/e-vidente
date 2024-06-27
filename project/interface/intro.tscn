@@ -1,0 +1,98 @@
+[gd_scene load_steps=18 format=3 uid="uid://bh0ilhv8eyhes"]
+
+[ext_resource type="Script" path="res://niveles/evidente.gd" id="1_rn1ep"]
+[ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_dijlt"]
+[ext_resource type="Texture2D" uid="uid://bgnjx5tn4v3r3" path="res://assets-sistema/intro/intro-1.png" id="3_5wll6"]
+[ext_resource type="Texture2D" uid="uid://b8fubw0nfeh0f" path="res://assets-sistema/intro/intro-2.png" id="4_ih6i2"]
+[ext_resource type="Texture2D" uid="uid://d1a0fkhu3cvls" path="res://assets-sistema/intro/intro-3-2.png" id="5_yc7ij"]
+[ext_resource type="Texture2D" uid="uid://bkj6ntcxh7a4y" path="res://assets-sistema/intro/intro-3-3.png" id="6_pprjx"]
+[ext_resource type="Texture2D" uid="uid://1c6heajtc2c4" path="res://assets-sistema/intro/intro-3-4.png" id="7_ojvtq"]
+[ext_resource type="Texture2D" uid="uid://4q1wskguxudo" path="res://assets-sistema/intro/intro-3-5.png" id="8_tmuc4"]
+[ext_resource type="Texture2D" uid="uid://dn88g0ecxshr5" path="res://assets-sistema/intro/intro-3.png" id="9_hb6sv"]
+[ext_resource type="Texture2D" uid="uid://2b8iwljy26d5" path="res://assets-sistema/intro/intro-4.png" id="10_ioqtx"]
+[ext_resource type="Texture2D" uid="uid://bupsljsgpx5o0" path="res://assets-sistema/intro/intro-5.png" id="11_8rob5"]
+[ext_resource type="Texture2D" uid="uid://bc14t2s3uk0u0" path="res://assets-sistema/intro/intro-6.png" id="12_of8g1"]
+[ext_resource type="Texture2D" uid="uid://darxagktopqxj" path="res://assets-sistema/intro/intro-7.png" id="13_6ox16"]
+[ext_resource type="Texture2D" uid="uid://dtp4txe10gky7" path="res://assets-sistema/intro/intro-8.png" id="14_5wue2"]
+[ext_resource type="Texture2D" uid="uid://c4r3iqo22dyhf" path="res://assets-sistema/intro/intro-9.png" id="15_2se8o"]
+[ext_resource type="Texture2D" uid="uid://breggyu6leu5h" path="res://assets-sistema/interfaz/titulo-jugar.png" id="16_7u4nq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8sp5d"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("3_5wll6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ih6i2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yc7ij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pprjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ojvtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tmuc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hb6sv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ioqtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8rob5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_of8g1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6ox16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5wue2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2se8o")
+}],
+"loop": true,
+"name": &"intro",
+"speed": 5.0
+}]
+
+[node name="Evidente" type="Node2D"]
+script = ExtResource("1_rn1ep")
+
+[node name="FondoFicha" type="ColorRect" parent="."]
+offset_left = 5.0
+offset_right = 1158.0
+offset_bottom = 799.0
+mouse_filter = 2
+color = Color(1, 1, 0.996078, 0.988235)
+
+[node name="ImagenFicha" type="Sprite2D" parent="FondoFicha"]
+position = Vector2(577, 407)
+scale = Vector2(1.09575, 1.09575)
+texture = ExtResource("2_dijlt")
+
+[node name="e-vidente" type="Sprite2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="e-vidente"]
+position = Vector2(581, 402)
+scale = Vector2(0.877111, 0.877111)
+sprite_frames = SubResource("SpriteFrames_8sp5d")
+animation = &"intro"
+
+[node name="go" type="Button" parent="."]
+offset_left = 428.0
+offset_top = 634.0
+offset_right = 707.0
+offset_bottom = 758.0
+icon = ExtResource("16_7u4nq")
+flat = true
+
+[connection signal="pressed" from="go" to="." method="_on_go_pressed"]
