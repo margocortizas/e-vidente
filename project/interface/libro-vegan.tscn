@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmwx6cfolqn4e"]
+[gd_scene load_steps=12 format=3 uid="uid://cmwx6cfolqn4e"]
 
 [ext_resource type="Script" path="res://interface/libro-vegan.gd" id="1_btrdt"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_elh6m"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cw2t3rhpxdndl" path="res://assets-sistema/interfaz/cap-5.png" id="7_6xkqp"]
 [ext_resource type="Texture2D" uid="uid://cvfuav230k4hf" path="res://assets-sistema/interfaz/cap-6.png" id="8_vx58k"]
 [ext_resource type="Texture2D" uid="uid://dwvlyxbf2glwa" path="res://assets-sistema/interfaz/archivero-veganismo.png" id="9_8b002"]
+[ext_resource type="AudioStream" uid="uid://cyoeurg1stfx5" path="res://assets-sistema/sonidos/dark-loops-000-piano-efect-80-bpm-6329.mp3" id="10_j0ohc"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b50jp"]
 load_path = "res://.godot/imported/flecha-ir-para-atras-historias.png-83409338da2b5fe798fe8cc0bb323689.ctex"
@@ -82,6 +83,11 @@ flat = true
 position = Vector2(825, 855)
 scale = Vector2(0.960001, 0.960001)
 texture = ExtResource("9_8b002")
+
+[node name="Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_j0ohc")
+volume_db = -4.962
+attenuation = 2.07053
 
 [connection signal="pressed" from="VBoxContainer/Cap1" to="." method="_on_cap_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Cap2" to="." method="_on_cap_2_pressed"]

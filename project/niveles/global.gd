@@ -30,6 +30,7 @@ func items_segun_nivel(nivel):
 		return items_level_vegan_gf
 
 func item_categoria(items, cate):
+	print(get_tree().root)
 	var items_categoria = []
 	for i in items : 
 		if i.categoria == cate:

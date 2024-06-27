@@ -1,8 +1,13 @@
 extends Node2D
 
+@onready var background = $Background
+
 var start_position
 var archive_highlighted = false
 
+func _ready():
+	background.play()
+	
 func _on_mouse_entered():
 	$Anim.play("select")
 	archive_highlighted = true
