@@ -1,5 +1,5 @@
 extends Libro
-class_name LibroVegan
+class_name LibroVeganGF
 
 func _on_cap_1_pressed():
 	Global.current_level = 1
@@ -25,4 +25,4 @@ func _on_cap_6_pressed():
 	get_tree().change_scene_to_file("res://niveles/nivel_3/Level-Vegan-GF.tscn")
 
 func _on_atras_pressed():
-	get_tree().change_scene_to_file("res://niveles/intro.tscn")
+	get_tree().change_scene_to_file("res://interface/archivero.tscn")
