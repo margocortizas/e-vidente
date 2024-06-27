@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://cmwx6cfolqn4e"]
+
+[ext_resource type="Script" path="res://interface/libro-vegan.gd" id="1_btrdt"]
+[ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_elh6m"]
+[ext_resource type="Texture2D" uid="uid://d2bdp16bgl7p8" path="res://assets-sistema/interfaz/cap-1.png" id="3_i7a8u"]
+[ext_resource type="Texture2D" uid="uid://d12obyfp3sruy" path="res://assets-sistema/interfaz/cap-2.png" id="4_ydatj"]
+[ext_resource type="Texture2D" uid="uid://iavu3mbffpmt" path="res://assets-sistema/interfaz/cap-3.png" id="5_12ycp"]
+[ext_resource type="Texture2D" uid="uid://dlo1ym437o2kh" path="res://assets-sistema/interfaz/cap-4.png" id="6_cfe55"]
+[ext_resource type="Texture2D" uid="uid://cw2t3rhpxdndl" path="res://assets-sistema/interfaz/cap-5.png" id="7_6xkqp"]
+[ext_resource type="Texture2D" uid="uid://cvfuav230k4hf" path="res://assets-sistema/interfaz/cap-6.png" id="8_vx58k"]
+[ext_resource type="Texture2D" uid="uid://dwvlyxbf2glwa" path="res://assets-sistema/interfaz/archivero-veganismo.png" id="9_8b002"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b50jp"]
+load_path = "res://.godot/imported/flecha-ir-para-atras-historias.png-83409338da2b5fe798fe8cc0bb323689.ctex"
+
+[node name="Libro" type="Node2D"]
+z_index = 4
+script = ExtResource("1_btrdt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 800.0
+color = Color(0.623183, 0.999127, 0.762443, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(576, 400)
+scale = Vector2(1.01691, 1.08165)
+texture = ExtResource("2_elh6m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+texture_filter = 3
+offset_left = 477.0
+offset_top = 80.0
+offset_right = 756.0
+offset_bottom = 924.0
+scale = Vector2(0.752857, 0.752857)
+size_flags_stretch_ratio = 1.73
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Cap1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+icon = ExtResource("3_i7a8u")
+flat = true
+
+[node name="Cap2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_ydatj")
+flat = true
+
+[node name="Cap3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_12ycp")
+flat = true
+
+[node name="Cap4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("6_cfe55")
+flat = true
+
+[node name="Cap5" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("7_6xkqp")
+flat = true
+
+[node name="Cap6" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("8_vx58k")
+flat = true
+
+[node name="Atras" type="Button" parent="."]
+offset_left = 27.0
+offset_top = 590.0
+offset_right = 252.0
+offset_bottom = 858.0
+scale = Vector2(0.698795, 0.626145)
+icon = SubResource("CompressedTexture2D_b50jp")
+flat = true
+
+[node name="ArchiveroVegan" type="Sprite2D" parent="."]
+position = Vector2(825, 855)
+scale = Vector2(0.960001, 0.960001)
+texture = ExtResource("9_8b002")
+
+[connection signal="pressed" from="VBoxContainer/Cap1" to="." method="_on_cap_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap2" to="." method="_on_cap_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap3" to="." method="_on_cap_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap4" to="." method="_on_cap_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap5" to="." method="_on_cap_5_pressed"]
+[connection signal="pressed" from="VBoxContainer/Cap6" to="." method="_on_cap_6_pressed"]
+[connection signal="pressed" from="Atras" to="." method="_on_button_pressed"]

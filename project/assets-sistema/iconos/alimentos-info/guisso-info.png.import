@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnf1xk13jetbd"
-path="res://.godot/imported/personaje-mal-malito-1.png-f9a04146671727b58206b6bd12115d7e.ctex"
+uid="uid://b7wpchge5ic3c"
+path="res://.godot/imported/guisso-info.png-45176911eb03da6a8092166cc49d798c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets-sistema/player/player - vegan gluten free/personaje-mal-malito-1.png"
-dest_files=["res://.godot/imported/personaje-mal-malito-1.png-f9a04146671727b58206b6bd12115d7e.ctex"]
+source_file="res://assets-sistema/iconos/alimentos-info/guisso-info.png"
+dest_files=["res://.godot/imported/guisso-info.png-45176911eb03da6a8092166cc49d798c.ctex"]
 
 [params]
 

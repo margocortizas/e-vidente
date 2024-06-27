@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnf1xk13jetbd"
-path="res://.godot/imported/personaje-mal-malito-1.png-f9a04146671727b58206b6bd12115d7e.ctex"
+uid="uid://5jimpew4xl7m"
+path="res://.godot/imported/titulo-celiaquia-veganismo.png-5f18b3d2476b6916b7030f01a92ddd5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets-sistema/player/player - vegan gluten free/personaje-mal-malito-1.png"
-dest_files=["res://.godot/imported/personaje-mal-malito-1.png-f9a04146671727b58206b6bd12115d7e.ctex"]
+source_file="res://assets-sistema/interfaz/titulo-celiaquia-veganismo.png"
+dest_files=["res://.godot/imported/titulo-celiaquia-veganismo.png-5f18b3d2476b6916b7030f01a92ddd5a.ctex"]
 
 [params]
 

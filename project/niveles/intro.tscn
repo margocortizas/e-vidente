@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://niveles/intro.gd" id="1_1l6ju"]
 [ext_resource type="Texture2D" uid="uid://breggyu6leu5h" path="res://assets-sistema/interfaz/titulo-jugar.png" id="2_68fep"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_khhng"]
-[ext_resource type="Texture2D" uid="uid://g2fk0rtysasx" path="res://assets-sistema/interfaz/titulo-opciones.png" id="3_2pkvm"]
 [ext_resource type="Texture2D" uid="uid://b0qs42irpynbm" path="res://assets-sistema/interfaz/titulo-capitulos.png" id="3_27hyn"]
+[ext_resource type="Texture2D" uid="uid://cxeacdh5knce6" path="res://assets-sistema/interfaz/titulo-salir.png" id="5_nvq7f"]
 
 [node name="Intro" type="Node2D"]
 z_index = 4
@@ -23,10 +23,10 @@ scale = Vector2(1.06083, 1.06083)
 texture = ExtResource("2_khhng")
 
 [node name="MenuBar" type="MenuBar" parent="."]
-offset_left = 386.0
-offset_top = 119.0
-offset_right = 758.0
-offset_bottom = 615.0
+offset_left = 400.0
+offset_top = 153.0
+offset_right = 772.0
+offset_bottom = 649.0
 scale = Vector2(1.14996, 1.14996)
 
 [node name="Jugar" type="Button" parent="MenuBar"]
@@ -37,16 +37,6 @@ offset_right = 422.0
 offset_bottom = 150.0
 theme_override_font_sizes/font_size = 60
 icon = ExtResource("2_68fep")
-flat = true
-
-[node name="Opciones" type="Button" parent="MenuBar"]
-layout_mode = 0
-offset_left = 8.0
-offset_top = 324.0
-offset_right = 422.0
-offset_bottom = 477.0
-theme_override_font_sizes/font_size = 60
-icon = ExtResource("3_2pkvm")
 flat = true
 
 [node name="Capítulos" type="Button" parent="MenuBar"]
@@ -61,14 +51,14 @@ flat = true
 
 [node name="Salir" type="Button" parent="MenuBar"]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 460.0
-offset_right = 411.0
-offset_bottom = 613.0
+offset_left = 7.82637
+offset_top = 311.315
+offset_right = 286.826
+offset_bottom = 464.315
 theme_override_font_sizes/font_size = 60
+icon = ExtResource("5_nvq7f")
 flat = true
 
 [connection signal="pressed" from="MenuBar/Jugar" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="MenuBar/Opciones" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MenuBar/Capítulos" to="." method="_on_capitulos_pressed"]
 [connection signal="pressed" from="MenuBar/Salir" to="." method="_on_salir_pressed"]

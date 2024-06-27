@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://qg7q3a1ubxp7"]
+[gd_scene load_steps=11 format=3 uid="uid://cn2ngevnyf2h6"]
 
 [ext_resource type="Script" path="res://niveles/libro.gd" id="1_o1qid"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_tlk3q"]

@@ -1,15 +1,6 @@
-extends Node
-class_name Level
+extends Level
+class_name LevelVegan
 
-@onready var background = $Background
-@onready var victory = $Victory
-@onready var adelante = $Adelante
-@onready var ensenanza = $Ensenanza
-@onready var meal = $"Globo texto/Meal"
-@onready var abstract_condition = $"Globo texto/Condition"
-@onready var manager_level = $ManagerLevel
-
-var is_dragging = false
 
 func _ready():
 	victory.hide()
@@ -29,6 +20,8 @@ func _victory():
 func _on_adelante_pressed():
 	if Global.current_level <= 5: 
 		Global.current_level += 1
-		get_tree().change_scene_to_file("res://niveles/nivel_1/Level.tscn")
+		get_tree().change_scene_to_file("res://niveles/nivel_2/level_vegan.tscn")
 	else:
 		get_tree().change_scene_to_file("res://niveles/intro.tscn")
+
+

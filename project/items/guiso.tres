@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="LevelItem" load_steps=5 format=3 uid="uid://bparais3kgejo"]
+
+[ext_resource type="Script" path="res://resources/level_item.gd" id="1_5y2dj"]
+[ext_resource type="PackedScene" uid="uid://bri7a10em12dj" path="res://items/item_level.tscn" id="1_mfw1s"]
+[ext_resource type="Texture2D" uid="uid://b7wpchge5ic3c" path="res://assets-sistema/iconos/alimentos-info/guisso-info.png" id="2_rcrcw"]
+[ext_resource type="Texture2D" uid="uid://73lagudtm6x5" path="res://assets-sistema/iconos/guiso-lentejas-0.png" id="4_5x2f7"]
+
+[resource]
+script = ExtResource("1_5y2dj")
+condiciones = Array[int]([])
+sprite = ExtResource("4_5x2f7")
+escena = ExtResource("1_mfw1s")
+posicion = Vector2(0, 0)
+esPositivo = false
+info = ExtResource("2_rcrcw")
+categoria = "ALMCENA"

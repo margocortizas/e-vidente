@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnf1xk13jetbd"
-path="res://.godot/imported/personaje-mal-malito-1.png-f9a04146671727b58206b6bd12115d7e.ctex"
+uid="uid://cxeacdh5knce6"
+path="res://.godot/imported/titulo-salir.png-1a598ca4dd2fb2e2f483281a9007523c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets-sistema/player/player - vegan gluten free/personaje-mal-malito-1.png"
-dest_files=["res://.godot/imported/personaje-mal-malito-1.png-f9a04146671727b58206b6bd12115d7e.ctex"]
+source_file="res://assets-sistema/interfaz/titulo-salir.png"
+dest_files=["res://.godot/imported/titulo-salir.png-1a598ca4dd2fb2e2f483281a9007523c.ctex"]
 
 [params]
 

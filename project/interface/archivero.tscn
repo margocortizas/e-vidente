@@ -34,21 +34,21 @@ script = ExtResource("3_c38ao")
 
 [node name="celiaco-vegano2" parent="CanvasLayer/ArchiveroContainer" instance=ExtResource("4_wmw33")]
 layout_mode = 2
-file = "res://niveles/nivel_1/Level.tscn"
+file = "res://interface/Libro-Vegan-GF.tscn"
 
 [node name="Archivero-Celiaco" parent="CanvasLayer/ArchiveroContainer/celiaco-vegano2" index="1"]
 texture = ExtResource("5_fxxew")
 
 [node name="vegano" parent="CanvasLayer/ArchiveroContainer" instance=ExtResource("4_wmw33")]
 layout_mode = 2
-file = "res://niveles/nivel_1/Level.tscn"
+file = "res://interface/libro-vegan.tscn"
 
 [node name="Archivero-Celiaco" parent="CanvasLayer/ArchiveroContainer/vegano" index="1"]
 texture = ExtResource("6_oto7i")
 
 [node name="celiaco" parent="CanvasLayer/ArchiveroContainer" instance=ExtResource("4_wmw33")]
 layout_mode = 2
-file = "res://niveles/nivel_1/Level.tscn"
+file = "res://interface/libro.tscn"
 
 [node name="Node" type="Node" parent="CanvasLayer"]
 

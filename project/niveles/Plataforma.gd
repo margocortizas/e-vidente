@@ -1,5 +1,5 @@
 extends Area2D
-class_name Plato 
+class_name Plato
 
 @onready var player_cambiante = $"../PlayerCambiante"
 @onready var bien = $Bien
@@ -10,12 +10,7 @@ var cantAlimentos = 0
 
 func _ready():
 	pass
-	
-func _on_area_2d_area_entered(area):
-	var item_level = area.get_parent()
-	
-	
-	
+
 func _react_food(item):
 	player_cambiante.item_en_plato(item)
 	cantAlimentos = cantAlimentos + 1
