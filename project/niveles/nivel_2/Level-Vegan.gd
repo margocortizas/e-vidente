@@ -9,7 +9,7 @@ func _ready():
 	manager_level.setup(self)
 
 func _on_atrás_pressed():
-	get_tree().change_scene_to_file("res://niveles/intro.tscn")
+	get_tree().change_scene_to_file("res://interface/archivero.tscn")
 
 func _victory():
 	victory.show()
