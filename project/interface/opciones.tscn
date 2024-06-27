@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2rea3e3dsg6c"]
+
+[ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="1_1hc87"]
+[ext_resource type="Script" path="res://interface/opciones.gd" id="1_2m0nt"]
+[ext_resource type="Texture2D" uid="uid://cdxlfflnxpslr" path="res://assets-sistema/interfaz/opciones-info.png" id="2_r8s3h"]
+[ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="4_uk3o2"]
+[ext_resource type="AudioStream" uid="uid://cyoeurg1stfx5" path="res://assets-sistema/sonidos/dark-loops-000-piano-efect-80-bpm-6329.mp3" id="5_5gqb0"]
+
+[node name="Opciones" type="Node2D"]
+script = ExtResource("1_2m0nt")
+
+[node name="FondoFicha" type="ColorRect" parent="."]
+offset_left = 5.0
+offset_right = 1158.0
+offset_bottom = 799.0
+mouse_filter = 2
+color = Color(1, 1, 0.996078, 0.988235)
+
+[node name="ImagenFicha" type="Sprite2D" parent="FondoFicha"]
+position = Vector2(577, 407)
+scale = Vector2(1.09575, 1.09575)
+texture = ExtResource("1_1hc87")
+
+[node name="Opciones" type="Sprite2D" parent="FondoFicha"]
+position = Vector2(572, 376)
+rotation = 0.0127772
+scale = Vector2(0.690741, 0.690741)
+texture = ExtResource("2_r8s3h")
+
+[node name="Atrás" type="Button" parent="."]
+offset_left = 14.0
+offset_top = 651.0
+offset_right = 243.0
+offset_bottom = 919.0
+scale = Vector2(0.64, 0.56)
+text = "
+"
+icon = ExtResource("4_uk3o2")
+flat = true
+
+[node name="Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_5gqb0")
+volume_db = -4.962
+attenuation = 2.07053
+
+[connection signal="pressed" from="Atrás" to="." method="_on_atrás_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qoge2msthra0"]
+[gd_scene load_steps=9 format=3 uid="uid://qoge2msthra0"]
 
 [ext_resource type="Script" path="res://interface/Archivero.gd" id="1_vbpnf"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_4l60g"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://yank5dcbacjh" path="res://assets-sistema/interfaz/archivero-celiaquia-veganismo.png" id="5_fxxew"]
 [ext_resource type="Texture2D" uid="uid://dwvlyxbf2glwa" path="res://assets-sistema/interfaz/archivero-veganismo.png" id="6_oto7i"]
 [ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="7_rysnj"]
+[ext_resource type="AudioStream" uid="uid://cyoeurg1stfx5" path="res://assets-sistema/sonidos/dark-loops-000-piano-efect-80-bpm-6329.mp3" id="8_8uwu2"]
 
 [node name="Archivero" type="Node2D"]
 script = ExtResource("1_vbpnf")
@@ -62,6 +63,11 @@ text = "
 "
 icon = ExtResource("7_rysnj")
 flat = true
+
+[node name="Background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_8uwu2")
+volume_db = -4.962
+attenuation = 2.07053
 
 [connection signal="mouse_entered" from="CanvasLayer/ArchiveroContainer" to="CanvasLayer/ArchiveroContainer" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/ArchiveroContainer" to="CanvasLayer/ArchiveroContainer" method="_on_mouse_exited"]
