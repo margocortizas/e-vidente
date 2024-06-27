@@ -1,4 +1,5 @@
 extends Libro
+class_name LibroVegan
 
 func _on_cap_1_pressed():
 	Global.current_level = 1

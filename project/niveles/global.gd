@@ -26,8 +26,8 @@ func items_segun_nivel(nivel):
 		return items_level 
 	elif nivel.name == "Level-Vegan": 
 		return items_level_vegan
-	elif nivel.name == "Level-Vegan-GF":
-		return items_level_vegan_gf 
+	else:
+		return items_level_vegan_gf
 
 func item_categoria(items, cate):
 	var items_categoria = []

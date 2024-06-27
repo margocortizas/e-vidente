@@ -10,7 +10,6 @@ var cantAlimentos = 0
 
 func _ready():
 	pass
-	
 
 func _react_food(item):
 	player_cambiante.item_en_plato(item)

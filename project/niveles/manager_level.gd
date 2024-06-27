@@ -12,13 +12,9 @@ var lista_items = []
 @onready var ensenanza = $"../Ensenanza"
 var nivelActual
 
-func _ready():
-	pass
-
 func setup(nivel):
-
-	nivelActual = Global.items_segun_nivel(nivel)
-		
+	nivelActual = Global.items_segun_nivel(get_parent())
+	
 	level_resource.cantidadNegativos = nivelActual[Global.current_level][0]
 	level_resource.cantidadPositivos = nivelActual[Global.current_level][1]
 	level_resource.comida = nivelActual[Global.current_level][2]
@@ -45,7 +41,7 @@ func items_aleatorios():
 	var listaPositivos = level_resource.itemsPositivos.duplicate()
 	listaNegativos.shuffle()
 	listaPositivos.shuffle()
-
+	
 	var filtradosPositivos = Global.item_categoria(listaPositivos, nivelActual[Global.current_level][5])
 	var filtradosNegativos = Global.item_categoria(listaNegativos, nivelActual[Global.current_level][5])
 	
