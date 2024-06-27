@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bupuitrnp6shp"]
+[gd_scene load_steps=42 format=3 uid="uid://bupuitrnp6shp"]
 
 [ext_resource type="Script" path="res://niveles/nivel_3/Level-Vegan-Gluten.gd" id="1_wi3ev"]
 [ext_resource type="Texture2D" uid="uid://5jimpew4xl7m" path="res://assets-sistema/interfaz/titulo-celiaquia-veganismo.png" id="2_f1fgs"]
@@ -11,23 +11,22 @@
 [ext_resource type="Texture2D" uid="uid://dr8gr3fyppexu" path="res://assets-sistema/interfaz/globito-celiaquia.png" id="9_6ao3j"]
 [ext_resource type="Script" path="res://niveles/PlayerCambiante.gd" id="10_qenqm"]
 [ext_resource type="Texture2D" uid="uid://qvb1xjnby13q" path="res://assets-sistema/interfaz/tengo hambre.png" id="11_dfdrh"]
-[ext_resource type="Texture2D" uid="uid://di3fi1seq8bub" path="res://assets-sistema/player/personaje-idle-1.png" id="12_shve7"]
-[ext_resource type="Texture2D" uid="uid://cw4bjhcs2158q" path="res://assets-sistema/player/personaje-idle-2.png" id="13_djbl7"]
-[ext_resource type="Texture2D" uid="uid://byvhnnk7acmxg" path="res://assets-sistema/player/personaje-idle-3.png" id="14_1j0nt"]
-[ext_resource type="Texture2D" uid="uid://qfxplhav3c1h" path="res://assets-sistema/player/personaje-mal-mal--malito-1.png" id="15_2ha6b"]
-[ext_resource type="Texture2D" uid="uid://ctibbenuomnoq" path="res://assets-sistema/player/personaje-mal-mal--malito-2.png" id="16_bcu03"]
-[ext_resource type="Texture2D" uid="uid://4wg5bh8dfre4" path="res://assets-sistema/player/personaje-mal-malito-1.png" id="17_bxs6d"]
-[ext_resource type="Texture2D" uid="uid://botuqbwkd2n4e" path="res://assets-sistema/player/personaje-mal-malito-2.png" id="18_jr7ni"]
-[ext_resource type="Texture2D" uid="uid://co5ypxfvqu2lr" path="res://assets-sistema/player/personaje-malito-1.png" id="19_k828i"]
-[ext_resource type="Texture2D" uid="uid://b3mn3uqqembgn" path="res://assets-sistema/player/personaje-malito-2.png" id="20_qc7u5"]
-[ext_resource type="Texture2D" uid="uid://dki7xmvxh1xhe" path="res://assets-sistema/player/personaje-malisisisimo-1.png" id="21_5tqqy"]
-[ext_resource type="Texture2D" uid="uid://6gg0eqeleaay" path="res://assets-sistema/player/personaje-malisisisimo-2.png" id="22_kb6se"]
-[ext_resource type="Texture2D" uid="uid://bvpeui28k18pq" path="res://assets-sistema/player/personaje-sintiendose-bien-1.png" id="23_aidy3"]
-[ext_resource type="Texture2D" uid="uid://qr4b87pgefe2" path="res://assets-sistema/player/personaje-sintiendose-bien-2.png" id="24_5on0h"]
-[ext_resource type="Texture2D" uid="uid://dxd2xrmjguelv" path="res://assets-sistema/player/personaje-sintiendose-bien-3.png" id="25_6o2r2"]
-[ext_resource type="Texture2D" uid="uid://d2mu0bg7aoagg" path="res://assets-sistema/player/personaje-sintiendose-mal-2.png" id="26_7his8"]
-[ext_resource type="Texture2D" uid="uid://5e4brkahgd6y" path="res://assets-sistema/player/personaje-sintiendose-mal-1.png" id="27_rr2f0"]
-[ext_resource type="Texture2D" uid="uid://sychosmpy3lp" path="res://assets-sistema/player/personaje-sintiendose-mal-3.png" id="28_e3y7s"]
+[ext_resource type="Texture2D" uid="uid://bxose8fiorpmb" path="res://assets-sistema/player/player - vegan gluten free/personaje-idle-1.png" id="14_eqswo"]
+[ext_resource type="Texture2D" uid="uid://dwkjsfkbbose2" path="res://assets-sistema/player/player - vegan gluten free/personaje-idle-2.png" id="15_83vhn"]
+[ext_resource type="Texture2D" uid="uid://bygrkcivqoa1o" path="res://assets-sistema/player/player - vegan gluten free/personaje-idle-3.png" id="16_xy536"]
+[ext_resource type="Texture2D" uid="uid://7xh4ux6tex4c" path="res://assets-sistema/player/player - vegan gluten free/personaje-mal-mal--malito-1.png" id="17_xrod0"]
+[ext_resource type="Texture2D" uid="uid://dhx1klo1kc1os" path="res://assets-sistema/player/player - vegan gluten free/personaje-mal-mal--malito-2.png" id="18_jravu"]
+[ext_resource type="Texture2D" uid="uid://dqwesw0bljsel" path="res://assets-sistema/player/player - vegan gluten free/personaje-mal-malito-1.png" id="19_yi0nb"]
+[ext_resource type="Texture2D" uid="uid://ck03lgnymx1j7" path="res://assets-sistema/player/player - vegan gluten free/personaje-mal-malito-2.png" id="20_m1rxu"]
+[ext_resource type="Texture2D" uid="uid://dqdxqbg22xb36" path="res://assets-sistema/player/player - vegan gluten free/personaje-malito-1.png" id="21_jucre"]
+[ext_resource type="Texture2D" uid="uid://dwa413eig23qf" path="res://assets-sistema/player/player - vegan gluten free/personaje-malito-2.png" id="22_8hgsu"]
+[ext_resource type="Texture2D" uid="uid://6mm04t5hpu21" path="res://assets-sistema/player/player - vegan gluten free/personaje-malisisisimo-1.png" id="23_mnpth"]
+[ext_resource type="Texture2D" uid="uid://cokge4sc4afdh" path="res://assets-sistema/player/player - vegan gluten free/personaje-malisisisimo-2.png" id="24_h6i21"]
+[ext_resource type="Texture2D" uid="uid://lh6p65k8vgp0" path="res://assets-sistema/player/player - vegan gluten free/personaje-sintiendose-bien-1.png" id="25_oi37f"]
+[ext_resource type="Texture2D" uid="uid://drbgxfprmq2q" path="res://assets-sistema/player/player - vegan gluten free/personaje-sintiendose-bien-3.png" id="26_2isym"]
+[ext_resource type="Texture2D" uid="uid://c4638bbqo53ct" path="res://assets-sistema/player/player - vegan gluten free/personaje-sintiendose-mal-1.png" id="27_3shuy"]
+[ext_resource type="Texture2D" uid="uid://drxblbkyk1pmx" path="res://assets-sistema/player/player - vegan gluten free/personaje-sintiendose-mal-2.png" id="28_teach"]
+[ext_resource type="Texture2D" uid="uid://rc41dfys1qf8" path="res://assets-sistema/player/player - vegan gluten free/personaje-sintiendose-mal-3.png" id="29_dhuu5"]
 [ext_resource type="Script" path="res://assets-sistema/player/AbstractState.gd" id="29_sdh2a"]
 [ext_resource type="Script" path="res://assets-sistema/player/SentirHambre.gd" id="30_h1vom"]
 [ext_resource type="Texture2D" uid="uid://blgjs4a0fjm3t" path="res://assets-sistema/interfaz/flecha-ir-para-atras-historias.png" id="31_lvwkw"]
@@ -63,13 +62,13 @@ radius = 118.828
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_shve7")
+"texture": ExtResource("14_eqswo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_djbl7")
+"texture": ExtResource("15_83vhn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_1j0nt")
+"texture": ExtResource("16_xy536")
 }],
 "loop": true,
 "name": &"cagadodehambre",
@@ -77,10 +76,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("15_2ha6b")
+"texture": ExtResource("17_xrod0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_bcu03")
+"texture": ExtResource("18_jravu")
 }],
 "loop": true,
 "name": &"masmasmochito",
@@ -88,10 +87,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("17_bxs6d")
+"texture": ExtResource("19_yi0nb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_jr7ni")
+"texture": ExtResource("20_m1rxu")
 }],
 "loop": true,
 "name": &"masmochito",
@@ -99,10 +98,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("19_k828i")
+"texture": ExtResource("21_jucre")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_qc7u5")
+"texture": ExtResource("22_8hgsu")
 }],
 "loop": true,
 "name": &"mochito",
@@ -110,10 +109,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("21_5tqqy")
+"texture": ExtResource("23_mnpth")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_kb6se")
+"texture": ExtResource("24_h6i21")
 }],
 "loop": true,
 "name": &"muelto",
@@ -121,13 +120,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("23_aidy3")
+"texture": ExtResource("25_oi37f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_5on0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_6o2r2")
+"texture": ExtResource("26_2isym")
 }],
 "loop": true,
 "name": &"recontento",
@@ -135,13 +131,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("23_aidy3")
+"texture": ExtResource("25_oi37f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("24_5on0h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_6o2r2")
+"texture": ExtResource("26_2isym")
 }],
 "loop": false,
 "name": &"resonrison",
@@ -149,13 +142,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("26_7his8")
+"texture": ExtResource("27_3shuy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("27_rr2f0")
+"texture": ExtResource("28_teach")
 }, {
 "duration": 1.0,
-"texture": ExtResource("28_e3y7s")
+"texture": ExtResource("29_dhuu5")
 }],
 "loop": false,
 "name": &"retriston",
@@ -265,7 +258,7 @@ texture = ExtResource("11_dfdrh")
 position = Vector2(-155, 22)
 scale = Vector2(1.7094, 1.64714)
 sprite_frames = SubResource("SpriteFrames_2gsss")
-animation = &"recontento"
+animation = &"retriston"
 
 [node name="AbstractState" type="Node" parent="PlayerCambiante"]
 script = ExtResource("29_sdh2a")

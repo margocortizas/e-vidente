@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dlo1ym437o2kh" path="res://assets-sistema/interfaz/cap-4.png" id="6_cfe55"]
 [ext_resource type="Texture2D" uid="uid://cw2t3rhpxdndl" path="res://assets-sistema/interfaz/cap-5.png" id="7_6xkqp"]
 [ext_resource type="Texture2D" uid="uid://cvfuav230k4hf" path="res://assets-sistema/interfaz/cap-6.png" id="8_vx58k"]
-[ext_resource type="Texture2D" uid="uid://cp82ofmqtb8g1" path="res://assets-sistema/interfaz/archivero-celiaquia.png" id="9_1e6ef"]
+[ext_resource type="Texture2D" uid="uid://dwvlyxbf2glwa" path="res://assets-sistema/interfaz/archivero-veganismo.png" id="9_8b002"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b50jp"]
 load_path = "res://.godot/imported/flecha-ir-para-atras-historias.png-83409338da2b5fe798fe8cc0bb323689.ctex"
@@ -79,9 +79,9 @@ icon = SubResource("CompressedTexture2D_b50jp")
 flat = true
 
 [node name="ArchiveroVegan" type="Sprite2D" parent="."]
-position = Vector2(608, 736)
+position = Vector2(825, 855)
 scale = Vector2(0.960001, 0.960001)
-texture = ExtResource("9_1e6ef")
+texture = ExtResource("9_8b002")
 
 [connection signal="pressed" from="VBoxContainer/Cap1" to="." method="_on_cap_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Cap2" to="." method="_on_cap_2_pressed"]
