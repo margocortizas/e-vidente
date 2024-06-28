@@ -30,14 +30,11 @@ func items_segun_nivel(nivel):
 		return items_level_vegan_gf
 
 func item_categoria(items, cate):
-	print(get_tree().root)
 	var items_categoria = []
 	for i in items : 
 		if i.categoria == cate:
 			items_categoria.append(i)
 	return items_categoria
-
-
 
 var items_level = {	
 					1: [1,1, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_1, almuerzo_cena], 
