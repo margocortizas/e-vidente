@@ -27,7 +27,7 @@ func setup(nivel):
 	
 	items_aleatorios()
 	lista_items.shuffle()
-	if level_resource.cantidadNegativos < 3 :
+	if (level_resource.cantidadNegativos + level_resource.cantidadPositivos) < 5 :
 		posicion = Vector2(420,680) 
 	else:
 		posicion = Vector2(230,680)
