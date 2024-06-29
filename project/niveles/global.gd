@@ -17,6 +17,7 @@ const PREPARA_VEGANE = preload("res://assets-sistema/interfaz/prepara-vegane.png
 const PREPARA_VEGETARIANE = preload("res://assets-sistema/interfaz/prepara-vegetariane.png")
 const PREPARA_VEGAN_GF = preload("res://assets-sistema/interfaz/prepara-vegan-gf.png")
 
+var playerCambiante : PlayerCambiante
 var is_dragging : Object
 var manager_level 
 var current_level = 1
