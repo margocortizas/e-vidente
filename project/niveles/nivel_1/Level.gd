@@ -8,12 +8,11 @@ class_name Level
 @onready var meal = $"Globo texto/Meal"
 @onready var abstract_condition = $"Globo texto/Condition"
 @onready var manager_level = $ManagerLevel
-@export var is_completed : bool
+
 
 var is_dragging = false
 
 func _ready():
-	is_completed = false
 	victory.hide()
 	adelante.disabled = true
 	background.play()
@@ -27,8 +26,7 @@ func _victory():
 	victory.play("victory")
 	adelante.disabled = false
 	ensenanza.show()
-	is_completed = true
-	
+	Global.items_level[Global.current_level][6] = true
 
 func _on_adelante_pressed():
 	if Global.current_level <= 5: 

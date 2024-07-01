@@ -9,13 +9,14 @@ func _ready():
 	manager_level.setup(self)
 
 func _on_atrás_pressed():
-	get_tree().change_scene_to_file("res://interface/archivero.tscn")
+	get_tree().change_scene_to_file("res://interface/Libro-Vegan-GF.tscn")
 
 func _victory():
 	victory.show()
 	victory.play("victory")
 	adelante.disabled = false
 	ensenanza.show()
+	Global.items_level_vegan_gf[Global.current_level][6] = true
 
 func _on_adelante_pressed():
 	if Global.current_level <= 5: 

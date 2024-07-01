@@ -38,28 +38,28 @@ func item_categoria(items, cate):
 	return items_categoria
 
 var items_level = {	
-					1: [1,1, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_1, almuerzo_cena], 
-					2: [2,3, DESAYUNO, PREPARA_CELIAQUIA,Ensenanzas.ENSENANZA_CELIAQUIA_2, desayuno_merienda],
-					3: [2,3, CENA, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_6, almuerzo_cena],
-					4: [3,3, DESAYUNO, PREPARA_CELIAQUIA,Ensenanzas.ENSENANZA_CELIAQUIA_8, desayuno_merienda],
-					5: [4,2, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_5, almuerzo_cena],
-					6: [1,3, BEBIDA, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida]
+					1: [1,1, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_1, almuerzo_cena, false], 
+					2: [2,3, DESAYUNO, PREPARA_CELIAQUIA,Ensenanzas.ENSENANZA_CELIAQUIA_2, desayuno_merienda, false],
+					3: [2,3, CENA, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_6, almuerzo_cena, false],
+					4: [3,3, DESAYUNO, PREPARA_CELIAQUIA,Ensenanzas.ENSENANZA_CELIAQUIA_8, desayuno_merienda, false],
+					5: [4,2, ALMUERZO, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_5, almuerzo_cena, false],
+					6: [1,3, BEBIDA, PREPARA_CELIAQUIA, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida, false]
 					}
 
 var items_level_vegan = {	
-					1: [1,2, ALMUERZO, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_1, almuerzo_cena], 
-					2: [2,2, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_2, desayuno_merienda],
-					3: [2,3, CENA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_3, almuerzo_cena],
-					4: [2,4, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_4, desayuno_merienda],
-					5: [4,2, ALMUERZO, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_5, almuerzo_cena],
-					6: [1,3, BEBIDA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_6, bebida]
+					1: [1,2, ALMUERZO, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_1, almuerzo_cena, false], 
+					2: [2,2, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_2, desayuno_merienda, false],
+					3: [2,3, CENA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_3, almuerzo_cena, false],
+					4: [2,4, DESAYUNO, PREPARA_VEGANE,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_4, desayuno_merienda, false],
+					5: [4,2, ALMUERZO, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_5, almuerzo_cena, false],
+					6: [1,3, BEBIDA, PREPARA_VEGANE, Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_6, bebida, false]
 					}
 
 var items_level_vegan_gf = {	
-					1: [1,1, ALMUERZO, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_3, almuerzo_cena], 
-					2: [1,2, DESAYUNO, PREPARA_VEGAN_GF,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_7, desayuno_merienda],
-					3: [2,4, CENA, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_4, almuerzo_cena],
-					4: [4,2, DESAYUNO, PREPARA_VEGAN_GF,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_8, desayuno_merienda],
-					5: [4,2, ALMUERZO, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_9, almuerzo_cena],
-					6: [2,2, BEBIDA, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida]
+					1: [1,1, ALMUERZO, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_3, almuerzo_cena, false], 
+					2: [1,2, DESAYUNO, PREPARA_VEGAN_GF,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_7, desayuno_merienda, false],
+					3: [2,4, CENA, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_4, almuerzo_cena, false],
+					4: [4,2, DESAYUNO, PREPARA_VEGAN_GF,Ensenanzaveganismo.ENSENANZA_VEGAN_VEGETARIANE_8, desayuno_merienda, false],
+					5: [4,2, ALMUERZO, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_9, almuerzo_cena, false],
+					6: [2,2, BEBIDA, PREPARA_VEGAN_GF, Ensenanzas.ENSENANZA_CELIAQUIA_7, bebida, false]
 					}

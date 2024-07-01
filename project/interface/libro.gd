@@ -11,11 +11,11 @@ class_name Libro
 
 func _ready():
 	background.play()
-	cap_2.disabled = true
-	cap_3.disabled = true
-	cap_4.disabled = true
-	cap_5.disabled = true
-	cap_6.disabled = true
+	cap_2.disabled = not Global.items_level[1][6]
+	cap_3.disabled = not Global.items_level[2][6]
+	cap_4.disabled = not Global.items_level[3][6]
+	cap_5.disabled = not Global.items_level[4][6]
+	cap_6.disabled = not Global.items_level[5][6]
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://niveles/intro.tscn")
@@ -26,15 +26,11 @@ func _on_cap_1_pressed():
 	
 func _on_cap_2_pressed():
 	Global.current_level = 2
-	if Global.current_level.is_completed :
-		cap_2.disabled = false
-		get_tree().change_scene_to_file("res://niveles/nivel_1/Level.tscn")
+	get_tree().change_scene_to_file("res://niveles/nivel_1/Level.tscn")
 
 func _on_cap_3_pressed():
 	Global.current_level = 3
-	if Global.current_level.is_completed :
-		cap_3.disabled = false
-		get_tree().change_scene_to_file("res://niveles/nivel_1/Level.tscn")
+	get_tree().change_scene_to_file("res://niveles/nivel_1/Level.tscn")
 
 func _on_cap_4_pressed():
 	Global.current_level = 4
