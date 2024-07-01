@@ -260,9 +260,9 @@ scale = Vector2(1.7094, 1.64714)
 sprite_frames = SubResource("SpriteFrames_2gsss")
 animation = &"retriston"
 
-[node name="AbstractState" type="Node" parent="PlayerCambiante"]
+[node name="AbstractState" type="Node" parent="PlayerCambiante" node_paths=PackedStringArray("level")]
 script = ExtResource("29_sdh2a")
-animation_name = null
+level = NodePath("../..")
 
 [node name="SentirHambre" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "entra_item_positivo", "entra_item_negativo")]
 script = ExtResource("30_h1vom")
@@ -272,29 +272,33 @@ animation_name = "cagadodehambre"
 entra_item_positivo = NodePath(".")
 entra_item_negativo = NodePath("../SentirseMal")
 
-[node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
+[node name="SentirseMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("29_sdh2a")
+level = NodePath("../../..")
 player_cambiante = NodePath("../..")
 animation_name = "mochito"
 entra_item_negativo = NodePath("../SentirseMuyMal")
 sale_item_negativo = NodePath("../SentirHambre")
 
-[node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
+[node name="SentirseMuyMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("29_sdh2a")
+level = NodePath("../../..")
 player_cambiante = NodePath("../..")
 animation_name = "masmochito"
 entra_item_negativo = NodePath("../SentirseBastanteMal")
 sale_item_negativo = NodePath("../SentirseMal")
 
-[node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "entra_item_negativo", "sale_item_negativo")]
+[node name="SentirseBastanteMal" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "entra_item_negativo", "sale_item_negativo")]
 script = ExtResource("29_sdh2a")
+level = NodePath("../../..")
 player_cambiante = NodePath("../..")
 animation_name = "masmasmochito"
 entra_item_negativo = NodePath("../SentirseMorir")
 sale_item_negativo = NodePath("../SentirseMuyMal")
 
-[node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("player_cambiante", "sale_item_negativo")]
+[node name="SentirseMorir" type="Node" parent="PlayerCambiante/AbstractState" node_paths=PackedStringArray("level", "player_cambiante", "sale_item_negativo")]
 script = ExtResource("29_sdh2a")
+level = NodePath("../../..")
 player_cambiante = NodePath("../..")
 animation_name = "muelto"
 sale_item_negativo = NodePath("../SentirseBastanteMal")
