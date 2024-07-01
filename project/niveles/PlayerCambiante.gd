@@ -1,6 +1,7 @@
 extends Sprite2D
 class_name PlayerCambiante
 
+@onready var hambre = $hambre
 @onready var anim = $AnimatedSprite2D
 @onready var plato = $"../Plato"
 @onready var adelante = $"../Adelante"

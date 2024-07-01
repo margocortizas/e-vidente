@@ -4,7 +4,6 @@ var almuerzo_cena = "ALMCENA"
 var desayuno_merienda = "DESAMER"
 var bebida = "BEBIDA"
 
-
 const DESAYUNO = preload("res://assets-sistema/interfaz/desayuno.png")
 const ALMUERZO = preload("res://assets-sistema/interfaz/almuerzo.png")
 const MERIENDA = preload("res://assets-sistema/interfaz/merienda.png")
