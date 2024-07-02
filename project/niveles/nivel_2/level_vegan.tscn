@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://drf3fidqykf11"]
+[gd_scene load_steps=43 format=3 uid="uid://drf3fidqykf11"]
 
 [ext_resource type="Script" path="res://niveles/nivel_2/Level-Vegan.gd" id="1_64ycw"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="2_6hd83"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dip61dcjlq1dk" path="res://assets-sistema/iconos/alimentos-info/victoria-1.png" id="4_mvmjh"]
 [ext_resource type="Texture2D" uid="uid://cjvrmdv4j443i" path="res://assets-sistema/iconos/alimentos-info/victoria-2.png" id="5_l4pa0"]
 [ext_resource type="Script" path="res://niveles/Menú.gd" id="6_0a2dw"]
+[ext_resource type="Texture2D" uid="uid://b4b057ms74s1r" path="res://assets-sistema/interfaz/menu-fondo.png" id="6_w25c5"]
 [ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="7_wtr41"]
 [ext_resource type="Script" path="res://niveles/Lupa.gd" id="8_5ahs6"]
 [ext_resource type="Texture2D" uid="uid://cbqcihsa0yu72" path="res://assets-sistema/interfaz/lupa.png" id="9_busdo"]
@@ -185,10 +186,16 @@ position = Vector2(567, 695)
 scale = Vector2(1.2443, 0.72)
 collision_layer = 8
 collision_mask = 8
+input_pickable = false
 script = ExtResource("6_0a2dw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Menú"]
 shape = SubResource("RectangleShape2D_dgfld")
+
+[node name="Sprite2D" type="Sprite2D" parent="Menú"]
+position = Vector2(3.61649, -2.63898)
+scale = Vector2(0.675987, 1.02154)
+texture = ExtResource("6_w25c5")
 
 [node name="Plato" parent="." instance=ExtResource("7_wtr41")]
 unique_name_in_owner = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cjad1e317i0v1"]
+[gd_scene load_steps=44 format=3 uid="uid://cjad1e317i0v1"]
 
 [ext_resource type="Script" path="res://niveles/nivel_1/Level.gd" id="1_g0f04"]
 [ext_resource type="Texture2D" uid="uid://tbbyh563rakt" path="res://assets-sistema/interfaz/titulo-celiaquia.png" id="2_l8wda"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="4_tsdj3"]
 [ext_resource type="Texture2D" uid="uid://cwkostcg25hb0" path="res://assets-sistema/interfaz/fondo-capitulo-01.png" id="5_0hx18"]
 [ext_resource type="Script" path="res://niveles/Lupa.gd" id="5_s52e6"]
+[ext_resource type="Texture2D" uid="uid://b4b057ms74s1r" path="res://assets-sistema/interfaz/menu-fondo.png" id="6_s2en4"]
 [ext_resource type="Texture2D" uid="uid://cbqcihsa0yu72" path="res://assets-sistema/interfaz/lupa.png" id="8_l1124"]
 [ext_resource type="Texture2D" uid="uid://dr8gr3fyppexu" path="res://assets-sistema/interfaz/globito-celiaquia.png" id="9_ahnvr"]
 [ext_resource type="Texture2D" uid="uid://bbybi1g73qawn" path="res://assets-sistema/interfaz/info-lupa.png" id="9_ijval"]
@@ -186,7 +187,13 @@ position = Vector2(567, 695)
 scale = Vector2(1.2443, 0.72)
 collision_layer = 8
 collision_mask = 8
+input_pickable = false
 script = ExtResource("3_7cyqn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Menú"]
+position = Vector2(3.61649, -2.63898)
+scale = Vector2(0.675987, 1.02154)
+texture = ExtResource("6_s2en4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Menú"]
 shape = SubResource("RectangleShape2D_v2l1p")

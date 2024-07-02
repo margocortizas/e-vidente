@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bupuitrnp6shp"]
+[gd_scene load_steps=43 format=3 uid="uid://bupuitrnp6shp"]
 
 [ext_resource type="Script" path="res://niveles/nivel_3/Level-Vegan-Gluten.gd" id="1_wi3ev"]
 [ext_resource type="Texture2D" uid="uid://5jimpew4xl7m" path="res://assets-sistema/interfaz/titulo-celiaquia-veganismo.png" id="2_f1fgs"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://caa3ga7iipsxp" path="res://items/plato.tscn" id="5_wrlk6"]
 [ext_resource type="Script" path="res://niveles/Lupa.gd" id="6_x2w5f"]
 [ext_resource type="Texture2D" uid="uid://cbqcihsa0yu72" path="res://assets-sistema/interfaz/lupa.png" id="7_c7qrw"]
+[ext_resource type="Texture2D" uid="uid://b4b057ms74s1r" path="res://assets-sistema/interfaz/menu-fondo.png" id="7_d7vbi"]
 [ext_resource type="Texture2D" uid="uid://bbybi1g73qawn" path="res://assets-sistema/interfaz/info-lupa.png" id="8_ls2i1"]
 [ext_resource type="Texture2D" uid="uid://dr8gr3fyppexu" path="res://assets-sistema/interfaz/globito-celiaquia.png" id="9_6ao3j"]
 [ext_resource type="Script" path="res://niveles/PlayerCambiante.gd" id="10_qenqm"]
@@ -191,10 +192,16 @@ position = Vector2(567, 695)
 scale = Vector2(1.2443, 0.72)
 collision_layer = 8
 collision_mask = 8
+input_pickable = false
 script = ExtResource("4_eqa8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Menú"]
 shape = SubResource("RectangleShape2D_bbluw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Menú"]
+position = Vector2(3.61649, -2.63898)
+scale = Vector2(0.675987, 1.02154)
+texture = ExtResource("7_d7vbi")
 
 [node name="Plato" parent="." instance=ExtResource("5_wrlk6")]
 unique_name_in_owner = true
