@@ -80,7 +80,7 @@ icon = SubResource("CompressedTexture2D_b50jp")
 flat = true
 
 [node name="ArchiveroCeliaquia" type="Sprite2D" parent="."]
-position = Vector2(608, 736)
+position = Vector2(627, 802)
 scale = Vector2(0.960001, 0.960001)
 texture = ExtResource("9_0j0nq")
 
